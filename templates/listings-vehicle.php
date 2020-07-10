@@ -43,7 +43,7 @@ do_action( 'wpcm_before_listings' );
 
 		<?php do_action( 'wpcm_before_listings_results' ); ?>
 
-		<div class="wpcm-vehicle-results-wrapper">
+		<div class="wpcm-vehicle-results-wrapper dms-container">
 			<?php
 			/**
 			 * wpcm_listings_vehicle_results hook
@@ -59,3 +59,4 @@ do_action( 'wpcm_before_listings' );
  * wpcm_after_listings_vehicle hook
  */
 do_action( 'wpcm_after_listings' );
+

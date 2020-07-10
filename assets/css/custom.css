@@ -1,0 +1,204 @@
+/*
+ * By Devmunds
+ * Version: 1.0.0
+ */
+/*====================================================================*/
+/*RESET CONTAINER DO TEMA*/
+.content-area{
+	width:100% !important;
+	border:none !important;
+}
+#right-sidebar{
+	display:none !important;
+}
+.container {
+	max-width: 100% !important;
+	width:100% !important;
+	padding-left:25px !important;
+	padding-right:25px !important;
+}
+.site-main{
+
+}
+#ui-datepicker-div{
+  display: none !important;
+}
+/*====================================================================*/
+
+.single .thumbnail{
+  display: none !important;
+}
+
+
+.wpcm-vehicle-listings .wpcm-vehicle-filters .wpcm-filter select{
+  width: 100% !important;
+}
+.select2-container--default .select2-selection--single{
+  border-radius: 0px !important;
+  border: 1px solid#ffffff !important;
+  background-color: #ffa100 !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+  color: #ffffff !important;
+  line-height: 50px !important;
+}
+.select2-container .select2-selection--single{
+  height: 50px !important;
+}
+
+.wpcm-vehicle-filters{
+  padding: 30px 25px 30px 25px!important;
+}
+.wpcm-vehicle-listings .wpcm-vehicle-sort {
+  color: #000000;
+}
+#wpcm-sort{
+  width: 400px;
+  
+}
+#wpcm-sort option{
+
+  color: #000000;
+}
+.wpcm-vehicle-listings .wpcm-vehicle-sort{
+  color: #ECECEC;
+  font-size: 25px !important;
+}
+
+/*====================================================================*/
+/*STYLE GRID VEICLES*/
+.wpcm-listings-item{
+  -webkit-box-shadow: 0px 0px 3px 1px #ECECEC;
+  box-shadow: 0px 0px 3px 1px #ECECEC;
+  margin-top: 10px !important;
+  border: none !important;
+  background-color: #ffffff !important;
+  padding: 0px 0 15px 0 !important;
+  height: auto;
+}
+.wpcm-listings-item:hover{
+  background-color: #e9e9e9 !important;
+  zoom: 1;
+}
+.wpcm-listings-item-meta ul li{
+  padding-right: 10px !important;
+  float: left !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+.wpcm-listings-item-image-wrapper{
+  width: 100% !important;
+  height: 100% !important;
+}
+.wpcm-listings-item-description{
+  overflow: hidden !important;
+  width: 100% !important;
+  margin-top: 10px;
+}
+
+.wpcm-listings-item-description h3{
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+.wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a .wpcm-listings-item-meta{
+  margin-top: 10px;
+}
+.wpcm-listings-item-meta label{
+  text-align: center;
+  color: #474747;
+}
+.wpcm-listings-item-meta span{
+  color: #000000 !important;
+  font-weight: 700;
+}
+
+
+
+.wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a .wpcm-listings-item-image-wrapper{
+  position: relative !important;
+}
+
+.wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a{
+  padding: 0 !important;
+  min-height: 200px !important;
+}
+.wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a:hover{
+  background-color: transparent !important;
+}
+.wpcm-title{
+  color: #284370 !important;
+}
+.wpcm-listings-item-meta ul li{
+  color: #474747 !important;
+}
+.wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a .wpcm-listings-item-image-wrapper{
+  left: 0;
+  float: none;
+}
+.wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a .wpcm-listings-item-description{
+  padding: 0 !important;
+  display: block;
+}
+.wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a .wpcm-listings-item-meta {
+  width: 100%;
+  padding-left: 0;
+  text-align: center;
+}
+
+
+@media (max-width: 992px) {
+  .wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a .wpcm-listings-item-meta {
+      /*padding: 0 0 0 135px !important;*/
+  }
+}
+
+
+/*End custom css frontend listings vehicles*/
+
+.wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item.wpcm-listings-item-featured a{
+  background-color: #c0ffd2 !important;
+}
+.wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item.wpcm-listings-item-featured a:hover{
+
+}
+
+
+/*- remover botão “adicionar novo”; By Devmunds*/
+.wpcm-button-dashboard-add-new{
+  display: none;
+}
+.wpcm-account-sign-in a{
+    display: none;
+}
+.dms-hidden{
+  display: none;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+  height: 50px !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border-color: #fff transparent transparent !important;
+}
+.wpcm-vehicle-listings .wpcm-vehicle-filters .wpcm-filter-button{
+  padding-top: 5px !important;
+}
+.wpcm-vehicle-listings .wpcm-vehicle-filters .wpcm-filter-button input{
+  background-color: #000000 !important;
+  padding: 15px !important;
+  line-height: inherit;
+}
+
+@media (min-width: 992px){
+  .wpcm-vehicle-listings .wpcm-vehicle-filters .wpcm-filter-make, .wpcm-vehicle-listings .wpcm-vehicle-filters .wpcm-filter-model {
+      width: 16.6666% !important;
+  }
+  .wpcm-vehicle-listings .wpcm-vehicle-filters .wpcm-filter {
+      width: 16.6666% !important;
+  }
+}
+
+.wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results {
+  padding: 0px 25px 0 25px !important;
+}

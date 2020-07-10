@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: WP Car Manager\n"
 "Report-Msgid-Bugs-To: https://github.com/barrykooij/wp-car-manager/issues\n"
 "POT-Creation-Date: 2016-07-11 09:01:01+00:00\n"
-"PO-Revision-Date: 2017-09-22 22:09+0000\n"
+"PO-Revision-Date: 2019-12-27 16:14-0300\n"
 "Last-Translator: Carlos Eduardo de Carvalho Pereira <carlosedcpereira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/barrykooijplugins/wp-car-manager/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: grunt-wp-i18n 0.4.9\n"
+"X-Generator: Poedit 2.2.4\n"
 
 #: src/Vehicle/Data.php:107
 msgid "125"
@@ -30,9 +30,7 @@ msgstr "170"
 msgid "Delete image"
 msgstr "Excluir foto"
 
-#: assets/views/meta-box/gallery.php:15 assets/views/meta-box/gallery.php:31
-#: templates/dashboard/buttons/delete.php:1
-#: templates/submit-car-form/images.php:28
+#: assets/views/meta-box/gallery.php:15 assets/views/meta-box/gallery.php:31 templates/dashboard/buttons/delete.php:1 templates/submit-car-form/images.php:28
 msgid "Delete"
 msgstr "Excluir"
 
@@ -48,37 +46,24 @@ msgstr "Adicionar para galeria"
 msgid "Add gallery images"
 msgstr "Adicionar galeria de fotos"
 
-#: assets/views/meta-box/input/select-model.php:4
-#: templates/listings/filters/model.php:3
-#: templates/submit-car-form/form-fields/select-model.php:3
-#: templates/submit-car-form/form-fields/select-model.php:15
+#: assets/views/meta-box/input/select-model.php:4 templates/listings/filters/model.php:3 templates/submit-car-form/form-fields/select-model.php:3 templates/submit-car-form/form-fields/select-model.php:15
 msgid "Select Model"
 msgstr "Selecione o modelo"
 
-#: assets/views/page/edit-make-model.php:16 assets/views/page/makes.php:16
-#: assets/views/page/makes.php:63 assets/views/page/makes.php:92
-#: assets/views/page/models.php:16 assets/views/page/models.php:63
-#: assets/views/page/models.php:93
+#: assets/views/page/edit-make-model.php:16 assets/views/page/makes.php:16 assets/views/page/makes.php:63 assets/views/page/makes.php:92 assets/views/page/models.php:16 assets/views/page/models.php:63 assets/views/page/models.php:93
 msgid "Name"
 msgstr "Nome"
 
-#: assets/views/page/edit-make-model.php:19 assets/views/page/makes.php:95
-#: assets/views/page/models.php:96
+#: assets/views/page/edit-make-model.php:19 assets/views/page/makes.php:95 assets/views/page/models.php:96
 msgid "The name is how it appears on your site."
 msgstr "O nome agora aparece como está no site"
 
-#: assets/views/page/edit-make-model.php:23 assets/views/page/makes.php:18
-#: assets/views/page/makes.php:64 assets/views/page/makes.php:98
-#: assets/views/page/models.php:18 assets/views/page/models.php:64
-#: assets/views/page/models.php:99
+#: assets/views/page/edit-make-model.php:23 assets/views/page/makes.php:18 assets/views/page/makes.php:64 assets/views/page/makes.php:98 assets/views/page/models.php:18 assets/views/page/models.php:64 assets/views/page/models.php:99
 msgid "Slug"
 msgstr "Slug"
 
-#: assets/views/page/edit-make-model.php:26 assets/views/page/makes.php:101
-#: assets/views/page/models.php:102
-msgid ""
-"The “slug” is the URL-friendly version of the name. It is usually all "
-"lowercase and contains only letters, numbers, and hyphens."
+#: assets/views/page/edit-make-model.php:26 assets/views/page/makes.php:101 assets/views/page/models.php:102
+msgid "The “slug” is the URL-friendly version of the name. It is usually all lowercase and contains only letters, numbers, and hyphens."
 msgstr "O \"slug\" é a versão amigável compatível com URL. Geralmente é tudo em minúsculas e contém apenas letras, números e hifens."
 
 #: assets/views/page/edit-make-model.php:32
@@ -98,18 +83,14 @@ msgid "What are Makes?"
 msgstr "Quais são as marcas?"
 
 #: assets/views/page/makes.php:77
-msgid ""
-"On this page you manage your vehicles makes. You can add a new make with the"
-" form below and manage your existing makes on the right. To manage a make’s "
-"models, click the wheel button."
+msgid "On this page you manage your vehicles makes. You can add a new make with the form below and manage your existing makes on the right. To manage a make’s models, click the wheel button."
 msgstr "Nesta página você gerencia suas marcas de veículos. Você pode adicionar uma nova marca com o formulário abaixo e gerenciar suas marcas existentes à direita. Para gerenciar os modelos de uma marca, clique no botão"
 
 #: assets/views/page/makes.php:78 assets/views/page/models.php:77
 msgid "You can read more about Makes and Models here"
 msgstr "Você pode ler mais sobre Marcas e Modelos aqui"
 
-#: assets/views/page/makes.php:82 assets/views/page/makes.php:105
-#: src/Taxonomies.php:93
+#: assets/views/page/makes.php:82 assets/views/page/makes.php:105 src/Taxonomies.php:93
 msgid "Add New Make"
 msgstr "Adicionar nova marca"
 
@@ -122,10 +103,7 @@ msgid "What are Models?"
 msgstr "Quais são os modelos?"
 
 #: assets/views/page/models.php:76
-msgid ""
-"On this page you manage your vehicles models. You can add a new model with "
-"the form below and manage your existing models on the right. A model is "
-"always linked to one make."
+msgid "On this page you manage your vehicles models. You can add a new model with the form below and manage your existing models on the right. A model is always linked to one make."
 msgstr "Nesta página, você gerencia os modelos de seus veículos. Você pode adicionar um novo modelo com o formulário abaixo e gerenciar seus modelos existentes à direita. Um modelo está sempre ligado a uma marca."
 
 #: assets/views/page/models.php:81 assets/views/page/models.php:106
@@ -157,9 +135,7 @@ msgid "Description"
 msgstr "Descrição"
 
 #: includes/template-functions.php:226
-msgid ""
-"A short description of the vehicle. Does not need to include features, these"
-" can be selected separately below."
+msgid "A short description of the vehicle. Does not need to include features, these can be selected separately below."
 msgstr "Uma breve descrição do veículo. Não precisa incluir recursos, estes podem ser selecionados separadamente abaixo."
 
 #: includes/template-functions.php:247 src/Admin/MetaBox/CarData.php:14
@@ -170,25 +146,19 @@ msgstr "Dados do carro"
 msgid "(optional)"
 msgstr "(opcional)"
 
-#: src/Admin/CustomColumns.php:47 src/Vehicle/Data.php:29
-#: templates/listings/filters/make.php:2
-#: templates/vehicle-data/data-make.php:8
+#: src/Admin/CustomColumns.php:47 src/Vehicle/Data.php:29 templates/listings/filters/make.php:2 templates/vehicle-data/data-make.php:8
 msgid "Make"
 msgstr "Marca"
 
-#: src/Admin/CustomColumns.php:48 src/Vehicle/Data.php:35
-#: templates/listings/filters/model.php:2
-#: templates/vehicle-data/data-model.php:8
+#: src/Admin/CustomColumns.php:48 src/Vehicle/Data.php:35 templates/listings/filters/model.php:2 templates/vehicle-data/data-model.php:8
 msgid "Model"
 msgstr "Modelo"
 
-#: src/Admin/CustomColumns.php:49 src/Vehicle/Data.php:48
-#: templates/vehicle-data/data-price.php:8
+#: src/Admin/CustomColumns.php:49 src/Vehicle/Data.php:48 templates/vehicle-data/data-price.php:8
 msgid "Price"
 msgstr "Preço"
 
-#: src/Admin/CustomColumns.php:50 src/Vehicle/Data.php:55
-#: templates/vehicle-data/data-mileage.php:8
+#: src/Admin/CustomColumns.php:50 src/Vehicle/Data.php:55 templates/vehicle-data/data-mileage.php:8
 msgid "Mileage"
 msgstr "Milhas"
 
@@ -204,8 +174,7 @@ msgstr "Vence em"
 msgid "Actions"
 msgstr "Ações"
 
-#: src/Admin/CustomColumns.php:91 src/Ajax/GetDashboard.php:61
-#: src/Ajax/GetVehicleResults.php:95 templates/single-vehicle/image.php:37
+#: src/Admin/CustomColumns.php:91 src/Ajax/GetDashboard.php:61 src/Ajax/GetVehicleResults.php:95 templates/single-vehicle/image.php:37
 msgid "Placeholder"
 msgstr "Espaço reservado"
 
@@ -229,15 +198,12 @@ msgstr "Vendido?"
 msgid "Short Description"
 msgstr "Breve descrição"
 
-#: src/Admin/Page/Extensions.php:13 src/Admin/Page/Extensions.php:47
-#: src/Util/Onboarding.php:155
+#: src/Admin/Page/Extensions.php:13 src/Admin/Page/Extensions.php:47 src/Util/Onboarding.php:155
 msgid "Extensions"
 msgstr "Extensões"
 
 #: src/Admin/Page/Extensions.php:80
-msgid ""
-"Extend WP Car Manager with its powerful free and paid extensions. %sClick "
-"here to browse all extensions%s"
+msgid "Extend WP Car Manager with its powerful free and paid extensions. %sClick here to browse all extensions%s"
 msgstr "Estenda o WP Car Manager com suas poderosas extensões gratuitas e pagas. %s Clique aqui para navegar em todas as extensões %s"
 
 #: src/Admin/Page/Extensions.php:167
@@ -317,8 +283,7 @@ msgid "Are you sure you want to delete %s?"
 msgstr "Tem certeza de que deseja excluir %s ?"
 
 #: src/Assets.php:167
-msgid ""
-"Something went wrong when trying to delete your vehicle, please try again."
+msgid "Something went wrong when trying to delete your vehicle, please try again."
 msgstr "Algo deu errado ao tentar excluir o seu veículo, tente novamente."
 
 #: src/Extension/Extension.php:152
@@ -571,7 +536,7 @@ msgstr "HP"
 
 #: src/MakeModelManager.php:74 templates/listings/filters/make.php:3
 msgid "Select Make"
-msgstr "Seleciona a marca"
+msgstr "Selecione a marca"
 
 #: src/RoleManager.php:21
 msgid "Car Seller"
@@ -666,9 +631,7 @@ msgid "Hide sold listings from listing pages"
 msgstr "Ocultar anúncios vendidos das páginas de listagem"
 
 #: src/Settings.php:96
-msgid ""
-"If enabled, listings marked as sold will no longer be listed on your listing"
-" pages."
+msgid "If enabled, listings marked as sold will no longer be listed on your listing pages."
 msgstr "Se ativado, os anúncios marcados como vendidos não serão mais listados em suas páginas de Anúncio."
 
 #: src/Settings.php:101
@@ -692,9 +655,7 @@ msgid "Allow account creation"
 msgstr "Permitir a criação da conta"
 
 #: src/Settings.php:114
-msgid ""
-"If enabled, non-logged in users will be able to create an account by "
-"entering their email address on the submission form."
+msgid "If enabled, non-logged in users will be able to create an account by entering their email address on the submission form."
 msgstr "Se ativado, os usuários não logados poderão criar uma conta digitando seu endereço de e-mail no formulário de inscrição."
 
 #: src/Settings.php:119
@@ -706,9 +667,7 @@ msgid "Automatically Generate Username from Email Address"
 msgstr "Gerar automaticamente o nome de usuário do endereço de e-mail"
 
 #: src/Settings.php:121
-msgid ""
-"If enabled, a username will be generated from the first part of the user "
-"email address. Otherwise, a username field will be shown."
+msgid "If enabled, a username will be generated from the first part of the user email address. Otherwise, a username field will be shown."
 msgstr "Se ativado, um nome de usuário será gerado a partir da primeira parte do endereço de e-mail do usuário. Caso contrário, um campo de nome de usuário será exibido."
 
 #: src/Settings.php:126
@@ -716,9 +675,7 @@ msgid "Account Role"
 msgstr "Função da conta"
 
 #: src/Settings.php:127
-msgid ""
-"If you enable registration on your submission form, choose a role for the "
-"new user."
+msgid "If you enable registration on your submission form, choose a role for the new user."
 msgstr "Se você habilitar o registro em seu formulário de inscrição, escolha uma função para o novo usuário."
 
 #: src/Settings.php:133
@@ -738,9 +695,7 @@ msgid "Listing Duration"
 msgstr "Duração do Anúncio"
 
 #: src/Settings.php:141
-msgid ""
-"How many %sdays%s listings are live before expiring. Can be left blank to "
-"never expire."
+msgid "How many %sdays%s listings are live before expiring. Can be left blank to never expire."
 msgstr "Quantas listagens %s dias %s estão em vigor antes de expirar. Pode ser deixado em branco para nunca expirar."
 
 #: src/Settings.php:147
@@ -792,9 +747,7 @@ msgid "%s has been submitted successfully and will be visible once approved."
 msgstr "%s foi enviado com sucesso e será visível uma vez aprovada."
 
 #: src/SubmitCarHandler.php:333
-msgid ""
-"%s has been submitted successfully and will be visible once payment has been"
-" confirmed."
+msgid "%s has been submitted successfully and will be visible once payment has been confirmed."
 msgstr "%s foi enviado com sucesso e estará visível uma vez que o pagamento tenha sido confirmado."
 
 #: src/SubmitCarHandler.php:336
@@ -870,12 +823,7 @@ msgid "Not Found"
 msgstr "Não encontrado"
 
 #: src/Taxonomies.php:72
-msgid ""
-"WP Car Manager Features are the place to add all the 'features' your vehicle"
-" has so you don't have to re-type the same feature every time. Examples of "
-"commonly used features are %s, %s, %s and %s but you are free to enter any "
-"feature you like. Vehicle features are listed in a nice list on the vehicle "
-"detail page."
+msgid "WP Car Manager Features are the place to add all the 'features' your vehicle has so you don't have to re-type the same feature every time. Examples of commonly used features are %s, %s, %s and %s but you are free to enter any feature you like. Vehicle features are listed in a nice list on the vehicle detail page."
 msgstr "O WP Car Manager Features é o local para adicionar todas as \"características\" do seu veículo, portanto, você não precisa voltar a digitar o mesmo recurso de cada vez. Exemplos de recursos comumente usados são %s, %s, %s e %s, mas você pode inserir qualquer recurso que você gosta. Os recursos do veículo estão listados em uma lista agradável na página de detalhes do veículo."
 
 #: src/Taxonomies.php:73
@@ -958,15 +906,12 @@ msgstr "Criando"
 msgid "Page created"
 msgstr "Página criada"
 
-#: src/Util/Onboarding.php:73 src/Util/Onboarding.php:118
-#: src/Util/Onboarding.php:127 src/Util/Onboarding.php:136
+#: src/Util/Onboarding.php:73 src/Util/Onboarding.php:118 src/Util/Onboarding.php:127 src/Util/Onboarding.php:136
 msgid "Create Page"
 msgstr "Criar página"
 
 #: src/Util/Onboarding.php:83
-msgid ""
-"WP Car Manager is almost ready for use, %sclick here%s to setup the final "
-"settings."
+msgid "WP Car Manager is almost ready for use, %sclick here%s to setup the final settings."
 msgstr "O WP Car Manager está quase pronto para uso, %s clique aqui %s para configurar as configurações finais."
 
 #: src/Util/Onboarding.php:99
@@ -974,24 +919,18 @@ msgid "Setup"
 msgstr "Configuração"
 
 #: src/Util/Onboarding.php:100
-msgid ""
-"Thank you for using WP Car Manager! We'd like to help you setup the plugin "
-"correctly so you can start listing your cars as quickly as possible."
+msgid "Thank you for using WP Car Manager! We'd like to help you setup the plugin correctly so you can start listing your cars as quickly as possible."
 msgstr "Obrigado por usar o WP Car Manager! Nós gostaríamos de ajudá-lo a configurar o plugin corretamente para que você possa começar a anunciar seus carros o mais rápido possível."
 
 #: src/Util/Onboarding.php:104
-msgid ""
-"WP Car Manager needs 3 pages setup with specific shortcodes to function "
-"correct. We can create and setup these pages for you at this moment or you "
-"can create them yourself and set them in the settings screen."
+msgid "WP Car Manager needs 3 pages setup with specific shortcodes to function correct. We can create and setup these pages for you at this moment or you can create them yourself and set them in the settings screen."
 msgstr "O WP Car Manager precisa de uma configuração de 3 páginas com códigos curtos específicos para funcionar corretamente. Podemos criar e configurar estas páginas para você neste momento ou você pode criá-las você mesmo e configurá-las na tela de configurações."
 
 #: src/Util/Onboarding.php:107
 msgid "Page"
 msgstr "Página"
 
-#: src/Util/Onboarding.php:114 src/Vehicle/PostType.php:14
-#: src/Vehicle/PostType.php:15
+#: src/Util/Onboarding.php:114 src/Vehicle/PostType.php:14 src/Vehicle/PostType.php:15
 msgid "Car Listings"
 msgstr "Anúncios de carros"
 
@@ -1020,10 +959,7 @@ msgid "A Never5 Product"
 msgstr "Um produto Never5"
 
 #: src/Util/Onboarding.php:148
-msgid ""
-"At %sNever5%s we create high quality premium WordPress plugins, with "
-"extensive support. We offer solutions in related posts, advanced download "
-"management, vehicle management and connecting post types."
+msgid "At %sNever5%s we create high quality premium WordPress plugins, with extensive support. We offer solutions in related posts, advanced download management, vehicle management and connecting post types."
 msgstr "Em %s Never5 %s, criamos plugins premium do WordPress de alta qualidade, com suporte extensivo. Oferecemos soluções em postagens relacionadas, gerenciamento de download avançado, gerenciamento de veículos e tipos de postagem de conexão."
 
 #: src/Util/Onboarding.php:150
@@ -1031,10 +967,7 @@ msgid "%sFollow Never5 on Twitter%s"
 msgstr "%s Siga Never5 no Twitter %s"
 
 #: src/Util/Onboarding.php:156
-msgid ""
-"Power up your WP Car Manager website with our official extensions. Our "
-"extensions allow you to add very specific functionality to your WP Car "
-"Manager installation and come with our premium support and updates."
+msgid "Power up your WP Car Manager website with our official extensions. Our extensions allow you to add very specific functionality to your WP Car Manager installation and come with our premium support and updates."
 msgstr "Aumente o seu site do WP Car Manager com nossas extensões oficiais. Nossas extensões permitem que você adicione funcionalidades muito específicas à sua instalação do WP Car Manager e venha com nosso suporte e atualizações premium."
 
 #: src/Util/Onboarding.php:159
@@ -1046,10 +979,7 @@ msgid "What's next?"
 msgstr "Qual é o próximo?"
 
 #: src/Util/Onboarding.php:165
-msgid ""
-"Now that you have created the required pages, it's time to setup your Makes "
-"& Models. You can %sread more about Makes & Models here%s or %screate them "
-"here%s."
+msgid "Now that you have created the required pages, it's time to setup your Makes & Models. You can %sread more about Makes & Models here%s or %screate them here%s."
 msgstr "Agora que você criou as páginas necessárias, é hora de configurar seus modelos e modelos. Você pode enviar mais sobre marcas & modelos aqui %s ou %s crie-os aqui %s."
 
 #: src/Vehicle/Data.php:22 templates/vehicle-data/data-condition.php:8
@@ -1064,9 +994,7 @@ msgstr "Primeira Data de Registro"
 msgid "Fuel Type"
 msgstr "Tipo de combustível"
 
-#: src/Vehicle/Data.php:65 src/Vehicle/Data.php:72 src/Vehicle/Data.php:79
-#: src/Vehicle/Data.php:93 src/Vehicle/Data.php:100 src/Vehicle/Data.php:107
-#: src/Vehicle/Data.php:114
+#: src/Vehicle/Data.php:65 src/Vehicle/Data.php:72 src/Vehicle/Data.php:79 src/Vehicle/Data.php:93 src/Vehicle/Data.php:100 src/Vehicle/Data.php:107 src/Vehicle/Data.php:114
 msgid "e.g."
 msgstr "Ex.:"
 
@@ -1234,12 +1162,7 @@ msgstr "Mostrar resultados"
 msgid "Min Year"
 msgstr "Ano mínimo"
 
-#: templates/listings/filters/frdate.php:3
-#: templates/listings/filters/frdate.php:4
-#: templates/listings/filters/mileage.php:3
-#: templates/listings/filters/mileage.php:4
-#: templates/listings/filters/price.php:3
-#: templates/listings/filters/price.php:4
+#: templates/listings/filters/frdate.php:3 templates/listings/filters/frdate.php:4 templates/listings/filters/mileage.php:3 templates/listings/filters/mileage.php:4 templates/listings/filters/price.php:3 templates/listings/filters/price.php:4
 msgid "All"
 msgstr "Todos"
 
@@ -1308,9 +1231,7 @@ msgid "Listing Expired"
 msgstr "Anúncio Vencido"
 
 #: templates/single-vehicle/expired.php:3
-msgid ""
-"This listing is expired, please go to your car dashboard for more "
-"information."
+msgid "This listing is expired, please go to your car dashboard for more information."
 msgstr "Este anúncio venceu, acesse o painel do carro para obter mais informações."
 
 #: templates/single-vehicle/features.php:11
@@ -1326,9 +1247,7 @@ msgid "Your submission is pending review, please check back later."
 msgstr "Seu envio está pendente de revisão, por favor, verifique novamente."
 
 #: templates/single-vehicle/preview.php:3
-msgid ""
-"This is a preview of your listing, please note this listing is not published"
-" yet!"
+msgid "This is a preview of your listing, please note this listing is not published yet!"
 msgstr "Esta é uma prévia do seu anúncio, por favor, note que este anúncio ainda não foi publicado!"
 
 #: templates/single-vehicle/preview.php:6
@@ -1356,9 +1275,7 @@ msgid "Sign in"
 msgstr "Entrar"
 
 #: templates/submit-car-form/account-signin.php:30
-msgid ""
-"If you don&rsquo;t have an account you can create one below by entering your"
-" email address/username. Your account details will be confirmed via email."
+msgid "If you don&rsquo;t have an account you can create one below by entering your email address/username. Your account details will be confirmed via email."
 msgstr "Se você fizer uma conta, pode criar uma listagem, inserindo seu endereço de e-mail / nome de usuário. Os detalhes da sua conta serão confirmados por e-mail."
 
 #: templates/submit-car-form/account-signin.php:34
@@ -1398,15 +1315,14 @@ msgid "Click here to upload your images"
 msgstr "Clique aqui para enviar suas fotos"
 
 #: templates/submit-car-form/images.php:39
-msgid ""
-"You can upload multiple images at the same time, the first image will be "
-"your thumbnail."
+msgid "You can upload multiple images at the same time, the first image will be your thumbnail."
 msgstr "Você pode enviar várias fotos ao mesmo tempo, a primeira foto será sua miniatura."
 
 #: templates/submit-car-form/step-empty-view.php:6
-msgid ""
-"You are redirected to the next step, %sclick here%s if nothing happens."
-msgstr "Você é redirecionado para o próximo passo, %s clique aqui\n%s se nada acontecer."
+msgid "You are redirected to the next step, %sclick here%s if nothing happens."
+msgstr ""
+"Você é redirecionado para o próximo passo, %s clique aqui\n"
+"%s se nada acontecer."
 
 #: templates/vehicle-data/data-frdate.php:8
 msgid "Year"
@@ -1429,8 +1345,7 @@ msgid "http://www.wpcarmanager.com"
 msgstr "http://www.wpcarmanager.com"
 
 #. Description of the plugin/theme
-msgid ""
-"The easiest way to manage, list and sell your cars online using WordPress."
+msgid "The easiest way to manage, list and sell your cars online using WordPress."
 msgstr "A maneira mais fácil de gerenciar, listar e vender seus carros on-line usando o WordPress."
 
 #. Author of the plugin/theme

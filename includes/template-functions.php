@@ -241,10 +241,10 @@ if ( ! function_exists( 'wpcm_template_submit_car_form_fields_account_signin' ) 
 if ( ! function_exists( 'wpcm_template_submit_car_form_fields_car_title' ) ) {
 	function wpcm_template_submit_car_form_fields_car_title( $vehicle ) {
 		?>
-		<fieldset class="wpcm-fieldset-title">
+		<fieldset class="wpcm-fieldset-title dms-hidden">
 			<label for="title"><?php _e( 'Listing Title', 'wp-car-manager' ); ?></label>
 
-			<div class="wpcm-field wpcm-required-field">
+			<div class="wpcm-field">
 				<?php
 				wp_car_manager()->service( 'template_manager' )->get_template_part( 'submit-car-form/form-fields/text', '', array(
 					'field'   => array( 'key' => 'title', 'placeholder' => __( '', 'wp-car-manager' ) ),
@@ -468,3 +468,5 @@ if ( ! function_exists( 'wpcm_template_review_sign' ) ) {
 		}
 	}
 }
+
+

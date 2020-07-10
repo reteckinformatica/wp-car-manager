@@ -18,7 +18,20 @@ abstract class Assets {
 			array(),
 			wp_car_manager()->get_version()
 		);
-
+		// frontend CSS custom by Devmunds
+		wp_enqueue_style(
+			'wpcm_css_frontend_dmsgrid',
+			wp_car_manager()->service( 'file' )->plugin_url( '/assets/css/dmsgrid.css' ),
+			array(),
+			wp_car_manager()->get_version()
+		);
+		// frontend CSS custom by Devmunds
+		wp_enqueue_style(
+			'wpcm_css_frontend_custom',
+			wp_car_manager()->service( 'file' )->plugin_url( '/assets/css/custom.css' ),
+			array(),
+			wp_car_manager()->get_version()
+		);
 		// load vehicle singular assets
 		if ( is_singular( Vehicle\PostType::VEHICLE ) ) {
 

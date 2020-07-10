@@ -95,7 +95,7 @@ abstract class Vehicle {
 	 * @param String $title
 	 */
 	public function set_title( $title ) {
-		$this->title = $title;
+		$this->title =  $title;
 	}
 
 	/**

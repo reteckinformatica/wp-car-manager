@@ -50,6 +50,7 @@ add_filter( 'wpcm_single_vehicle_data_fields', 'wpcm_template_data_remove_power_
 
 add_action( 'wpcm_listings_vehicle_sort', 'wpcm_template_vehicle_listings_sort', 10 );
 
+
 /**
  * Vehicle Before Listings Filters
  */
@@ -121,6 +122,17 @@ add_action( 'wpcm_dashboard_profile', 'wpcm_template_dashboard_profile_title', 9
  * Vehicle Dashboard Profile
  */
 add_action( 'wpcm_dashboard_profile', 'wpcm_template_dashboard_profile', 10 );
+
+/**
+* By Devmunds
+*/
+
+
+
+//add_shortcode('dms_teste_0002','dms_teste_0001');
+
+
+
 
 /**
  * Vehicle Dashboard Results Title

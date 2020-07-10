@@ -38,10 +38,10 @@ class Data {
 			),
 			'frdate'       => array(
 				'type'        => 'date',
-				'label'       => __( 'First Registration Date', 'wp-car-manager' ),
+				'label'       => __( 'Ano do veiculo', 'wp-car-manager' ),
 				'key'         => 'frdate',
 				'required'    => true,
-				'placeholder' => 'YY-MM-DD'
+				'placeholder' => 'Ano'
 			),
 			'price'        => array(
 				'type'        => 'text',

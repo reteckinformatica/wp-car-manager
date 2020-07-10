@@ -9,8 +9,9 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 do_action( 'wpcm_before_single_vehicle', $vehicle );
 ?>
-	<div class="wpcm-vehicle" itemscope itemtype="https://schema.org/Vehicle">
-		<div class="wpcm-vehicle-head">
+	<div class="wpcm-vehicle dms-container" itemscope itemtype="https://schema.org/Vehicle">
+	<div class="dms-wrapper">
+		<div class="wpcm-vehicle-head dms-row">
 			<?php
 			/**
 			 * wpcm_after_vehicle_summary hook
@@ -20,7 +21,7 @@ do_action( 'wpcm_before_single_vehicle', $vehicle );
 			do_action( 'wpcm_before_vehicle_summary', $vehicle );
 			?>
 
-			<div class="wpcm-summary">
+			<div class="wpcm-summary dms-col-2">
 				<?php
 				/**
 				 * wpcm_vehicle_summary hook
@@ -55,5 +56,6 @@ do_action( 'wpcm_before_single_vehicle', $vehicle );
 		</div>
 
 		<meta itemprop="url" content="<?php the_permalink(); ?>"/>
+	</div>
 	</div>
 <?php do_action( 'wpcm_after_single_vehicle', $vehicle ); ?>

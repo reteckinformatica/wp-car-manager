@@ -11,7 +11,7 @@
 	<div class="wpcm-dashboard-item-data">
 		<?php do_action( 'wpcm_vehicle_dashboard_item_data_start', $vehicle ); ?>
 		<ul>
-			<li class="wpcm-title"><a href="<?php echo $url; ?>"><?php echo $title; ?></a></li>
+			<li class="wpcm-title"><a href="<?php echo $url; ?>"><?php echo $vehicle->get_model_name(); ?></a></li>
 			<li class="wpcm-price"><?php echo $price; ?></li>
 			<li><?php echo $mileage; ?></li>
 			<li><?php echo $frdate; ?></li>
