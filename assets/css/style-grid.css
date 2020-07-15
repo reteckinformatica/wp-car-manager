@@ -1,5 +1,5 @@
 /*
- * By Devmunds
+ * By Reteck
  * Version: 1.0.0
 */
 *{
@@ -7,30 +7,30 @@
   -moz-box-sizing: border-box !important;
 }
 /*containar*/
-.dms-container{
+.wpcm-container{
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
 }
-.dms-wrapper{
+.wpcm-wrapper{
   padding: 25px;
 }
 /*linha*/
-.dms-row{
+.wpcm-row{
   margin-left: -5px;
   margin-right: -5px;
 }
-.dms-row:before, .dms-row:after{
+.wpcm-row:before, .wpcm-row:after{
   content: "";
   display: table;;
 }
-.dms-row:after{
+.wpcm-row:after{
   clear: both;
 }
 /*Mobile*/
 @media screen and (max-width: 539px) and (min-width: 0px) {
-  .dms-mb-col-2{
+  .wpcm-mb-col-2{
     position: relative;
     float: left;
     width: 50%;
@@ -39,7 +39,7 @@
 }
 /*Tablet*/
 @media screen and (max-width: 720px) and (min-width: 540px) {
-  .dms-sm-col-3{
+  .wpcm-sm-col-3{
     position: relative;
     float: left;
     width: 33.3333%;
@@ -51,19 +51,19 @@
 }
 /*Desktop*/
 @media screen and (max-width: 1024px) and (min-width: 721px) {
-  .dms-col-2{
+  .wpcm-col-2{
     position: relative;
     float: left;
     width: 50%;
     padding: 5px;
   }
-  .dms-col-4{
+  .wpcm-col-4{
     position: relative;
     float: left;
     width: 25%;
     padding: 5px;
   }
-  .dms-col-5{
+  .wpcm-col-5{
     position: relative;
     float: left;
     width: 20%;
@@ -75,31 +75,31 @@
 }
 /*Desktop*/
 @media screen and (min-width: 1025px) {
-  .dms-col-2{
+  .wpcm-col-2{
     position: relative;
     float: left;
     width: 50%;
     padding: 5px;
   }
-  .dms-col-4{
+  .wpcm-col-4{
     position: relative;
     float: left;
     width: 25%;
     padding: 5px;
   }
-  .dms-col-5{
+  .wpcm-col-5{
     position: relative;
     float: left;
     width: 20%;
     padding: 5px;
   }
-  .dms-col-6{
+  .wpcm-col-6{
     position: relative;
     float: left;
     width: 16.6666%;
     padding: 5px;
   }
-  .dms-col-7{
+  .wpcm-col-7{
     position: relative;
     float: left;
     width: 14.2857%;

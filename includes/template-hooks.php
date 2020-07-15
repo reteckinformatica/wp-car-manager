@@ -124,12 +124,12 @@ add_action( 'wpcm_dashboard_profile', 'wpcm_template_dashboard_profile_title', 9
 add_action( 'wpcm_dashboard_profile', 'wpcm_template_dashboard_profile', 10 );
 
 /**
-* By Devmunds
+* By Reteck
 */
 
 
 
-//add_shortcode('dms_teste_0002','dms_teste_0001');
+//add_shortcode('wpcm_teste_0002','wpcm_teste_0001');
 
 
 

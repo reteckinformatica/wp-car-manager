@@ -10,7 +10,7 @@ if ( $attachment_ids ) {
 	$loop    = 0;
 	$columns = apply_filters( 'wpcm_vehicle_thumbnails_columns', 4 );
 	?>
-	<div class="dms-row wpcm-thumbnails wpcm-<?php echo 'columns-' . $columns; ?>"><?php
+	<div class="wpcm-row wpcm-thumbnails wpcm-<?php echo 'columns-' . $columns; ?>"><?php
 
 		foreach ( $attachment_ids as $attachment_id ) {
 
@@ -42,7 +42,7 @@ if ( $attachment_ids ) {
 			$image = Never5\WPCarManager\Helper\Images::get_image_html( $attachment_id, apply_filters( 'wpcm_single_vehicle_small_thumbnail_size', 'wpcm_vehicle_thumbnail' ) );
 
 			// Output image with overlay link
-			echo apply_filters( 'wpcm_single_vehicle_image_thumbnail_html', sprintf( '<a href="%s" class="dms-col-7 %s" title="%s" data-rel="prettyPhoto[vehicle-gallery]">%s</a>', $image_link, $image_class, $image_caption, $image ), $attachment_id, $vehicle->get_id(), $image_class );
+			echo apply_filters( 'wpcm_single_vehicle_image_thumbnail_html', sprintf( '<a href="%s" class="wpcm-col-7 %s" title="%s" data-rel="prettyPhoto[vehicle-gallery]">%s</a>', $image_link, $image_class, $image_caption, $image ), $attachment_id, $vehicle->get_id(), $image_class );
 
 			$loop ++;
 		}

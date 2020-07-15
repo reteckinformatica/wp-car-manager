@@ -18,17 +18,17 @@ abstract class Assets {
 			array(),
 			wp_car_manager()->get_version()
 		);
-		// frontend CSS custom by Devmunds
+		// frontend CSS custom By Reteck
 		wp_enqueue_style(
-			'wpcm_css_frontend_dmsgrid',
-			wp_car_manager()->service( 'file' )->plugin_url( '/assets/css/dmsgrid.css' ),
+			'wpcm_css_frontend_style-grid',
+			wp_car_manager()->service( 'file' )->plugin_url( '/assets/css/style-grid.css' ),
 			array(),
 			wp_car_manager()->get_version()
 		);
-		// frontend CSS custom by Devmunds
+		// frontend CSS custom By Reteck
 		wp_enqueue_style(
 			'wpcm_css_frontend_custom',
-			wp_car_manager()->service( 'file' )->plugin_url( '/assets/css/custom.css' ),
+			wp_car_manager()->service( 'file' )->plugin_url( '/assets/css/style-custom.css' ),
 			array(),
 			wp_car_manager()->get_version()
 		);

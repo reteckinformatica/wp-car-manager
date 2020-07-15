@@ -81,7 +81,7 @@ final class Plugin extends Pimple\Container {
 		} );
 
 		// register image sizes
-		//Modified by Devmunds
+		//Modified By Reteck
 		add_action( 'init', function () {
 			add_image_size( 'wpcm_vehicle_single', 1280, 720, true );
 			add_image_size( 'wpcm_vehicle_thumbnail', 400, 400, true );

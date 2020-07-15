@@ -1,4 +1,4 @@
-<!--Modified by Devmunds-->
+<!--Modified By Reteck-->
 <div class="wpcm-notice">
 	<h2><?php _e( 'Preview', 'wp-car-manager' ); ?></h2>
 	<p><?php _e( 'This is a preview of your listing, please note this listing is not published yet!', 'wp-car-manager' ); ?></p>

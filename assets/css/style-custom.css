@@ -1,5 +1,5 @@
 /*
- * By Devmunds
+ * By Reteck
  * Version: 1.0.0
  */
 /*====================================================================*/
@@ -11,9 +11,7 @@
 #right-sidebar{
 	display:none !important;
 }
-.site-main{
-
-}
+/*Remove datapicker pagina enviar veículos*/
 #ui-datepicker-div{
   display: none !important;
 }
@@ -158,14 +156,14 @@
 }
 
 
-/*- remover botão “adicionar novo”; By Devmunds*/
+/*- remover botão “adicionar novo”; By Reteck*/
 .wpcm-button-dashboard-add-new{
   display: none;
 }
 .wpcm-account-sign-in a{
     display: none;
 }
-.dms-hidden{
+.wpcm-hidden{
   display: none;
 }
 

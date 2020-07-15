@@ -1,5 +1,5 @@
-<!--Modified by Devmunds-->
-<div class="dms-mb-col-2 dms-sm-col-3 dms-col-4 dms-col-4">
+<!--Modified By Reteck-->
+<div class="wpcm-mb-col-2 wpcm-sm-col-3 wpcm-col-4 wpcm-col-4">
     <li class="wpcm-listings-item<?php echo( $vehicle->is_featured() ? " wpcm-listings-item-featured" : "" ); ?>">
         <a href="<?php echo $url; ?>" title="<?php echo  $vehicle->get_make_name() . " " . $vehicle->get_model_name(); ?>">
             <?php do_action( 'wpcm_vehicle_listings_item_start', $vehicle ); ?>

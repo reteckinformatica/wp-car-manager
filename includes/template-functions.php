@@ -241,7 +241,7 @@ if ( ! function_exists( 'wpcm_template_submit_car_form_fields_account_signin' ) 
 if ( ! function_exists( 'wpcm_template_submit_car_form_fields_car_title' ) ) {
 	function wpcm_template_submit_car_form_fields_car_title( $vehicle ) {
 		?>
-		<fieldset class="wpcm-fieldset-title dms-hidden">
+		<fieldset class="wpcm-fieldset-title wpcm-hidden">
 			<label for="title"><?php _e( 'Listing Title', 'wp-car-manager' ); ?></label>
 
 			<div class="wpcm-field">

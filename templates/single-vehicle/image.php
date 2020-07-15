@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 } // Exit if accessed directly
 
 ?>
-<div class="wpcm-images dms-col-2">
+<div class="wpcm-images wpcm-col-2">
 
 	<?php
 
