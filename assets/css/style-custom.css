@@ -20,24 +20,6 @@
 .single .thumbnail{
   display: none !important;
 }
-
-
-.wpcm-vehicle-listings .wpcm-vehicle-filters .wpcm-filter select{
-  width: 100% !important;
-}
-.select2-container--default .select2-selection--single{
-  border-radius: 0px !important;
-  border: 1px solid#ffffff !important;
-  background-color: #ffa100 !important;
-}
-.select2-container--default .select2-selection--single .select2-selection__rendered{
-  color: #ffffff !important;
-  line-height: 50px !important;
-}
-.select2-container .select2-selection--single{
-  height: 50px !important;
-}
-
 .wpcm-vehicle-filters{
   padding: 30px 25px 30px 25px!important;
 }
@@ -56,9 +38,15 @@
   color: #ECECEC;
   font-size: 25px !important;
 }
+/*====================================================================*/
+/*STYLE SIMGLE VEHICLES*/
+.wpcm-images{
+  background-color: #c0ffd2;
+}
+
 
 /*====================================================================*/
-/*STYLE GRID VEICLES*/
+/*STYLE GRID VEHICLES*/
 .wpcm-listings-item{
   -webkit-box-shadow: 0px 0px 3px 1px #ECECEC;
   box-shadow: 0px 0px 3px 1px #ECECEC;
@@ -86,6 +74,10 @@
   overflow: hidden !important;
   width: 100% !important;
   margin-top: 10px;
+  text-transform: uppercase;
+}
+.entry-header h2{/*page single vehicle*/
+  text-transform: uppercase !important;
 }
 
 .wpcm-listings-item-description h3{
@@ -153,18 +145,6 @@
 }
 .wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item.wpcm-listings-item-featured a:hover{
 
-}
-
-
-/*- remover botão “adicionar novo”; By Reteck*/
-.wpcm-button-dashboard-add-new{
-  display: none;
-}
-.wpcm-account-sign-in a{
-    display: none;
-}
-.wpcm-hidden{
-  display: none;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow{

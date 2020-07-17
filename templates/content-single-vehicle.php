@@ -26,10 +26,11 @@ do_action( 'wpcm_before_single_vehicle', $vehicle );
 				/**
 				 * wpcm_vehicle_summary hook
 				 *
-				 * @hooked wpcm_template_single_price - 10
+				 * @hooked wpcm_template_single_price - 10 removed by Reteck
 				 * @hooked wpcm_template_single_summary_data - 20
 				 * @hooked wpcm_template_single_contact - 30
 				 */
+				do_action( 'wpcm_vehicle_summary_price', $vehicle ); /*by Reteck */
 				do_action( 'wpcm_vehicle_summary', $vehicle );
 				?>
 			</div>

@@ -5,7 +5,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 } // Exit if accessed directly
 
 ?>
-<div class="wpcm-images wpcm-col-2">
+<!--Update by Reteck-->
+<div class="wpcm-images wpcm-col-1">
 
 	<?php
 
@@ -29,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			$gallery = '';
 		}
 
-		$image_html = sprintf( '<a href="%s" itemprop="image" class="wpcm-main-image zoom" title="%s" data-rel="prettyPhoto%s">%s</a>', $image_link, $image_caption, $gallery, $image ); // use itemprop="image"
+		$image_html = sprintf( '<a href="%s" itemprop="image" class="wpcm-main-image" title="%s" data-rel="prettyPhoto%s">%s</a>', $image_link, $image_caption, $gallery, $image ); // use itemprop="image"
 
 	} else {
 

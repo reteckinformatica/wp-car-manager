@@ -146,7 +146,7 @@ class SaveVehicle extends Ajax {
 			}
 
 			// set Vehicle data in object
-			$vehicle->set_title( $data['title'] );
+			$vehicle->set_title( $data['make'] . $data['model'] . $data['color'] );
 			$vehicle->set_description( $data['description'] );
 			$vehicle->set_condition( $data['condition'] );
 			$vehicle->set_make( $data['make'] );
