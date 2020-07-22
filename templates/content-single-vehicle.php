@@ -19,6 +19,7 @@ do_action( 'wpcm_before_single_vehicle', $vehicle );
 			 * @hooked wpcm_show_vehicle_images - 10
 			 */
 			do_action( 'wpcm_before_vehicle_summary', $vehicle );
+			do_action( 'wpcm_vehicle_summary_price', $vehicle ); /*by Reteck */
 			?>
 
 			<div class="wpcm-summary wpcm-col-2">
@@ -29,9 +30,13 @@ do_action( 'wpcm_before_single_vehicle', $vehicle );
 				 * @hooked wpcm_template_single_price - 10 removed by Reteck
 				 * @hooked wpcm_template_single_summary_data - 20
 				 * @hooked wpcm_template_single_contact - 30
-				 */
-				do_action( 'wpcm_vehicle_summary_price', $vehicle ); /*by Reteck */
+				 */				
 				do_action( 'wpcm_vehicle_summary', $vehicle );
+				?>
+			</div>
+			<div cclass="wpcm-summary wpcm-col-2">
+				<?php 
+				do_action( 'wpcm_vehicle_summary_contact', $vehicle ); /*by Reteck */
 				?>
 			</div>
 

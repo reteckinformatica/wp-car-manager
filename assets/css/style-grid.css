@@ -56,7 +56,12 @@
     float: left;
     width: 50%;
     padding: 5px;
-    background-color: #ff0000;
+  }
+  .wpcm-col-3{
+    position: relative;
+    float: left;
+    width: 33.3333%;
+    padding: 5px;    
   }
   .wpcm-col-4{
     position: relative;
@@ -81,7 +86,12 @@
     float: left;
     width: 50%;
     padding: 5px;
-    background-color: #ff0000;
+  }
+  .wpcm-col-3{
+    position: relative;
+    float: left;
+    width: 33.3333%;
+    padding: 5px;    
   }
   .wpcm-col-4{
     position: relative;

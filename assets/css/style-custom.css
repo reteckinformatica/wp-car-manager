@@ -20,7 +20,7 @@
 .single .thumbnail{
   display: none !important;
 }
-.wpcm-vehicle-filters{
+.wpcm-rtk-vehicle-filters{
   padding: 30px 25px 30px 25px!important;
 }
 .wpcm-vehicle-listings .wpcm-vehicle-sort {
@@ -172,5 +172,13 @@
 }
 
 .wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results {
-  padding: 0px 25px 0 25px !important;
+  padding:0 !important;
 }
+/*STYLE BY CORRECEL DE IMAGENS*/
+.carousel {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+
+

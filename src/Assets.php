@@ -32,6 +32,28 @@ abstract class Assets {
 			array(),
 			wp_car_manager()->get_version()
 		);
+		// frontend CSS custom By Reteck
+		wp_enqueue_style(
+			'wpcm_css_frontend_slick',
+			wp_car_manager()->service( 'file' )->plugin_url( '/assets/css/slick.css' ),
+			array(),
+			wp_car_manager()->get_version()
+		);
+		// By Reteck
+		wp_enqueue_script(
+			'wpcm_js_slick',
+			wp_car_manager()->service( 'file' )->plugin_url( '/assets/js/slick.min.js' ),
+			array(),
+			wp_car_manager()->get_version(),
+			true			
+		);
+		// By Reteck
+		wp_enqueue_script(
+			'wpcm_js_slick_min',
+			wp_car_manager()->service( 'file' )->plugin_url( '/assets/js/jquery-2-2-0.js' ),
+			array(),
+			wp_car_manager()->get_version()			
+		);
 		// load vehicle singular assets
 		if ( is_singular( Vehicle\PostType::VEHICLE ) ) {
 
@@ -114,7 +136,6 @@ abstract class Assets {
 			wp_car_manager()->get_version(),
 			true
 		);
-
 		// enqueue dropzone script
 		wp_enqueue_script(
 			'wpcm_js_dropzone',

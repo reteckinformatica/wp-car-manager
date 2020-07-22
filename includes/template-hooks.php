@@ -30,7 +30,7 @@ add_action( 'wpcm_vehicle_thumbnails', 'wpcm_template_vehicle_thumbnails', 20 );
  * @see wpcm_template_single_contact()
  */
 add_action( 'wpcm_vehicle_summary', 'wpcm_template_single_summary_data', 20 );
-add_action( 'wpcm_vehicle_summary', 'wpcm_template_single_contact', 30 );
+
 
 
 
@@ -40,7 +40,7 @@ add_action( 'wpcm_vehicle_summary', 'wpcm_template_single_contact', 30 );
 *
 */
 add_action( 'wpcm_vehicle_summary_price', 'wpcm_template_single_price', 10 );
-
+add_action( 'wpcm_vehicle_summary_contact', 'wpcm_template_single_contact', 30 );
 
 /**
  * Vehicle Content Box
