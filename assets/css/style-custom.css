@@ -6,7 +6,9 @@
 /*RESET CONTAINER DO TEMA*/
 .content-area{
 	width:100% !important;
-	border:none !important;
+  border:none !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 #right-sidebar{
 	display:none !important;
@@ -219,12 +221,13 @@
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /*TITLE PAGE SIMGLE VEHICLE*/
 .wpcm-rtk-header{
+
+}
+.wpcm-rtk-header h1{
   background-color: #fff;
   border-radius: 5px;
   padding: 15px;
   margin-bottom: 6px;
-}
-.wpcm-rtk-header h1{
   text-transform: uppercase;
   font-size: 30px;
   font-weight: 700;
@@ -256,3 +259,10 @@
   padding: 15px;
 }
 /*TABLE*/
+
+/*CONTATO*/
+.wpcm-rtk-whatsapp{
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

@@ -35,7 +35,16 @@ do_action( 'wpcm_before_single_vehicle', $vehicle );
 					*
 					* @hooked wpcm_template_single_data
 					*/
-					do_action( 'wpcm_vehicle_content', $vehicle );
+					//do_action( 'wpcm_vehicle_content', $vehicle );
+					?>					
+				</div>
+				<div class="wpcm-rtk-itens-vehicle">
+					<?php 
+					/**
+					* Itens de veículo
+					* @hooked wpcm_vehicle_content_features - 30
+					*/
+					do_action( 'wpcm_vehicle_content_features', $vehicle ); 
 					?>
 				</div>
 			</div>
@@ -54,7 +63,6 @@ do_action( 'wpcm_before_single_vehicle', $vehicle );
 			/**
 			 * wpcm_after_vehicle_summary hook
 			 */
-			//do_action( 'wpcm_after_vehicle_summary', $vehicle );
 			?>
 		</div>
 
@@ -63,10 +71,13 @@ do_action( 'wpcm_before_single_vehicle', $vehicle );
 			/**
 			 * vehicle_single_vehicle_summary hook
 			 *
+			 * Descrição
+			 *
 			 * @hooked wpcm_template_single_data - 10
 			 * @hooked wpcm_template_single_content - 20
 			 * @hooked wpcm_template_single_features - 30
 			 */
+			do_action( 'wpcm_vehicle_content', $vehicle );
 			do_action('wpcm_vehicle_content_content', $vehicle);
 			?>
 		</div>
