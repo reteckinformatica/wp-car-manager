@@ -175,10 +175,41 @@
   padding:0 !important;
 }
 /*STYLE BY CORRECEL DE IMAGENS*/
-.carousel {
-  width: 1000px;
-  margin: 0 auto;
+.wpcm-rtk-wrap-images{
+  background-color: blanchedalmond;
+  overflow: hidden;
 }
-
-
-
+.slick-slide {
+  width: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px #284370;
+}
+.slick-prev-1{ 
+  position: absolute;
+  top: 40%;
+  left: 2rem;
+  background-color: #284370;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50px;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 800;
+}
+.slick-next-1{
+  position: absolute;
+  top: 40%;
+  right: 2rem;
+  background-color: #284370;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50px;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 800;
+}

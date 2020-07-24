@@ -19,7 +19,7 @@
 
 	if ( count( $attachment_ids ) > 0 ):
 		?>
-		<div class="wpcm-form-images-current">
+		<<div class="wpcm-form-images-current">
 			<h3><?php _e( 'Current Images', 'wp-car-manager' ); ?></h3>
 			<ul>
 				<?php foreach ( $attachment_ids as $attachment_id ) : ?>
