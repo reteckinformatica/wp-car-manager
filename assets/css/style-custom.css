@@ -232,7 +232,12 @@
   font-size: 30px;
   font-weight: 700;
 }
-.wpcm-rtk-detalhes{
+.wpcm-rtk-itens-vehicle{
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 15px;
+}
+.wpcm-rtk-decription{
   background-color: #fff;
   border-radius: 5px;
   padding: 15px;
@@ -257,6 +262,7 @@
   background-color: #fff;
   border-radius: 5px;
   padding: 15px;
+  overflow: hidden;
 }
 /*TABLE*/
 
