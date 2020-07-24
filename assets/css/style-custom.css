@@ -78,6 +78,7 @@
 }
 .entry-header h2{/*page single vehicle*/
   text-transform: uppercase !important;
+  display: none !important;
 }
 
 .wpcm-listings-item-description h3{
@@ -212,4 +213,21 @@
   color: #ffffff;
   cursor: pointer;
   z-index: 800;
+}
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*TITLE PAGE SIMGLE VEHICLE*/
+.wpcm-rtk-header{
+  background-color: burlywood;
+}
+.wpcm-summary{
+  background-color: crimson;
+}
+.wpcm-contact{
+  background-color: burlywood;
+}
+.wpcm-summary-data{
+  background-color: burlywood;
+}
+.wpcm-vehicle-content{
+  background-color: cadetblue;
 }

@@ -19,10 +19,16 @@ do_action( 'wpcm_before_single_vehicle', $vehicle );
 			 * @hooked wpcm_show_vehicle_images - 10
 			 */
 			do_action( 'wpcm_before_vehicle_summary', $vehicle );
-			do_action( 'wpcm_vehicle_summary_price', $vehicle ); /*by Reteck */
+			//do_action( 'wpcm_vehicle_summary_price', $vehicle ); /*by Reteck */
 			?>
 
 			<div class="wpcm-summary wpcm-col-2">
+				<div class="wpcm-rtk-header"> 
+					<h1>
+						<?php echo  $vehicle->get_title(); ?> 
+						<span><?php echo "R$ " . number_format($vehicle->get_price(), 2, ',', '.') ; ?></span>
+					</h1>
+				</div>						
 				<?php
 				/**
 				 * wpcm_vehicle_summary hook
@@ -31,10 +37,10 @@ do_action( 'wpcm_before_single_vehicle', $vehicle );
 				 * @hooked wpcm_template_single_summary_data - 20
 				 * @hooked wpcm_template_single_contact - 30
 				 */				
-				do_action( 'wpcm_vehicle_summary', $vehicle );
+				//do_action( 'wpcm_vehicle_summary', $vehicle );
 				?>
 			</div>
-			<div cclass="wpcm-summary wpcm-col-2">
+			<div class="wpcm-summary wpcm-col-2">
 				<?php 
 				do_action( 'wpcm_vehicle_summary_contact', $vehicle ); /*by Reteck */
 				?>
@@ -48,7 +54,7 @@ do_action( 'wpcm_before_single_vehicle', $vehicle );
 			?>
 		</div>
 
-		<div class="wpcm-vehicle-content entry-content">
+		<div class="wpcm-vehicle-content entry-content wpcm-col-1">
 			<?php
 			/**
 			 * vehicle_single_vehicle_summary hook
