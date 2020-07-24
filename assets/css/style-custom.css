@@ -177,20 +177,22 @@
 }
 /*STYLE BY CORRECEL DE IMAGENS*/
 .wpcm-rtk-wrap-images{
-  background-color: blanchedalmond;
   overflow: hidden;
+  padding-bottom: 15px;
+  margin-bottom: 5px;
+  border-bottom: 2px solid #f2f4f6;
 }
 .slick-slide {
   width: 100%;
   margin-left: 10px;
   margin-right: 10px;
-  border: 1px #284370;
+  border: 1px #244e9e;
 }
 .slick-prev-1{ 
   position: absolute;
   top: 40%;
   left: 2rem;
-  background-color: #284370;
+  background-color: #244e9e;
   width: 50px;
   height: 50px;
   text-align: center;
@@ -204,7 +206,7 @@
   position: absolute;
   top: 40%;
   right: 2rem;
-  background-color: #284370;
+  background-color: #244e9e;
   width: 50px;
   height: 50px;
   text-align: center;
@@ -217,17 +219,40 @@
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /*TITLE PAGE SIMGLE VEHICLE*/
 .wpcm-rtk-header{
-  background-color: burlywood;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 6px;
 }
-.wpcm-summary{
-  background-color: crimson;
+.wpcm-rtk-header h1{
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 700;
+}
+.wpcm-rtk-detalhes{
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 15px;
+}
+.wpcm-rtk-price{
+
+}
+.wpcm-rtk-price span{
+  font-size: 30px;
+  font-weight: 800;
+  color: #000000;
 }
 .wpcm-contact{
-  background-color: burlywood;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 15px;
 }
 .wpcm-summary-data{
-  background-color: burlywood;
+  background-color: aqua;
 }
 .wpcm-vehicle-content{
-  background-color: cadetblue;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 15px;
 }
+/*TABLE*/

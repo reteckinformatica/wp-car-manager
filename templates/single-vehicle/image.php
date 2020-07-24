@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
   prevArrow: '<div class="slick-prev-1"><i class="fa fa-angle-left" aria-hidden="true"></i></div>',
   nextArrow: '<div class="slick-next-1"><i class="fa fa-angle-right" aria-hidden="true"></i></div>',
   centerPadding: '60px',
-  slidesToShow: 2,
+  slidesToShow: 3,
   responsive: [
     {
       breakpoint: 768,

@@ -5,7 +5,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 <div class="wpcm-contact">
-
+	<div class="wpcm-rtk-price">
+		<span><?php echo "R$ " . number_format($vehicle->get_price(), 2, ',', '.') ; ?></span>
+	</div>
 	<?php
 	if ( '' != $email && apply_filters( 'wpcm_contact_email_link', true ) ) :
 		?>
