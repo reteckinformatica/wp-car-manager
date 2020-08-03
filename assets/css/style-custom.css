@@ -7,8 +7,8 @@
 .content-area{
 	width:100% !important;
   border:none !important;
-  padding: 0 !important;
   margin: 0 !important;
+  padding: 0 !important;
 }
 #right-sidebar{
 	display:none !important;
@@ -25,9 +25,6 @@
 .wpcm-rtk-vehicle-filters{
   padding: 30px 25px 30px 25px!important;
 }
-.wpcm-vehicle-listings .wpcm-vehicle-sort {
-  color: #000000;
-}
 #wpcm-sort{
   width: 400px;
   
@@ -37,15 +34,62 @@
   color: #000000;
 }
 .wpcm-vehicle-listings .wpcm-vehicle-sort{
+  background-color: #415a3a;
   color: #ECECEC;
   font-size: 25px !important;
 }
 /*====================================================================*/
 /*STYLE SIMGLE VEHICLES*/
+.wpcm-rtk-box{
+  background-color: #fff;
+  box-shadow: 0 2px 9px 0 rgba(158,184,209,.41);
+  -webkit-box-shadow: 0 2px 9px 0 rgba(158,184,209,.41);  
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 10px;
+  overflow: hidden;
+}
 .wpcm-images{
   background-color: #c0ffd2;
 }
+.wpcm-rtk-detalhes-vehicle{
 
+}
+.wpcm-rtk-itens-vehicle{
+  background-color: #2e2d37;
+  color: #fff;
+}
+.wpcm-rtk-itens-vehicle h2{
+  color: #fff;
+}
+.wpcm-rtk-decription{
+  text-align: justify;
+}
+.wpcm-rtk-header{
+  padding-left: 2%;
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
+.wpcm-rtk-header h2{
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #0f0f0f;
+  width: 13.5em; 
+  word-wrap: break-word;
+  margin: 0;
+  line-height: 4rem;
+}
+.wpcm-rtk-header span{
+  font-size: 3.5em;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+  line-height: 7rem;
+}
+.wpcm-rtk-header span i{
+  color: #000000;
+  font-style: normal;
+}
 
 /*====================================================================*/
 /*STYLE GRID VEHICLES*/
@@ -186,89 +230,38 @@
 }
 .slick-slide {
   width: 100%;
-  margin-left: 10px;
-  margin-right: 10px;
-  border: 1px #244e9e;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.slick-prev-next{
+  background-color: #415a3a;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 60px;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 800;
+  position: absolute;
+  top: 40%;  
+}
+.slick-prev-next:hover{
+  background-color: #375030;
 }
 .slick-prev-1{ 
-  position: absolute;
-  top: 40%;
   left: 2rem;
-  background-color: #244e9e;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  line-height: 50px;
-  border-radius: 50px;
-  color: #ffffff;
-  cursor: pointer;
-  z-index: 800;
 }
 .slick-next-1{
-  position: absolute;
-  top: 40%;
   right: 2rem;
-  background-color: #244e9e;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  line-height: 50px;
-  border-radius: 50px;
-  color: #ffffff;
-  cursor: pointer;
-  z-index: 800;
 }
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /*TITLE PAGE SIMGLE VEHICLE*/
-.wpcm-rtk-header{
 
-}
-.wpcm-rtk-header h1{
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 15px;
-  margin-bottom: 6px;
-  text-transform: uppercase;
-  font-size: 30px;
-  font-weight: 700;
-}
-.wpcm-rtk-itens-vehicle{
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 15px;
-}
-.wpcm-rtk-decription{
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 15px;
-}
-.wpcm-rtk-price{
-
-}
-.wpcm-rtk-price span{
-  font-size: 30px;
-  font-weight: 800;
-  color: #000000;
-}
-.wpcm-contact{
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 15px;
-}
-.wpcm-summary-data{
-  background-color: aqua;
-}
-.wpcm-vehicle-content{
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 15px;
+/*GARERIA*/
+.wpcm-wrap-galeria{
   overflow: hidden;
 }
-/*TABLE*/
-
-/*CONTATO*/
-.wpcm-rtk-whatsapp{
-  width: 100%;
-  margin-top: 10px;
-  margin-bottom: 10px;
+.slick-slide{
+  margin: 0 !important;
 }

@@ -13,8 +13,13 @@
   margin-right: auto;
   padding: 0;
 }
+.wpcm-rtk-wrap{
+  padding-left: 5px;
+  padding-right: 5px;
+}
 .wpcm-wrapper{
- 
+  width: 100%;
+  overflow: hidden;
 }
 /*linha*/
 .wpcm-row{
@@ -23,69 +28,92 @@
 }
 .wpcm-row:before, .wpcm-row:after{
   content: "";
-  display: table;;
+  display: table;
 }
 .wpcm-row:after{
   clear: both;
 }
 /*Mobile*/
-@media screen and (max-width: 539px) and (min-width: 0px) {
-  .wpcm-rtk-sidebar{
-    position: relative;
-    float: left;
-    width: 100%;
-    padding: 6px;
+@media screen and (max-width: 768px) and (min-width: 0px) {
+  .wpcm-row{    
+    display: flex;
+    flex-wrap: wrap;
   }
-  .wpcm-rtk-section{
-    position: relative;
-    float: left;
-    width: 100%;
-    padding: 6px;
-  }  
   .wpcm-mb-col-2{
     position: relative;
     float: left;
     width: 50%;
     padding: 6px;
   }
-}
-/*Tablet*/
-@media screen and (max-width: 720px) and (min-width: 540px) {
-  .wpcm-rtk-sidebar{
+  .wpcm-rtk-col-4{
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 6px;
+    flex: 1;    
+  }
+  .wpcm-rtk-col-8{
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 6px;
+    flex: 2;
+  }
+  .wpcm-rtk-col-12{
     position: relative;
     float: left;
     width: 100%;
     padding: 6px;
   }
-  .wpcm-rtk-section{
-    position: relative;
-    float: left;
-    width: 100%;
-    padding: 6px;
-  }  
+}
+/*Tablet*/
+@media screen and (max-width: 960px) and (min-width: 767px) {
+  .wpcm-row{    
+    display: block;
+  }
   .wpcm-sm-col-3{
     position: relative;
     float: left;
     width: 33.3333%;
     padding: 6px;
   }
+  .wpcm-rtk-col-4{
+    position: relative;
+    float: left;
+    width: 40%;
+    padding: 6px;
+  }
+  .wpcm-rtk-col-8{
+    position: relative;
+    float: left;
+    width: 60%;
+    padding: 6px;
+  }
+  .wpcm-rtk-col-12{
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 6px;
+  }  
   .wpcm-vehicle-listings .wpcm-vehicle-filters .wpcm-filter {
     width: 50% !important;
   }
 }
 /*Desktop*/
-@media screen and (max-width: 1024px) and (min-width: 721px) {
-  .wpcm-rtk-sidebar{
-    position: relative;
-    float: left;
-    width: 35%;
-    padding: 6px;
-  }
+@media screen and (max-width: 1024px) and (min-width: 960px) {
   .wpcm-rtk-section{
+    background-color: #fff;
     position: relative;
     float: left;
     width: 65%;
-    padding: 6px;
+    padding: 5px;
+  }
+  .wpcm-rtk-sidebar{
+    background-color: #fff;
+    position: relative;
+    float: left;
+    width: 35%;
+    padding: 5px;
   }
   .wpcm-col-2{
     position: relative;
@@ -111,24 +139,36 @@
     width: 20%;
     padding: 5px;
   }
+  .wpcm-rtk-col-4{
+    position: relative;
+    float: left;
+    width: 40%;
+    padding: 6px;
+  }
+  .wpcm-rtk-col-6{
+    position: relative;
+    float: left;
+    width: 50%;
+    padding: 6px;
+  }
+  .wpcm-rtk-col-8{
+    position: relative;
+    float: left;
+    width: 60%;
+    padding: 6px;
+  }
+  .wpcm-rtk-col-12{
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 6px;
+  }  
   .wpcm-vehicle-listings .wpcm-vehicle-filters .wpcm-filter {
     width: 25% !important;
   }
 }
 /*Desktop*/
 @media screen and (min-width: 1025px) {
-  .wpcm-rtk-sidebar{
-    position: relative;
-    float: left;
-    width: 35%;
-    padding: 6px;
-  }
-  .wpcm-rtk-section{
-    position: relative;
-    float: left;
-    width: 65%;
-    padding: 6px;
-  }
   .wpcm-col-2{
     position: relative;
     float: left;
@@ -165,5 +205,30 @@
     width: 14.2857%;
     padding: 5px;
   }
+  .wpcm-rtk-col-4{
+    position: relative;
+    float: left;
+    width: 35%;
+    padding: 6px;
+  }
+  .wpcm-rtk-col-6{
+    position: relative;
+    float: left;
+    width: 50%;
+    padding: 6px;
+  }
+  .wpcm-rtk-col-8{
+    position: relative;
+    float: left;
+    width: 65%;
+    padding: 6px;
+  }
+  .wpcm-rtk-col-12{
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 6px;
+    margin-top:10px;
+    margin-bottom: 10px;
+  }
 }
-/*TV ?*/

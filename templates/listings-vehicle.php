@@ -4,8 +4,6 @@
  * wpcm_before_listings_vehicle hook
  */
 do_action( 'wpcm_before_listings' );
-
-
 ?>
 	<div class="wpcm-vehicle-listings"<?php echo $data_atts; ?>>
 
@@ -43,7 +41,7 @@ do_action( 'wpcm_before_listings' );
 
 		<?php do_action( 'wpcm_before_listings_results' ); ?>
 
-		<div class="wpcm-vehicle-results-wrapper wpcm-container">
+		<div class="wpcm-vehicle-results-wrapper wpcm-container wpcm-rtk-wrap">
 			<?php
 			/**
 			 * wpcm_listings_vehicle_results hook
