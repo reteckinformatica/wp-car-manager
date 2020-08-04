@@ -5,6 +5,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 <div class="wpcm-contact">
+	<div>
+		<form>
+			<input type="text"/>
+			<input type="text"/>
+			<input type="text"/>
+			<input type="text"/>
+			<input type="submit"/>
+		</form>
+	</div>
 	<div class="wpcm-rtk-whatsapp">
 		<?php
 		if ( '' !== $phone_number && apply_filters( 'wpcm_contact_phone_link', true ) ) :

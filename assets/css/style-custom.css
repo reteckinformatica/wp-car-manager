@@ -49,9 +49,7 @@
   padding: 10px;
   overflow: hidden;
 }
-.wpcm-images{
-  background-color: #c0ffd2;
-}
+
 .wpcm-rtk-detalhes-vehicle{
 
 }
@@ -149,8 +147,6 @@
   font-weight: 700;
 }
 
-
-
 .wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a .wpcm-listings-item-image-wrapper{
   position: relative !important;
 }
@@ -181,51 +177,10 @@
   padding-left: 0;
   text-align: center;
 }
-
-
-@media (max-width: 992px) {
-  .wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a .wpcm-listings-item-meta {
-      /*padding: 0 0 0 135px !important;*/
-  }
-}
-
-
-/*End custom css frontend listings vehicles*/
-
-.wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item.wpcm-listings-item-featured a{
-  background-color: #c0ffd2 !important;
-}
-.wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item.wpcm-listings-item-featured a:hover{
-
-}
-
-.select2-container--default .select2-selection--single .select2-selection__arrow{
-  height: 50px !important;
-}
-.select2-container--default .select2-selection--single .select2-selection__arrow b {
-  border-color: #fff transparent transparent !important;
-}
-.wpcm-vehicle-listings .wpcm-vehicle-filters .wpcm-filter-button{
-  padding-top: 5px !important;
-}
-.wpcm-vehicle-listings .wpcm-vehicle-filters .wpcm-filter-button input{
-  background-color: #000000 !important;
-  padding: 15px !important;
-  line-height: inherit;
-}
-
-@media (min-width: 992px){
-  .wpcm-vehicle-listings .wpcm-vehicle-filters .wpcm-filter-make, .wpcm-vehicle-listings .wpcm-vehicle-filters .wpcm-filter-model {
-      width: 16.6666% !important;
-  }
-  .wpcm-vehicle-listings .wpcm-vehicle-filters .wpcm-filter {
-      width: 16.6666% !important;
-  }
-}
-
 .wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results {
   padding:0 !important;
 }
+/*====================================================================*/
 /*STYLE BY CORRECEL DE IMAGENS*/
 .slider-imagens-vehicles{
   width: 100%;
@@ -249,11 +204,10 @@
   cursor: pointer;
   z-index: 800;
   position: absolute;
-  top: 40%;  
+  top: 40%;
+  line-height: 60px;  
 }
-.slick-prev-next i{
-  font-size: 23px;
-  line-height: 60px;    
+.slick-prev-next i{  
   color: #ffffff;
 }
 .slick-prev-next:hover{
@@ -265,17 +219,31 @@
 .wpcm-rtk-left{
   left: 2rem;
 }
-/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-/*TITLE PAGE SIMGLE VEHICLE*/
-
-/*GARERIA*/
 .wpcm-wrap-galeria{
   overflow: hidden;
 }
 .slick-slide{
   margin: 0 !important;
 }
+/*====================================================================*/
+/*TITLE PAGE SIMGLE VEHICLE*/
 .wpcm-vehicle-data span{
   color: #56a541;
   font-weight: 700;
 }
+/*====================================================================*/
+/*DASHBOARD*/
+.wpcm-dashboard-button{
+  background-color: #415a3a !important;
+}
+.wpcm-dashboard-button:hover{
+  background-color: #4b7041 !important;
+}
+.wpcm-button{
+  background-color: #415a3a !important;
+  margin-left: 15px;
+}
+.wpcm-button:hover{
+  background-color: #415a3a !important;
+}
+
