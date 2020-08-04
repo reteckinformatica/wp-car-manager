@@ -221,6 +221,7 @@ final class Plugin extends Pimple\Container {
 
 			// assets
 			add_action( 'wp_enqueue_scripts', array( 'Never5\\WPCarManager\\Assets', 'enqueue_frontend' ) );
+			add_action( 'wp_enqueue_scripts', array( 'Never5\\WPCarManager\\Assets', 'enqueue_body_scripts' ) );
 
 			// setup shortcode
 			add_action( 'init', function () use ( $container ) {

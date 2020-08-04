@@ -127,18 +127,6 @@ add_action( 'wpcm_dashboard_profile', 'wpcm_template_dashboard_profile_title', 9
  * Vehicle Dashboard Profile
  */
 add_action( 'wpcm_dashboard_profile', 'wpcm_template_dashboard_profile', 10 );
-
-/**
-* By Reteck
-*/
-
-
-
-//add_shortcode('wpcm_teste_0002','wpcm_teste_0001');
-
-
-
-
 /**
  * Vehicle Dashboard Results Title
  */

@@ -59,6 +59,11 @@
   background-color: #2e2d37;
   color: #fff;
 }
+.wpcm-rtk-itens-vehicle ul li{
+  list-style-type: none;
+  text-decoration: none;
+  color: #56a541;
+}
 .wpcm-rtk-itens-vehicle h2{
   color: #fff;
 }
@@ -222,38 +227,43 @@
   padding:0 !important;
 }
 /*STYLE BY CORRECEL DE IMAGENS*/
-.wpcm-rtk-wrap-images{
-  overflow: hidden;
-  padding-bottom: 15px;
-  margin-bottom: 5px;
-  border-bottom: 2px solid #f2f4f6;
-}
-.slick-slide {
+.slider-imagens-vehicles{
   width: 100%;
-  margin-left: 0px;
-  margin-right: 0px;
+  height: 100%;
+  overflow: hidden;
+  margin-bottom: 10px;
 }
 .slick-prev-next{
-  background-color: #415a3a;
+  background: rgba(98,125,77,1);
+  background: -moz-linear-gradient(-45deg, rgba(98,125,77,1) 0%, rgba(31,59,8,1) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(98,125,77,1)), color-stop(100%, rgba(31,59,8,1)));
+  background: -webkit-linear-gradient(-45deg, rgba(98,125,77,1) 0%, rgba(31,59,8,1) 100%);
+  background: -o-linear-gradient(-45deg, rgba(98,125,77,1) 0%, rgba(31,59,8,1) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(98,125,77,1) 0%, rgba(31,59,8,1) 100%);
+  background: linear-gradient(135deg, rgba(98,125,77,1) 0%, rgba(31,59,8,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#627d4d', endColorstr='#1f3b08', GradientType=1 );
+  border-radius: 50%;
   width: 60px;
   height: 60px;
   text-align: center;
-  line-height: 60px;
-  border-radius: 60px;
-  color: #ffffff;
   cursor: pointer;
   z-index: 800;
   position: absolute;
   top: 40%;  
 }
+.slick-prev-next i{
+  font-size: 23px;
+  line-height: 60px;    
+  color: #ffffff;
+}
 .slick-prev-next:hover{
-  background-color: #375030;
+  background-color: #429c28;
 }
-.slick-prev-1{ 
-  left: 2rem;
-}
-.slick-next-1{
+.wpcm-rtk-right{
   right: 2rem;
+}
+.wpcm-rtk-left{
+  left: 2rem;
 }
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /*TITLE PAGE SIMGLE VEHICLE*/
@@ -264,4 +274,8 @@
 }
 .slick-slide{
   margin: 0 !important;
+}
+.wpcm-vehicle-data span{
+  color: #56a541;
+  font-weight: 700;
 }

@@ -35,6 +35,15 @@
 }
 /*Mobile*/
 @media screen and (max-width: 768px) and (min-width: 0px) {
+  .slick-prev-next{
+    width: 40px !important;
+    height: 40px !important;
+    line-height: 40px !important;
+    border-radius: 40px !important;
+  }
+
+
+
   .wpcm-row{    
     display: flex;
     flex-wrap: wrap;
@@ -68,6 +77,12 @@
 }
 /*Tablet*/
 @media screen and (max-width: 960px) and (min-width: 767px) {
+  .slick-prev-next{
+    width: 45px !important;
+    height: 45px !important;
+    line-height: 45px !important;
+    border-radius: 45px !important;
+  }
   .wpcm-row{    
     display: block;
   }
@@ -101,6 +116,12 @@
 }
 /*Desktop*/
 @media screen and (max-width: 1024px) and (min-width: 960px) {
+  .slick-prev-next{
+    width: 50px !important;
+    height: 50px !important;
+    line-height: 50px !important;
+    border-radius: 50px !important;
+  }
   .wpcm-rtk-section{
     background-color: #fff;
     position: relative;

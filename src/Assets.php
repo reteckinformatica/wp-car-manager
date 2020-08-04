@@ -5,7 +5,6 @@ namespace Never5\WPCarManager;
 abstract class Assets {
 
 	private static $shortcode_assets_enqueued = array();
-
 	/**
 	 * Enqueue frontend assets
 	 */
@@ -45,7 +44,7 @@ abstract class Assets {
 			wp_car_manager()->service( 'file' )->plugin_url( '/assets/css/slick-theme.css' ),
 			array(),
 			wp_car_manager()->get_version()
-		);		
+		);	
 		// load vehicle singular assets
 		if ( is_singular( Vehicle\PostType::VEHICLE ) ) {
 
@@ -62,6 +61,32 @@ abstract class Assets {
 		}
 
 	}
+	/**
+	* By Reteck
+	* Enqueue body scripts
+	*
+	*/
+
+	public static function enqueue_body_scripts(){
+		wp_enqueue_script(
+			'wpcm_js_jquery_1_11_0_min',
+			wp_car_manager()->service( 'file' )->plugin_url( '/assets/js/jquery-1.11.0.min.js' ),
+			array(),
+			wp_car_manager()->get_version()
+		);			
+		wp_enqueue_script(
+			'wpcm_js_jquery_migrate_1_2_1_min',
+			wp_car_manager()->service( 'file' )->plugin_url( '/assets/js/jquery-migrate-1.2.1.min.js' ),
+			array(),
+			wp_car_manager()->get_version()
+		);	
+		wp_enqueue_script(
+			'wpcm_js_slick_min',
+			wp_car_manager()->service( 'file' )->plugin_url( '/assets/js/slick.min.js' ),
+			array(),
+			wp_car_manager()->get_version()
+		);	
+	}	
 
 	/**
 	 * Enqueue shortcode related Js
