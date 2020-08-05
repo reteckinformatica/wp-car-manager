@@ -246,7 +246,7 @@ class Settings {
 			'account_username'      => '1',
 			'account_role'          => 'car_seller',
 			'moderate_new_listings' => '1',
-			'listing_duration'      => '30',
+			'listing_duration'      => '', //By update Reteck
 			'page_submit'           => 0,
 			'page_dashboard'        => 0,
 			'page_listings'         => 0,

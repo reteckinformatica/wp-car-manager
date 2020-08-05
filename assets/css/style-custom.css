@@ -34,7 +34,7 @@
   color: #000000;
 }
 .wpcm-vehicle-listings .wpcm-vehicle-sort{
-  background-color: #415a3a;
+  background-color: #244e9e;
   color: #ECECEC;
   font-size: 25px !important;
 }
@@ -54,13 +54,26 @@
 
 }
 .wpcm-rtk-itens-vehicle{
-  background-color: #2e2d37;
+  background-color: #244e9e;
   color: #fff;
+}
+.wpcm-rtk-itens-vehicle ul{
+  margin: 0;
+  text-align: justify;
 }
 .wpcm-rtk-itens-vehicle ul li{
   list-style-type: none;
   text-decoration: none;
-  color: #56a541;
+  color: #ffffff;
+  float: left;
+  padding: 5px 10px;
+  margin: 5px;
+  width: auto;
+  border-radius: 5px;
+}
+.wpcm-rtk-itens-vehicle ul li:hover{
+  background-color: #1c3a72;
+  cursor: pointer;
 }
 .wpcm-rtk-itens-vehicle h2{
   color: #fff;
@@ -159,7 +172,7 @@
   background-color: transparent !important;
 }
 .wpcm-title{
-  color: #284370 !important;
+  color: #244e9e !important;
 }
 .wpcm-listings-item-meta ul li{
   color: #474747 !important;
@@ -189,14 +202,7 @@
   margin-bottom: 10px;
 }
 .slick-prev-next{
-  background: rgba(98,125,77,1);
-  background: -moz-linear-gradient(-45deg, rgba(98,125,77,1) 0%, rgba(31,59,8,1) 100%);
-  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(98,125,77,1)), color-stop(100%, rgba(31,59,8,1)));
-  background: -webkit-linear-gradient(-45deg, rgba(98,125,77,1) 0%, rgba(31,59,8,1) 100%);
-  background: -o-linear-gradient(-45deg, rgba(98,125,77,1) 0%, rgba(31,59,8,1) 100%);
-  background: -ms-linear-gradient(-45deg, rgba(98,125,77,1) 0%, rgba(31,59,8,1) 100%);
-  background: linear-gradient(135deg, rgba(98,125,77,1) 0%, rgba(31,59,8,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#627d4d', endColorstr='#1f3b08', GradientType=1 );
+  background-color: #244e9e;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -211,7 +217,7 @@
   color: #ffffff;
 }
 .slick-prev-next:hover{
-  background-color: #429c28;
+  background-color: #1c3a72;
 }
 .wpcm-rtk-right{
   right: 2rem;
@@ -246,4 +252,35 @@
 .wpcm-button:hover{
   background-color: #415a3a !important;
 }
+/*====================================================================*/
+/*CONTACT PAGE SINGLE VEHICLE*/
+.wpcm-rtk-wrap-form{
 
+}
+.wpcm-rtk-form-control{
+  padding: 10px;
+  margin-bottom: 7px;
+  border-radius: 7px;
+  width: 100%; 
+}
+
+.wpcm-rtk-shared-social{
+  width: 100%;
+}
+.wpcm-rtk-shared{
+  list-style-type: none;
+  margin: 0;
+}
+.wpcm-rtk-shared li{
+  margin: 2px;
+  float: left;
+  color: #ffffff;
+  background-color: #1c3a72;
+  padding: 10px;
+  width: 32%;
+  text-align: center;
+}
+.wpcm-rtk-shared li:hover{
+  background-color: #112a57;
+  cursor: pointer;
+}

@@ -41,7 +41,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<!--Vehicle contact-->
 					<div class="wpcm-rtk-box">
 						<?php do_action( 'wpcm_vehicle_summary_contact', $vehicle );?>
-					</div>			
+					</div>
+					<div class="wpcm-rtk-box">
+						<div class="wpcm-rtk-shared-social">
+							<?php //echo the_permalink(); ?>
+							<h3>Compartilhe</h3>
+							<ul class="wpcm-rtk-shared">
+								<li>FACEBOOK</li>
+								<li>INSTAGRAM</li>
+								<li>WHATSAPP</li>
+							</ul>
+						</div>	
+					</div>				
 				</div>
 			</div>
 			<!--meta tag for ?-->
