@@ -229,8 +229,8 @@
   overflow: hidden;
 }
 .slick-slide{
-  margin-left: 5px !important;
-  margin-right: 5px !important;
+  margin-left: 4px !important;
+  margin-right: 4px !important;
 }
 /*====================================================================*/
 /*TITLE PAGE SIMGLE VEHICLE*/
@@ -241,17 +241,19 @@
 /*====================================================================*/
 /*DASHBOARD*/
 .wpcm-dashboard-button{
-  background-color: #415a3a !important;
+  background-color: #244e9e !important;
+  border-radius: 25px;
 }
 .wpcm-dashboard-button:hover{
-  background-color: #4b7041 !important;
+  background-color: #3976e6 !important;
 }
 .wpcm-button{
-  background-color: #415a3a !important;
+  background-color: #244e9e !important;
   margin-left: 15px;
+  border-radius: 25px;
 }
 .wpcm-button:hover{
-  background-color: #415a3a !important;
+  background-color: #3976e6 !important;
 }
 /*====================================================================*/
 /*CONTACT PAGE SINGLE VEHICLE*/
@@ -277,15 +279,18 @@
   float: left;
   color: #ffffff;
   background-color: #244e9e;
-  padding: 10px;
-  width: 32%;
+  padding: 9px;
+  width: 31%;
   text-align: center;
 }
 .wpcm-rtk-shared li:hover{
   background-color: #3976e6;
   cursor: pointer;
 }
-.wpcm-rtk-shared li::after{
-  background-color: #3976e6;
-  cursor: pointer;
+.wpcm-rtk-textarea{
+  resize: none;
+  max-height: 100px;
+}
+.novaAba {
+  target-new: tab ! important
 }

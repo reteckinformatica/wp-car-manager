@@ -7,22 +7,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="wpcm-contact">
 	<h3>Fale com o vendedor</h3>
 	<div class="wpcm-rtk-wrap-form">
-		<form>
-			<input class="wpcm-rtk-form-control" type="text" placeholder="Nome"/>
-			<input class="wpcm-rtk-form-control" type="text" placeholder="E-mail"/>
-			<input class="wpcm-rtk-form-control" type="text" placeholder="Telefone"/>
-			<textarea class="wpcm-rtk-form-control" placeholder="Mensagem"></textarea>
-			<input class="button" type="submit" value="ENVIAR MENSAGEM"/>
+		<form method="post" action="">
+			<input name="cli_name" class="wpcm-rtk-form-control" type="text" placeholder="Nome"/>
+			<input name="cli_email" class="wpcm-rtk-form-control" type="email" placeholder="E-mail"/>
+			<input name="cli_phone" class="wpcm-rtk-form-control" type="text" placeholder="Telefone"/>
+			<textarea name="cli_mesage" class="wpcm-rtk-form-control wpcm-rtk-textarea" placeholder="Mensagem"></textarea>
+			<button name="btn_submit_msg" class="wpcm-button" type="submit">ENVIAR MENSAGEM</button>
 		</form>
 	</div>	
-	<div class="wpcm-rtk-whatsapp">
-		<?php
-		/*
-		if ( '' !== $phone_number && apply_filters( 'wpcm_contact_phone_link', true ) ) :
-			?>
-			<a target="_blank" href="https://wa.me/<?php echo esc_attr( $phone_number ); ?>?text=Ol%C3%A1%2C%20gostaria%20de%20receber%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20seguinte%20ve%C3%ADculo%20<?php the_permalink(); ?>"
-			class="wpcm-button wpcm-contact-button"><?php _e( '✆ Fale com o vendedor', 'wp-car-manager' ); ?></a>
-		<?php endif; */?>
-	
-	</div>
+	<?php			
+		if(isset($_POST['btn_submit_msg'])){ 
+			$nome         = $_POST['cli_name'];
+			$email        = $_POST['cli_email'];
+			$cli_phone    = $_POST['cli_phone'];
+			$msgtext      = $_POST['cli_mesage'];
+			$rtk_origen   = " Esta mensagem foi envida de: " . get_site_url();
+		
+			$textzap = "Cliente: " . $nome . ", E-mail: " . $email  . ", Telefone: " . $cli_phone . ", Mensagem: " . $msgtext . "," . $rtk_origen;
+			$rtk_send_msg = str_replace(' ', '%20', str_replace(',','%0A', $textzap));
+			
+		?>
+		<script type="text/javascript">
+			window.self.location.replace("<?php echo 'https://wa.me/' . esc_attr( $phone_number ) . '?text=' . $rtk_send_msg; ?>");
+		</script>
+	<?php } ?>	
 </div>
