@@ -229,7 +229,8 @@
   overflow: hidden;
 }
 .slick-slide{
-  margin: 0 !important;
+  margin-left: 5px !important;
+  margin-right: 5px !important;
 }
 /*====================================================================*/
 /*TITLE PAGE SIMGLE VEHICLE*/
@@ -275,12 +276,16 @@
   margin: 2px;
   float: left;
   color: #ffffff;
-  background-color: #1c3a72;
+  background-color: #244e9e;
   padding: 10px;
   width: 32%;
   text-align: center;
 }
 .wpcm-rtk-shared li:hover{
-  background-color: #112a57;
+  background-color: #3976e6;
+  cursor: pointer;
+}
+.wpcm-rtk-shared li::after{
+  background-color: #3976e6;
   cursor: pointer;
 }
