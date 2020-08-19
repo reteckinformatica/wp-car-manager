@@ -5,6 +5,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 } // Exit if accessed directly
 
+do_action( 'wpcm_before_single_vehicle', $vehicle );
+
 ?>
 <div class="wpcm-vehicle" itemscope itemtype="https://schema.org/Vehicle">
 	<!--Vehicle galeria-->
@@ -47,9 +49,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 							<?php //echo the_permalink(); ?>
 							<h3>Compartilhe</h3>
 							<ul class="wpcm-rtk-shared">
-								<li>FACEBOOK</li>
-								<li>INSTAGRAM</li>
-								<li>WHATSAPP</li>
+								<li class="wpcm-button-shared"><i class="fab fa-facebook"></i></li>
+								<li class="wpcm-button-shared"><i class="fab fa-instagram"></i></li>
+								<li class="wpcm-button-shared"><i class="fab fa-whatsapp"></i></li>
 							</ul>
 						</div>	
 					</div>				
@@ -60,3 +62,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 	</div>
 </div>
+
+<?php do_action( 'wpcm_after_single_vehicle', $vehicle ); ?>

@@ -22,7 +22,7 @@
 		<label><?php _e( 'Have an account?', 'wp-car-manager' ); ?></label>
 
 		<div class="wpcm-field wpcm-account-sign-in">
-			<a class="button"
+			<a class="button wpcm-button"
 			   href="<?php echo apply_filters( 'wpcm_submit_car_form_account_login_url', wp_login_url( get_permalink() ) ); ?>"><?php _e( 'Sign in', 'wp-car-manager' ); ?></a>
 
 			<?php if ( $account_creation ) : ?>
