@@ -165,7 +165,7 @@ abstract class Assets {
 		// enqueue listings script
 		wp_enqueue_script(
 			'wpcm_js_car_submission',
-			wp_car_manager()->service( 'file' )->plugin_url( '/assets/js/car-submission' . ( ( ! SCRIPT_DEBUG ) ? '.min' : '' ) . '.js' ),
+			wp_car_manager()->service( 'file' )->plugin_url( '/assets/js/car-submission.js' ),
 			array( 'jquery', 'wpcm_js_select2', 'wpcm_js_dropzone' ),
 			wp_car_manager()->get_version(),
 			true
