@@ -116,7 +116,7 @@ jQuery(function($) {
         parallelUploads: maxFotos,
         maxFiles: maxFotos,
         maxFilesize: 20,
-        dictMaxFilesExceeded: 'Maximo de imagens atigido',
+        dictMaxFilesExceeded: 'Você não pode enviar mais arquivos.',
         acceptedFiles: "image/*",
         wpcm_response: null,
 
