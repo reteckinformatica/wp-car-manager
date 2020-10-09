@@ -146,6 +146,9 @@ class Data {
 		return apply_filters( 'wpcm_fuel_type', array(
 			'Gasolina'      => __( 'Gasolina', 'wp-car-manager' ),
 			'Etanol'        => __( 'Etanol', 'wp-car-manager' ),
+			'Elétrico'      => __( 'Elétrico', 'wp-car-manager' ),
+			'Flex'          => __( 'Etanol', 'wp-car-manager' ),
+			'Hibrido'       => __( 'Hibrido', 'wp-car-manager' ),
 			'GNV' 			=> __( 'GNV', 'wp-car-manager' ),
 			'Diesel' 		=> __( 'Diesel', 'wp-car-manager' )
 		) );
