@@ -7,12 +7,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
 * Load admin extra fields
 */
-add_action('show_user_profile', 'userMetaWPCMForm'); // editing your own profile
-add_action('edit_user_profile', 'userMetaWPCMForm'); // editing another user
-//add_action('user_new_form', 'userMetaWPCMForm'); // creating a new user
-add_action('personal_options_update', 'userMetaWPCMSave');
-add_action('edit_user_profile_update', 'userMetaWPCMSave');
-add_action('user_register', 'userMetaWPCMSave');
+add_action('show_user_profile', 'wpcm_user_meta_form'); // editing your own profile
+add_action('edit_user_profile', 'wpcm_user_meta_form'); // editing another user
+//add_action('user_new_form', 'wpcm_user_meta_form'); // creating a new user
+
+add_action('personal_options_update', 'wpcm_user_meta_save');
+add_action('edit_user_profile_update', 'wpcm_user_meta_save');
+add_action('user_register', 'wpcm_user_meta_save');
+
+add_action( 'user_profile_update_errors', 'wpcm_validate_fields_in_user_profile',10,2);
 
 
 /**

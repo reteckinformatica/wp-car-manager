@@ -7,8 +7,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  ************************ USER EXTRA FIELD ************************
  */
- if(!function_exists('userMetaWPCMForm')){
-	function userMetaWPCMForm(WP_User $user){
+ if(!function_exists('wpcm_user_meta_form')){
+	function wpcm_user_meta_form(WP_User $user){
 		?>
 		<h2>WP Car Manager</h2>
 			<table class="form-table">
@@ -43,16 +43,40 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
-if(!function_exists('userMetaWPCMSave')){
-	function userMetaWPCMSave($userId) {
+if(!function_exists('wpcm_user_meta_save')){
+	function wpcm_user_meta_save($userId) {
 		if (!current_user_can('edit_user', $userId)) {
 			return;
 		}
+
+		if ( !isset( $_POST['user_max_photos_upload'] ) || empty( $_POST['user_max_photos_upload'] ) ) {
+			return false;
+		}
 		
+		if ( !isset( $_POST['user_max_posts'] ) || empty( $_POST['user_max_posts'] ) ) {
+			return false;
+		}
+
 		update_user_meta($userId, 'userMeta_max_photos_upload', $_REQUEST['user_max_photos_upload']);
 		update_user_meta($userId, 'userMeta_max_posts', $_REQUEST['user_max_posts']);
 	}
 }	
+
+if( ! function_exists('wpcm_validate_fields_in_user_profile') ){
+	function wpcm_validate_fields_in_user_profile($errors,$is_update) {
+		if ( ! $is_update ) {
+			return true;
+		}
+	
+		if ( ! isset( $_POST['user_max_photos_upload'] ) || empty( $_POST['user_max_photos_upload'] ) ) {
+			$errors->add( 'user_max_photos_upload', '<strong>ERRO</strong>: Informe o maximo de fotos permitido para este usuário.' );
+		}
+	
+		if ( ! isset( $_POST['user_max_posts'] ) || empty( $_POST['user_max_posts'] ) ) {
+			$errors->add( 'user_max_posts', '<strong>ERRO</strong>: Informe o maximo de posts permitido para este usuário.' );
+		}
+	}
+}
 
 /**
  * SINGLE VEHICLE
