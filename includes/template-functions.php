@@ -5,6 +5,56 @@ if ( ! defined( 'ABSPATH' ) ) {
 } // Exit if accessed directly
 
 /**
+ ************************ USER EXTRA FIELD ************************
+ */
+ if(!function_exists('userMetaWPCMForm')){
+	function userMetaWPCMForm(WP_User $user){
+		?>
+		<h2>WP Car Manager</h2>
+			<table class="form-table">
+				<!--Maximo de fotos por usuário-->
+				<tr class="user-max-photos-upload-wrap">
+					<th><label for="user_max_photos_upload">Maximo de Fotos</label></th>
+					<td>
+						<input
+							type="text"
+							value="<?php echo esc_attr(get_user_meta($user->ID, 'userMeta_max_photos_upload', true)); ?>"
+							name="user_max_photos_upload"
+							id="user_max_photos_upload"
+						>
+						<p class="description">Maximo de fotos por posts</p>
+					</td>
+				</tr>
+				<!--Maximo de posts por usuários-->
+				<tr class="user-max-posts-wrap">
+					<th><label for="user_max_posts">Maximo de Posts</label></th>
+					<td>
+						<input
+							type="text"
+							value="<?php echo esc_attr(get_user_meta($user->ID, 'userMeta_max_posts', true)); ?>"
+							name="user_max_posts"
+							id="user_max_posts"
+						>
+						<p class="description">Maximo de posts permitido</p>
+					</td>
+				</tr>			
+			</table>
+		<?php	
+	}
+}
+
+if(!function_exists('userMetaWPCMSave')){
+	function userMetaWPCMSave($userId) {
+		if (!current_user_can('edit_user', $userId)) {
+			return;
+		}
+		
+		update_user_meta($userId, 'userMeta_max_photos_upload', $_REQUEST['user_max_photos_upload']);
+		update_user_meta($userId, 'userMeta_max_posts', $_REQUEST['user_max_posts']);
+	}
+}	
+
+/**
  * SINGLE VEHICLE
  */
 

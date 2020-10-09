@@ -102,16 +102,19 @@ jQuery(function($) {
     $form.find('#wpcm-submit').click(function() {
         $form.submit();
     });
-    //Update by reteck
+    // Update by reteck
     // setup dropzone
+
+    var maxFotos = document.getElementById("max_photos_upload").innerText;
+
     $('div#wpcm-car-submission-images').dropzone({
         url: wpcm.ajax_url_post_images,
         paramName: 'wpcm_images',
         autoProcessQueue: false,
         addRemoveLinks: true,
         uploadMultiple: true,
-        parallelUploads: 5,
-        maxFiles: 5,
+        parallelUploads: maxFotos,
+        maxFiles: maxFotos,
         acceptedFiles: "image/jpeg,image/png,image/gif",
         wpcm_response: null,
 

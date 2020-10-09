@@ -107,6 +107,10 @@ final class Plugin extends Pimple\Container {
 
 		if ( is_admin() ) {
 
+			// Include template functions
+			require_once( $container['file']->plugin_path() . '/includes/template-hooks.php' );
+			require_once( $container['file']->plugin_path() . '/includes/template-functions.php' );
+
 			// modify admin menu
 			add_action( 'admin_head', function () {
 				$menu = new Admin\Menu();

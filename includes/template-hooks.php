@@ -5,6 +5,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 } // Exit if accessed directly
 
 /**
+* Load admin extra fields
+*/
+add_action('show_user_profile', 'userMetaWPCMForm'); // editing your own profile
+add_action('edit_user_profile', 'userMetaWPCMForm'); // editing another user
+//add_action('user_new_form', 'userMetaWPCMForm'); // creating a new user
+add_action('personal_options_update', 'userMetaWPCMSave');
+add_action('edit_user_profile_update', 'userMetaWPCMSave');
+add_action('user_register', 'userMetaWPCMSave');
+
+
+/**
  * Before Summary Box
  *
  * @see wpcm_template_vehicle_preview_bar()
