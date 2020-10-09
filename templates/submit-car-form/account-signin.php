@@ -10,7 +10,7 @@
 			?>
 
 			<!--<a class="button wpcm-button"
-			   href="<?php echo apply_filters( 'wpcm_submit_car_form_account_logout_url', wp_logout_url( get_permalink() ) ); ?>"><?php _e( 'Sign out', 'wp-car-manager' ); ?></a>
+			   href="<?php //echo apply_filters( 'wpcm_submit_car_form_account_logout_url', wp_logout_url( get_permalink() ) ); ?>"><?php //_e( 'Sign out', 'wp-car-manager' ); ?></a>
 			-->
 		</div>
 	</fieldset>

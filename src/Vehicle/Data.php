@@ -35,7 +35,14 @@ class Data {
 				'label'    => __( 'Model', 'wp-car-manager' ),
 				'key'      => 'model',
 				'required' => true,
-			),
+			),		
+			'body_style'   => array(
+				'type'        => 'text',
+				'label'       => __( 'Versão', 'wp-car-manager' ),
+				'key'         => 'body_style',
+				'required'    => false,
+				'placeholder' => __( 'e.g.', 'wp-car-manager' ) . ' ' . __( 'A6', 'wp-car-manager' )
+			),			
 			'frdate'       => array(
 				'type'        => 'date',
 				'label'       => __( 'Ano do veiculo', 'wp-car-manager' ),
@@ -47,18 +54,19 @@ class Data {
 				'type'        => 'text',
 				'label'       => __( 'Price', 'wp-car-manager' ),
 				'key'         => 'price',
-				'required'    => false,
+				'required'    => true,
 				'placeholder' => Helper\Format::price( '29000.99', array( 'plain' => true, 'decimals' => 2 ) )
 			),
 			'mileage'      => array(
 				'type'        => 'text',
-				'label'       => __( 'Mileage', 'wp-car-manager' ),
+				'label'       => __( 'Quilometragem', 'wp-car-manager' ),
 				'key'         => 'mileage',
 				'required'    => false,
 				'placeholder' => Helper\Format::mileage( '100000' )
 			),
 			'fuel_type'    => array(
-				'type'        => 'text',
+				'type'     => 'select',
+				'options'  => self::get_fuel_type(),
 				'label'       => __( 'Fuel Type', 'wp-car-manager' ),
 				'key'         => 'fuel_type',
 				'required'    => false,
@@ -70,13 +78,6 @@ class Data {
 				'key'         => 'color',
 				'required'    => false,
 				'placeholder' => __( 'e.g.', 'wp-car-manager' ) . ' ' . __( 'Grey', 'wp-car-manager' )
-			),
-			'body_style'   => array(
-				'type'        => 'text',
-				'label'       => __( 'Body Style', 'wp-car-manager' ),
-				'key'         => 'body_style',
-				'required'    => false,
-				'placeholder' => __( 'e.g.', 'wp-car-manager' ) . ' ' . __( 'Sedan', 'wp-car-manager' )
 			),
 			'transmission' => array(
 				'type'     => 'select',
@@ -98,14 +99,14 @@ class Data {
 				'key'         => 'engine',
 				'required'    => false,
 				'placeholder' => __( 'e.g.', 'wp-car-manager' ) . ' ' . __( '2.0 TDI', 'wp-car-manager' )
-			),
+			),/*
 			'power_kw'        => array(
 				'type'        => 'text',
 				'label'       => __( 'Power kW', 'wp-car-manager' ),
 				'key'         => 'power_kw',
 				'required'    => false,
 				'placeholder' => __( 'e.g.', 'wp-car-manager' ) . ' ' . __( '125', 'wp-car-manager' )
-			),
+			),*/
 			'power_hp'        => array(
 				'type'        => 'text',
 				'label'       => __( 'Power hp', 'wp-car-manager' ),
@@ -138,6 +139,15 @@ class Data {
 			'automatic'      => __( 'Automatic', 'wp-car-manager' ),
 			'manual'         => __( 'Manual', 'wp-car-manager' ),
 			'semi-automatic' => __( 'Semi-Automatic', 'wp-car-manager' )
+		) );
+	}
+	//By Reteck
+	public static function get_fuel_type() {
+		return apply_filters( 'wpcm_fuel_type', array(
+			'Gasolina'      => __( 'Gasolina', 'wp-car-manager' ),
+			'Etanol'        => __( 'Etanol', 'wp-car-manager' ),
+			'GNV' 			=> __( 'GNV', 'wp-car-manager' ),
+			'Diesel' 		=> __( 'Diesel', 'wp-car-manager' )
 		) );
 	}
 
