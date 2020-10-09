@@ -144,13 +144,15 @@ class Data {
 	//By Reteck
 	public static function get_fuel_type() {
 		return apply_filters( 'wpcm_fuel_type', array(
-			'Gasolina'      => __( 'Gasolina', 'wp-car-manager' ),
-			'Etanol'        => __( 'Etanol', 'wp-car-manager' ),
-			'Elétrico'      => __( 'Elétrico', 'wp-car-manager' ),
-			'Flex'          => __( 'Etanol', 'wp-car-manager' ),
-			'Hibrido'       => __( 'Hibrido', 'wp-car-manager' ),
-			'GNV' 			=> __( 'GNV', 'wp-car-manager' ),
-			'Diesel' 		=> __( 'Diesel', 'wp-car-manager' )
+			'Flex'       	=> __( 'Flex', 'wp-car-manager' ),
+			'Gasolina'   	=> __( 'Gasolina', 'wp-car-manager' ),
+			'Diesel'      	=> __( 'Diesel', 'wp-car-manager' ),
+			'Álcool'        => __( 'Álcool', 'wp-car-manager' ),
+			'Híbrido'       => __( 'Híbrido', 'wp-car-manager' ),
+			'Elétrico' 		=> __( 'Elétrico', 'wp-car-manager' ),
+			'GNV e Flex' 	=> __( 'GNV e Flex', 'wp-car-manager' ),
+			'GNV e Gasolina' 	=> __( 'GNV e Gasolina', 'wp-car-manager' ),
+			'GNV e Álcool' 	=> __( 'GNV e Álcool', 'wp-car-manager' )
 		) );
 	}
 

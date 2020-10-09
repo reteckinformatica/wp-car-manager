@@ -9,7 +9,9 @@
 .wpcm-title {
     text-transform: uppercase;
 }
-
+.dz-error-message{
+    display: none;
+}
 
 /*FALTA ORGANIZAR*/
 

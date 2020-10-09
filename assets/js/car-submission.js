@@ -111,11 +111,13 @@ jQuery(function($) {
         url: wpcm.ajax_url_post_images,
         paramName: 'wpcm_images',
         autoProcessQueue: false,
-        addRemoveLinks: true,
+        addRemoveLinks: false,
         uploadMultiple: true,
         parallelUploads: maxFotos,
         maxFiles: maxFotos,
-        acceptedFiles: "image/jpeg,image/png,image/gif",
+        maxFilesize: 20,
+        dictMaxFilesExceeded: 'Maximo de imagens atigido',
+        acceptedFiles: "image/*",
         wpcm_response: null,
 
         init: function() {
@@ -177,7 +179,7 @@ jQuery(function($) {
                 });
             } else {
 
-                alert('Something went wrong while trying to delete the image.');
+                alert('Algo deu errado ao tentar excluir a imagem.');
 
                 tgt_cont.find('.wpcm-image-delete-overlay').remove();
                 tgt_cont.find('.wpcm-spinner').remove();
