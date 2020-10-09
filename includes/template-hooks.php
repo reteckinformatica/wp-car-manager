@@ -7,9 +7,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
 * Load admin extra fields
 */
+add_action('user_new_form', 'wpcm_user_meta_form'); // creating a new user
 add_action('show_user_profile', 'wpcm_user_meta_form'); // editing your own profile
 add_action('edit_user_profile', 'wpcm_user_meta_form'); // editing another user
-//add_action('user_new_form', 'wpcm_user_meta_form'); // creating a new user
 
 add_action('personal_options_update', 'wpcm_user_meta_save');
 add_action('edit_user_profile_update', 'wpcm_user_meta_save');

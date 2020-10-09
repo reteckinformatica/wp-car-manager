@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  ************************ USER EXTRA FIELD ************************
  */
  if(!function_exists('wpcm_user_meta_form')){
-	function wpcm_user_meta_form(WP_User $user){
+	function wpcm_user_meta_form($user){
 		?>
 		<h2>WP Car Manager</h2>
 			<table class="form-table">
@@ -63,10 +63,7 @@ if(!function_exists('wpcm_user_meta_save')){
 }	
 
 if( ! function_exists('wpcm_validate_fields_in_user_profile') ){
-	function wpcm_validate_fields_in_user_profile($errors,$is_update) {
-		if ( ! $is_update ) {
-			return true;
-		}
+	function wpcm_validate_fields_in_user_profile($errors) {
 	
 		if ( ! isset( $_POST['user_max_photos_upload'] ) || empty( $_POST['user_max_photos_upload'] ) ) {
 			$errors->add( 'user_max_photos_upload', '<strong>ERRO</strong>: Informe o maximo de fotos permitido para este usuário.' );
