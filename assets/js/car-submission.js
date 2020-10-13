@@ -111,7 +111,7 @@ jQuery(function($) {
         url: wpcm.ajax_url_post_images,
         paramName: 'wpcm_images',
         autoProcessQueue: false,
-        addRemoveLinks: false,
+        addRemoveLinks: true,
         uploadMultiple: true,
         parallelUploads: maxFotos,
         maxFiles: maxFotos,
