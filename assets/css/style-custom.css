@@ -81,13 +81,6 @@
     color: #000000;
 }
 
-.wpcm-vehicle-listings .wpcm-vehicle-sort {
-    background-color: #244e9e;
-    color: #ECECEC;
-    font-size: 25px !important;
-}
-
-
 /*====================================================================*/
 
 
@@ -102,8 +95,6 @@
     padding: 10px;
     overflow: hidden;
 }
-
-.wpcm-rtk-detalhes-vehicle {}
 
 .wpcm-rtk-itens-vehicle {
     background-color: #244e9e;
@@ -344,9 +335,6 @@
 
 
 /*DASHBOARD*/
-
-.wpcm-dashboard {}
-
 .wpcm-dashboard-button {
     background-color: #244e9e !important;
     border-radius: 25px;
@@ -371,9 +359,6 @@
 
 
 /*CONTACT PAGE SINGLE VEHICLE*/
-
-.wpcm-rtk-wrap-form {}
-
 .wpcm-rtk-form-control {
     padding: 10px;
     margin-bottom: 7px;
@@ -389,8 +374,6 @@
     list-style-type: none;
     margin: 0;
 }
-
-.wpcm-rtk-shared {}
 
 .wpcm-rtk-shared li:hover {
     background-color: #3976e6;
@@ -420,11 +403,6 @@
     resize: none;
     max-height: 100px;
 }
-
-.novaAba {
-    target-new: tab ! important
-}
-
 
 /*PROFILE*/
 

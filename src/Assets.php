@@ -204,7 +204,7 @@ abstract class Assets {
 		// enqueue listings script
 		wp_enqueue_script(
 			'wpcm_js_dashboard',
-			wp_car_manager()->service( 'file' )->plugin_url( '/assets/js/dashboard' . ( ( ! SCRIPT_DEBUG ) ? '.min' : '' ) . '.js' ),
+			wp_car_manager()->service( 'file' )->plugin_url( '/assets/js/dashboard.js' ),
 			array( 'jquery' ),
 			wp_car_manager()->get_version(),
 			true
