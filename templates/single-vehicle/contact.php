@@ -6,47 +6,59 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <div class="wpcm-contact">
 	<h3>Fale com o vendedor</h3>
-	<div class="wpcm-rtk-wrap-form">
-		<form method="post" action="">
-			<input name="cli_name" class="wpcm-rtk-form-control" type="text" placeholder="Nome"/>
-			<input name="cli_email" class="wpcm-rtk-form-control" type="email" placeholder="E-mail"/>
-			<input name="cli_phone" class="wpcm-rtk-form-control" type="text" placeholder="Telefone"/>
-			<textarea name="cli_mesage" class="wpcm-rtk-form-control wpcm-rtk-textarea" placeholder="Mensagem"></textarea>
-			<input id="btn_rtk" name="btn_submit_msg" class="wpcm-button" type="submit" value="ENVIAR MENSAGEM" />
-		</form>
-	</div>	
-	<?php			
-		if(isset($_POST['btn_submit_msg'])){ 
-			$nome         = $_POST['cli_name'];
-			$email        = $_POST['cli_email'];
-			$cli_phone    = $_POST['cli_phone'];
-			$msgtext      = $_POST['cli_mesage'];
-			$rtk_origen   = " Esta mensagem foi envida de: " . get_site_url();
-		
-			$textzap = "Cliente: " . $nome . ", E-mail: " . $email  . ", Telefone: " . $cli_phone . ", Mensagem: " . $msgtext . "," . $rtk_origen;
-			$rtk_send_msg = str_replace(' ', '%20', str_replace(',','%0A', $textzap));
-
-			if ( '' !== $phone_number && apply_filters( 'wpcm_contact_phone_link', true ) ) :
-			
-				$phoneset= 	esc_attr( $phone_number ); 
-		   
-			endif; 
-
-			$wpcm_url_add = "https://api.whatsapp.com/send?1=pt_BR&phone=$phoneset&text=$rtk_send_msg";
-		
-			?>
-			<script type="text/javascript">
-				var get_url_whats = "<?php echo $wpcm_url_add;?>";
-				var win = window.open(get_url_whats, "_blank");
-				if (win) {
-					//Browser has allowed it to be opened
-					win.focus();
-				} else {
-					//Browser has blocked it
-					alert('Por favor libere popups para este site!');
-				}
-			</script>
-			<?php
-	 	} 
-	 ?>	
+	<div class="wpcm-location">
+		<ul class="wpcm-location-buttons">
+			<li class="wpcm-custom-buttom" ><a href="javascript:wpcm_modal_contact_open();"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+			<li class="wpcm-custom-buttom" ><a target="_black" href="mailto:<?php echo $email; ?>" ><i class="fas fa-envelope"></i> E-mail</a></li>
+			<li class="wpcm-custom-buttom" ><a target="_black" href="<?php echo $location; ?>" ><i class="fas fa-map-marker-alt"></i> Localização</a></li>
+		</ul>		 
+	</div>
 </div>
+<!--Contact Modal-->
+<div id="id01" class="modal">
+	<div class="modal-content">
+		<span onclick="wpcm_modal_contact_close();" class="close">&times;</span>
+		<div class="w3-container">
+			<?php if( ! empty($phone_number) ):?> 
+			<div class="wpcm-rtk-modal-control">
+				<div class="wpcm-contact-telefones">
+					<?php _e( '<span><strong>Vendedor 1: </strong>' . $phone_number . '</span>', 'wp-car-manager' ); ?>
+				</div>
+				<div class="wpcm-contact-buttons">
+					<a class="wpcm-buttom-ligar" href="tel:<?php echo $phone_number; ?>"><i class="fas fa-phone"></i> LIGAR</a>
+					<a class="wpcm-buttom-whats" href="tel:<?php echo $whatsapp; ?>"><i class="fab fa-whatsapp"></i> WhatsApp</a>							
+				</div>
+			</div>
+			<?php endif; if( ! empty($phone_number2)):?>
+			<div class="wpcm-rtk-modal-control">
+				<div class="wpcm-contact-telefones">
+					<?php _e( '<span><strong>Vendedor 2: </strong>' . $phone_number2 . '</span>', 'wp-car-manager' ); ?>
+				</div>
+				<div class="wpcm-contact-buttons">
+					<a class="wpcm-buttom-ligar" href="tel:<?php echo $phone_number2; ?>"><i class="fas fa-phone"></i> LIGAR</a>
+					<a class="wpcm-buttom-whats" href="tel:<?php echo $whatsapp; ?>"><i class="fab fa-whatsapp"></i> WhatsApp</a>							
+				</div>
+			</div>
+			<?php endif; if( ! empty($phone_number3)):?>
+			<div class="wpcm-rtk-modal-control">
+				<div class="wpcm-contact-telefones">
+					<?php _e( '<span><strong>Vendedor 3: </strong>' . $phone_number3 . '</span>', 'wp-car-manager' ); ?>
+				</div>
+				<div class="wpcm-contact-buttons">
+					<a class="wpcm-buttom-ligar" href="tel:<?php echo $phone_number3; ?>"><i class="fas fa-phone"></i> LIGAR</a>
+					<a class="wpcm-buttom-whats" href="tel:<?php echo $whatsapp; ?>"><i class="fab fa-whatsapp"></i> WhatsApp</a>							
+				</div>
+			</div>
+			<?php endif; ?>
+		</div>
+	</div>
+</div>
+<!--Script teste (Remover)-->
+<script>
+	function wpcm_modal_contact_open() {
+		document.getElementById('id01').style.display='block';
+	}
+	function wpcm_modal_contact_close() {
+		document.getElementById('id01').style.display='none'
+	}
+</script>

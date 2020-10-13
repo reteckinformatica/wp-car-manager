@@ -44,9 +44,9 @@ do_action( 'wpcm_before_single_vehicle', $vehicle );
 					<div class="wpcm-rtk-box">
 						<?php do_action( 'wpcm_vehicle_summary_contact', $vehicle );?>
 					</div>
+					<!--
 					<div class="wpcm-rtk-box">
 						<div class="wpcm-rtk-shared-social">
-							<?php //echo the_permalink(); ?>
 							<h3>Compartilhe</h3>
 							<ul class="wpcm-rtk-shared">
 								<li class="wpcm-button-shared"><i class="fab fa-facebook"></i></li>
@@ -54,7 +54,8 @@ do_action( 'wpcm_before_single_vehicle', $vehicle );
 								<li class="wpcm-button-shared"><i class="fab fa-whatsapp"></i></li>
 							</ul>
 						</div>	
-					</div>				
+					</div>
+					-->				
 				</div>
 			</div>
 			<!--meta tag for ?-->

@@ -172,6 +172,15 @@ if ( ! function_exists( 'wpcm_template_single_contact' ) ) {
 
 			// get phone number
 			$phone_number = get_user_meta( $vehicle->get_author(), 'wpcm_phone', true );
+			$phone_number2 = get_user_meta( $vehicle->get_author(), 'wpcm_phone2', true );
+			$phone_number3 = get_user_meta( $vehicle->get_author(), 'wpcm_phone3', true );
+
+			//get location
+			$location = get_user_meta( $vehicle->get_author(), 'wpcm_location', true );
+
+			// get WhatsApp number
+			$whatsapp = get_user_meta( $vehicle->get_author(), 'wpcm_whatsapp', true);
+
 		} else {
 			// get email address
 			$email = wp_car_manager()->service( 'settings' )->get_option( 'contact_email' );
@@ -182,9 +191,13 @@ if ( ! function_exists( 'wpcm_template_single_contact' ) ) {
 
 		wp_car_manager()->service( 'template_manager' )->get_template_part( 'single-vehicle/contact', '',
 			array(
-				'vehicle'      => $vehicle,
-				'email'        => $email,
-				'phone_number' => $phone_number
+				'vehicle'      	=> $vehicle,
+				'email'        	=> $email,
+				'phone_number' 	=> $phone_number,
+				'phone_number2' => $phone_number2,
+				'phone_number3' => $phone_number3,
+				'location'	   	=> $location,
+				'whatsapp'	   	=> $whatsapp
 			)
 		);
 	}
