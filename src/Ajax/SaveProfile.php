@@ -81,16 +81,16 @@ class SaveProfile extends Ajax {
 				throw new SaveProfileException( 'Phone not set', 'no-phone' );
 			}
 
+			if ( ! isset( $data['whatsapp'] ) ) {
+				throw new SaveProfileException( 'WhatsApp not set', 'no-phone' );
+			}
+			
 			if ( ! isset( $data['phone2'] ) ) {
 				throw new SaveProfileException( 'Phone2 not set', 'no-phone' );
 			}
-			
+
 			if ( ! isset( $data['phone3'] ) ) {
 				throw new SaveProfileException( 'Phone3 not set', 'no-phone' );
-			}
-
-			if ( ! isset( $data['phone4'] ) ) {
-				throw new SaveProfileException( 'Phone4 not set', 'no-phone' );
 			}
 
 			/**
@@ -99,9 +99,9 @@ class SaveProfile extends Ajax {
 			$data['email'] = trim( $data['email'] );
 			$data['location'] = trim( $data['location'] );
 			$data['phone'] = trim( $data['phone'] );
+			$data['whatsapp'] = trim( $data['whatsapp'] );
 			$data['phone2'] = trim( $data['phone2'] );
 			$data['phone3'] = trim( $data['phone3'] );
-			$data['phone4'] = trim( $data['phone4'] );
 
 			/**
 			 * Data Persisting
@@ -109,9 +109,9 @@ class SaveProfile extends Ajax {
 			update_user_meta( $user->ID, 'wpcm_email', $data['email'] );
 			update_user_meta( $user->ID, 'wpcm_location', $data['location']);
 			update_user_meta( $user->ID, 'wpcm_phone', $data['phone'] );
+			update_user_meta( $user->ID, 'wpcm_whatsapp', $data['whatsapp'] );
 			update_user_meta( $user->ID, 'wpcm_phone2', $data['phone2'] );
-			update_user_meta( $user->ID, 'wpcm_phone3', $data['phone3'] );
-			update_user_meta( $user->ID, 'wpcm_phone4', $data['phone4']);
+			update_user_meta( $user->ID, 'wpcm_phone3', $data['phone3']);
 
 			/**
 			 * Return statement
@@ -121,9 +121,9 @@ class SaveProfile extends Ajax {
 				'email' 	=> esc_html( $data['email'] ),
 				'location' 	=> esc_html( $data['location']),
 				'phone' 	=> esc_html( $data['phone'] ),
+				'whatsapp' 	=> esc_html( $data['whatsapp'] ),
 				'phone2' 	=> esc_html( $data['phone2'] ),
-				'phone3' 	=> esc_html( $data['phone3'] ),
-				'phone4'  	=> esc_html( $data['phone4'] )
+				'phone3'  	=> esc_html( $data['phone3'] )
 			);
 
 		} catch ( SaveProfileException $e ) {

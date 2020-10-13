@@ -55,9 +55,9 @@ class GetProfile extends Ajax
 				'email' => esc_html(get_user_meta($user->ID, 'wpcm_email', true)),
 				'location' => esc_html(get_user_meta($user->ID, 'wpcm_location', true)),
 				'phone' => esc_html(get_user_meta($user->ID, 'wpcm_phone', true)),
+				'whatsapp' => esc_html(get_user_meta($user->ID, 'wpcm_whatsapp', true)),
 				'phone2' => esc_html(get_user_meta($user->ID, 'wpcm_phone2', true)),
-				'phone3' => esc_html(get_user_meta($user->ID, 'wpcm_phone3', true)),
-				'phone4' => esc_html(get_user_meta($user->ID, 'wpcm_phone4', true))
+				'phone3' => esc_html(get_user_meta($user->ID, 'wpcm_phone3', true))
 			);
 		} catch (SaveProfileException $e) {
 			$return['success'] = false;

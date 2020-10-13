@@ -10,7 +10,13 @@
             <span class="wpcm-dashboard-profile-label">Local do Véculo (URL)</span><!--Update by Reteck-->
             <span class="wpcm-dashboard-profile-value" data-key="location"></span>
         </label>
-    </li>      
+    </li>
+    <li id="wpcm-dashboard-profile-field-whatsapp">
+        <label>
+            <span class="wpcm-dashboard-profile-label">WhatsApp</span><!--Update by Reteck-->
+            <span class="wpcm-dashboard-profile-value" data-key="whatsapp"></span>
+        </label>
+    </li>          
     <li id="wpcm-dashboard-profile-field-phone">
         <label>
             <span class="wpcm-dashboard-profile-label">Telefone</span><!--Update by Reteck-->
@@ -27,12 +33,6 @@
         <label>
             <span class="wpcm-dashboard-profile-label">Telefone 3</span><!--Update by Reteck-->
             <span class="wpcm-dashboard-profile-value" data-key="phone3"></span>
-        </label>
-    </li>
-    <li id="wpcm-dashboard-profile-field-phone4">
-        <label>
-            <span class="wpcm-dashboard-profile-label">Telefone 4</span><!--Update by Reteck-->
-            <span class="wpcm-dashboard-profile-value" data-key="phone4"></span>
         </label>
     </li>          
 </ul>
