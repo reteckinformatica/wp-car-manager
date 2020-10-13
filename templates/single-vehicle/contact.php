@@ -18,6 +18,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div id="id01" class="modal">
 	<div class="modal-content">
 		<span onclick="wpcm_modal_contact_close();" class="close">&times;</span>
+		<div class="wpcm-modal-header">
+			<h2><?php _e('Ligue-nos', 'wp-car-manager') ?></h2>
+		</div>
 		<div class="w3-container">
 			<?php if( ! empty($phone_number) ):?> 
 			<div class="wpcm-rtk-modal-control">
