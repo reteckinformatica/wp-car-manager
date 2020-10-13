@@ -29,7 +29,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</div>
 				<div class="wpcm-contact-buttons">
 					<a class="wpcm-buttom-ligar" href="tel:<?php echo $phone_number; ?>"><i class="fas fa-phone"></i> LIGAR</a>
-					<a class="wpcm-buttom-whats" href="tel:<?php echo $whatsapp; ?>"><i class="fab fa-whatsapp"></i> WhatsApp</a>							
+					<?php if( ! empty($whatsapp)): ?>
+						<a class="wpcm-buttom-whats" href="tel:<?php echo $whatsapp; ?>"><i class="fab fa-whatsapp"></i> WhatsApp</a>							
+					<?php endif; ?>
 				</div>
 			</div>
 			<?php endif; if( ! empty($phone_number2)):?>
@@ -39,7 +41,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</div>
 				<div class="wpcm-contact-buttons">
 					<a class="wpcm-buttom-ligar" href="tel:<?php echo $phone_number2; ?>"><i class="fas fa-phone"></i> LIGAR</a>
-					<a class="wpcm-buttom-whats" href="tel:<?php echo $whatsapp; ?>"><i class="fab fa-whatsapp"></i> WhatsApp</a>							
+					<?php if( ! empty($whatsapp)): ?>
+						<a class="wpcm-buttom-whats" href="tel:<?php echo $whatsapp; ?>"><i class="fab fa-whatsapp"></i> WhatsApp</a>							
+					<?php endif; ?>				
 				</div>
 			</div>
 			<?php endif; if( ! empty($phone_number3)):?>
@@ -49,7 +53,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</div>
 				<div class="wpcm-contact-buttons">
 					<a class="wpcm-buttom-ligar" href="tel:<?php echo $phone_number3; ?>"><i class="fas fa-phone"></i> LIGAR</a>
-					<a class="wpcm-buttom-whats" href="tel:<?php echo $whatsapp; ?>"><i class="fab fa-whatsapp"></i> WhatsApp</a>							
+					<?php if( ! empty($whatsapp)): ?>
+						<a class="wpcm-buttom-whats" href="tel:<?php echo $whatsapp; ?>"><i class="fab fa-whatsapp"></i> WhatsApp</a>							
+					<?php endif; ?>
 				</div>
 			</div>
 			<?php endif; ?>
