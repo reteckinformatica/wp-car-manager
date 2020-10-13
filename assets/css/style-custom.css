@@ -21,6 +21,10 @@
     margin-bottom: 5px;
 }
 
+.wpcm-contact-telefones span {
+    color: black;
+}
+
 .wpcm-contact-buttons a {
     float: left;
     padding: 4px 10px;
