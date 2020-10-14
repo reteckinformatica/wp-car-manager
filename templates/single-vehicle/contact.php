@@ -33,26 +33,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="wpcm-modal-whats-container">
 			<form method="post" action="">
 				<div class="wpcm-form-control">
-					<div class="wpcm-form-control">
-						<label>O que você deseja?</label>
-					</div>					
+					<label>O que você deseja?</label>
+				</div>
+				<div class="wpcm-form-control">				
 					<select id="selecionar" name="wpcm-contact-type">
 						<option>Selecione a resposta</option>
 						<option data-section="Comprar" value="Comprar" >Comprar</option>
 						<option data-section="Trocar" value="Trocar" >Trocar</option>
 					</select>
-				</div>
-				<div data-name="Comprar" class="wpcm-form-control wpcm-hide">
-					<input type="text" value="" placeholder="Nome completo" required>
-				</div>
-				<div data-name="Comprar" class="wpcm-form-control wpcm-hide">
-					<select>
+				</div>										
+				<div class="wpcm-form-control">
+					<input type="text" value="" placeholder="Seu nome completo" required>
+				</div>			
+				<div class="wpcm-form-control">
+					<select name="wpcm-payment-method"> 
 						<option>Forma de pagamento</option>
+						<option value="À Vista">À Vista</option>
+						<option value="Preciso Financiar">Preciso Financiar</option>
 					</select>
-				</div>
+				</div>								
 				<div data-name="Trocar" class="wpcm-form-control wpcm-hide">
-					<label><?php _e('Preencha as especificações do seu veículo.','wp-car-manager'); ?></label>
-				</div>				
+					<label><?php _e('Preencha abaixo as informações do veículo que quer dar na troca:','wp-car-manager'); ?></label>
+				</div>			
 				<div data-name="Trocar" class="wpcm-form-control wpcm-hide">
 					<input type="text" placeholder="Marca">
 				</div>

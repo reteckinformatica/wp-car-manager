@@ -68,8 +68,8 @@
         font-size: 35px !important;
     }
     .wpcm-row {
-        display: flex;
-        flex-wrap: wrap;
+        display: flex !important;
+        flex-wrap: wrap !important;
     }
     .wpcm-mb-col-2 {
         position: relative;
