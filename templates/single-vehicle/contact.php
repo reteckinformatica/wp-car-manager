@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <div class="wpcm-contact">
 	<h3>Fale com o vendedor</h3>
-	<?php if( ! empty($phone_number)):?>
+	<?php if( ! empty($phone_number) || ! empty($phone_number2) || ! empty($phone_number3)):?>
 	<div class="wpcm-contact-buttons wpcm-contact-col-3 wpcm-ligue-nos">
 		<a href="javascript:wpcm_modal_contact_open();"><i class="fas fa-phone"></i> <?php _e( ' Ligue-nos', 'wp-car-manager' ); ?> </a>
 	</div>
