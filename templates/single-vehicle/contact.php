@@ -6,16 +6,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <div class="wpcm-contact">
 	<h3>Fale com o vendedor</h3>
+	<?php if( ! empty($phone_number)):?>
 	<div class="wpcm-contact-buttons wpcm-contact-col-3 wpcm-ligue-nos">
 		<a href="javascript:wpcm_modal_contact_open();"><i class="fas fa-phone"></i> <?php _e( ' Ligue-nos', 'wp-car-manager' ); ?> </a>
 	</div>
+	<?php endif; if( ! empty($email)):?>
 	<div class="wpcm-contact-buttons wpcm-contact-col-3 wpcm-email">
 		<a target="_black" href="mailto:<?php echo $email; ?>" ><i class="fas fa-envelope"></i> <?php _e( 'E-mail', 'wp-car-manager' ); ?> </a>
 	</div>
+	<?php endif; if( ! empty($location)): ?>
 	<div class="wpcm-contact-buttons wpcm-contact-col-3 wpcm-location">
 		<a target="_black" href="<?php echo $location; ?>" ><i class="fas fa-map-marker-alt"></i> <?php _e( 'Localização', 'wp-car-manager' ) ?> </a>
 	</div>
-	<?php if( ! empty($whatsapp)): ?>
+	<?php endif; if( ! empty($whatsapp)): ?>
 		<div class="wpcm-contact-buttons wpcm-contact-col-1 wpcm-whatsapp">
 			<a href="javascript:wpcm_modal_whats_open();"><i class="fab fa-whatsapp"></i> WhatsApp</a>
 		</div>
