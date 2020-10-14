@@ -59,19 +59,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<label><?php _e('Preencha abaixo as informações do veículo que quer dar na troca:','wp-car-manager'); ?></label>
 				</div>			
 				<div data-name="Trocar" class="wpcm-form-control wpcm-hide">
-					<input type="text" placeholder="Marca">
+					<input type="text" name="wpcm-marca" placeholder="Marca">
 				</div>
 				<div data-name="Trocar" class="wpcm-form-control wpcm-hide"> 
-					<input type="text" placeholder="Modelo">
+					<input type="text" name="wpcm-modelo" placeholder="Modelo">
 				</div>
 				<div data-name="Trocar" class="wpcm-form-control wpcm-hide"> 
-					<input type="text" placeholder="Versão">
+					<input type="text" name="wpcm-versao" placeholder="Versão">
 				</div>
 				<div data-name="Trocar" class="wpcm-form-control wpcm-hide"> 
-					<input type="text" placeholder="Ano">
+					<input type="text" name="wpcm-ano" placeholder="Ano">
 				</div>
 				<div data-name="Trocar" class="wpcm-form-control wpcm-hide"> 
-					<input type="text" placeholder="KM Atual">
+					<input type="text" name="wpcm-km-atual" placeholder="KM Atual">
 				</div>								
 				<div class="wpcm-form-control">
 					<button type="submit" name="wpcm-send-mgs">Enviar mensagem</button>	
@@ -87,15 +87,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 		if(isset($_POST['wpcm-contact-type']) && $_POST['wpcm-contact-type'] == 'Comprar'){		
 			$nome         = $_POST['wpcm_name_cliente'];
 			$payment	  = $_POST['wpcm_payment_method'];
-			$email        = $_POST['email_cliente'];
-			$msgtext      = $_POST['mensagem'];
 
 			$textzap = "Olá, sou " . $nome . ". | Vi seu anúncio no site " . get_site_url() . ". | Gostaria de comprar o veículo " . get_permalink() . ". | Forma de pagamento: " . $payment;
 			$rtk_send_msg = str_replace(' ', '%20', str_replace('|','%0A', $textzap));
 		}
 
 		if(isset($_POST['wpcm-contact-type']) && $_POST['wpcm-contact-type'] ==  'Trocar'){
-			$rtk_send_msg = "Mensagem teste";
+			$nome         = $_POST['wpcm_name_cliente'];
+			$payment	  = $_POST['wpcm_payment_method'];
+			$marca = $_POST['wpcm-marca'];
+			$modelo = $_POST['wpcm-modelo'];
+			$versao = $_POST['wpcm-versao'];
+			$ano = $_POST['wpcm-ano'];
+			$km_atual = $_POST['wpcm-km-atual'];
+			
+
+			$textzap = "Olá, sou " . $nome . ". | Vi seu anúncio no site " . get_site_url() . ". | Gostaria de trocar meu veículo | " . $marca . "|" . $modelo . "|" . $versao . "|" . $ano . "|" .$km_atual ." rodados, pelo seu " . get_permalink() . ". | Forma de pagamento: " . $payment;
+			$rtk_send_msg = str_replace(' ', '%20', str_replace('|','%0A', $textzap));
 		}
 
 		$url =  "https://api.whatsapp.com/send?1=pt_BR&phone=$whatsapp&text=$rtk_send_msg";
