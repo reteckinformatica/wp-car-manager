@@ -46,10 +46,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 					</select>
 				</div>										
 				<div class="wpcm-form-control">
-					<input type="text" value="" placeholder="Seu nome completo" required>
+					<input type="text" name="wpcm_name_cliente" placeholder="Seu nome completo" required>
 				</div>			
 				<div class="wpcm-form-control">
-					<select name="wpcm-payment-method"> 
+					<select name="wpcm_payment_method"> 
 						<option>Forma de pagamento</option>
 						<option value="À Vista">À Vista</option>
 						<option value="Preciso Financiar">Preciso Financiar</option>
@@ -74,12 +74,45 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<input type="text" placeholder="KM Atual">
 				</div>								
 				<div class="wpcm-form-control">
-					<input type="submit" value="Enviar mensagem">
+					<button type="submit" name="wpcm-send-mgs">Enviar mensagem</button>	
 				</div>
 			</form>
 		</div>
 	</div>
 </div>
+
+<?php
+      
+	if(isset($_POST['wpcm-send-mgs'])){
+		if(isset($_POST['wpcm-contact-type']) && $_POST['wpcm-contact-type'] == 'Comprar'){		
+			$nome         = $_POST['wpcm_name_cliente'];
+			$payment	  = $_POST['wpcm_payment_method'];
+			$email        = $_POST['email_cliente'];
+			$msgtext      = $_POST['mensagem'];
+
+			$textzap = "Olá, sou " . $nome . ". | Vi seu anúncio no site " . get_site_url() . ". | Gostaria de comprar o veículo " . get_permalink() . ". | Forma de pagamento: " . $payment;
+			$rtk_send_msg = str_replace(' ', '%20', str_replace('|','%0A', $textzap));
+		}
+
+		if(isset($_POST['wpcm-contact-type']) && $_POST['wpcm-contact-type'] ==  'Trocar'){
+			$rtk_send_msg = "Mensagem teste";
+		}
+
+		$url =  "https://api.whatsapp.com/send?1=pt_BR&phone=$whatsapp&text=$rtk_send_msg";
+
+	?>
+		<script>	window.self.location.replace("<?php echo $url; ?>"); </script>
+	<?php
+	}
+
+?>
+
+
+
+
+
+
+
 
 
 
@@ -128,6 +161,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <!--Script teste (Remover)-->
 <script>
+
 	function wpcm_modal_contact_open() {
 		document.getElementById('id01').style.display='block';
 	}
