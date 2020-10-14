@@ -2,260 +2,278 @@
  * By Reteck
  * Version: 1.0.0
 */
-*{
-  box-sizing: border-box !important;
-  -moz-box-sizing: border-box !important;
+
+* {
+    box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
 }
+
+
 /*containar*/
-.wpcm-container{
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0;
+
+.wpcm-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
 }
-.wpcm-rtk-wrap{
-  padding-left: 5px;
-  padding-right: 5px;
+
+.wpcm-rtk-wrap {
+    padding-left: 5px;
+    padding-right: 5px;
 }
-.wpcm-wrapper{
-  width: 100%;
-  overflow: hidden;
+
+.wpcm-wrapper {
+    width: 100%;
+    overflow: hidden;
 }
+
+
 /*linha*/
-.wpcm-row{
-  margin-left: -6px;
-  margin-right: -6px;
+
+.wpcm-row {
+    margin-left: -6px;
+    margin-right: -6px;
 }
-.wpcm-row:before, .wpcm-row:after{
-  content: "";
-  display: table;
+
+.wpcm-row:before,
+.wpcm-row:after {
+    content: "";
+    display: table;
 }
-.wpcm-row:after{
-  clear: both;
+
+.wpcm-row:after {
+    clear: both;
 }
+
+
 /*Mobile*/
+
 @media screen and (max-width: 768px) and (min-width: 0px) {
-  .slick-prev-next{
-    width: 40px !important;
-    height: 40px !important;
-    line-height: 40px !important;
-    border-radius: 40px !important;
-  }
-  .wpcm-rtk-header h2{
-    font-size: 25px !important;
-  }
-  .wpcm-rtk-header span{
-    font-size: 35px !important;
-  }
+    .wpcm-modal-whats-content{
+        width: 90% !important;
+        margin: 2% auto;
+    }
 
-
-
-  .wpcm-row{    
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .wpcm-mb-col-2{
-    position: relative;
-    float: left;
-    width: 50%;
-    padding: 6px;
-  }
-  .wpcm-rtk-col-4{
-    position: relative;
-    float: left;
-    width: 100%;
-    padding: 6px;
-    flex: 1;    
-  }
-  .wpcm-rtk-col-8{
-    position: relative;
-    float: left;
-    width: 100%;
-    padding: 6px;
-    flex: 2;
-  }
-  .wpcm-rtk-col-12{
-    position: relative;
-    float: left;
-    width: 100%;
-    padding: 6px;
-  }
+    .slick-prev-next {
+        width: 40px !important;
+        height: 40px !important;
+        line-height: 40px !important;
+        border-radius: 40px !important;
+    }
+    .wpcm-rtk-header h2 {
+        font-size: 25px !important;
+    }
+    .wpcm-rtk-header span {
+        font-size: 35px !important;
+    }
+    .wpcm-row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .wpcm-mb-col-2 {
+        position: relative;
+        float: left;
+        width: 50%;
+        padding: 6px;
+    }
+    .wpcm-rtk-col-4 {
+        position: relative;
+        float: left;
+        width: 100%;
+        padding: 6px;
+        flex: 1;
+    }
+    .wpcm-rtk-col-8 {
+        position: relative;
+        float: left;
+        width: 100%;
+        padding: 6px;
+        flex: 2;
+    }
+    .wpcm-rtk-col-12 {
+        position: relative;
+        float: left;
+        width: 100%;
+        padding: 6px;
+    }
 }
+
+
 /*Tablet*/
-@media screen and (max-width: 960px) and (min-width: 767px) {
-  .slick-prev-next{
-    width: 45px !important;
-    height: 45px !important;
-    line-height: 45px !important;
-    border-radius: 45px !important;
-  }
-  .wpcm-row{    
-    display: block;
-  }
-  .wpcm-sm-col-3{
-    position: relative;
-    float: left;
-    width: 33.3333%;
-    padding: 6px;
-  }
-  .wpcm-rtk-col-4{
-    position: relative;
-    float: left;
-    width: 40%;
-    padding: 6px;
-  }
-  .wpcm-rtk-col-8{
-    position: relative;
-    float: left;
-    width: 60%;
-    padding: 6px;
-  }
-  .wpcm-rtk-col-12{
-    position: relative;
-    float: left;
-    width: 100%;
-    padding: 6px;
-  }  
-  .wpcm-vehicle-listings .wpcm-vehicle-filters .wpcm-filter {
-    width: 50% !important;
-  }
+
+@media screen and (max-width: 960px) and (min-width: 764px) {
+
+    .wpcm-modal-whats-content{
+        width: 90% !important;
+        margin: 2% auto;
+    }
+
+    .slick-prev-next {
+        width: 45px !important;
+        height: 45px !important;
+        line-height: 45px !important;
+        border-radius: 45px !important;
+    }
+    .wpcm-row {
+        display: block;
+    }
+    .wpcm-sm-col-3 {
+        position: relative;
+        float: left;
+        width: 33.3333%;
+        padding: 6px;
+    }
+    .wpcm-rtk-col-4 {
+        position: relative;
+        float: left;
+        width: 100%;
+        padding: 6px;
+    }
+    .wpcm-rtk-col-8 {
+        position: relative;
+        float: left;
+        width: 100%;
+        padding: 6px;
+    }
+    .wpcm-rtk-col-12 {
+        position: relative;
+        float: left;
+        width: 100%;
+        padding: 6px;
+    }
+    .wpcm-vehicle-listings .wpcm-vehicle-filters .wpcm-filter {
+        width: 50% !important;
+    }
 }
+
+
 /*Desktop*/
-@media screen and (max-width: 1024px) and (min-width: 960px) {
-  .slick-prev-next{
-    width: 50px !important;
-    height: 50px !important;
-    line-height: 50px !important;
-    border-radius: 50px !important;
-  }
-  .wpcm-rtk-section{
-    background-color: #fff;
-    position: relative;
-    float: left;
-    width: 65%;
-    padding: 5px;
-  }
-  .wpcm-rtk-sidebar{
-    background-color: #fff;
-    position: relative;
-    float: left;
-    width: 35%;
-    padding: 5px;
-  }
-  .wpcm-col-2{
-    position: relative;
-    float: left;
-    width: 50%;
-    padding: 5px;
-  }
-  .wpcm-col-3{
-    position: relative;
-    float: left;
-    width: 33.3333%;
-    padding: 5px;    
-  }
-  .wpcm-col-4{
-    position: relative;
-    float: left;
-    width: 25%;
-    padding: 5px;
-  }
-  .wpcm-col-5{
-    position: relative;
-    float: left;
-    width: 20%;
-    padding: 5px;
-  }
-  .wpcm-rtk-col-4{
-    position: relative;
-    float: left;
-    width: 40%;
-    padding: 6px;
-  }
-  .wpcm-rtk-col-6{
-    position: relative;
-    float: left;
-    width: 50%;
-    padding: 6px;
-  }
-  .wpcm-rtk-col-8{
-    position: relative;
-    float: left;
-    width: 60%;
-    padding: 6px;
-  }
-  .wpcm-rtk-col-12{
-    position: relative;
-    float: left;
-    width: 100%;
-    padding: 6px;
-  }  
-  .wpcm-vehicle-listings .wpcm-vehicle-filters .wpcm-filter {
-    width: 25% !important;
-  }
+
+@media screen and (max-width: 1024px) and (min-width: 959px) {
+    .slick-prev-next {
+        width: 50px !important;
+        height: 50px !important;
+        line-height: 50px !important;
+        border-radius: 50px !important;
+    }
+    .wpcm-col-2 {
+        position: relative;
+        float: left;
+        width: 50%;
+        padding: 5px;
+    }
+    .wpcm-col-3 {
+        position: relative;
+        float: left;
+        width: 33.3333%;
+        padding: 5px;
+    }
+    .wpcm-col-4 {
+        position: relative;
+        float: left;
+        width: 25%;
+        padding: 5px;
+    }
+    .wpcm-col-5 {
+        position: relative;
+        float: left;
+        width: 20%;
+        padding: 5px;
+    }
+    .wpcm-rtk-col-4 {
+        position: relative;
+        float: left;
+        width: 100%;
+        padding: 6px;
+    }
+    .wpcm-rtk-col-6 {
+        position: relative;
+        float: left;
+        width: 50%;
+        padding: 6px;
+    }
+    .wpcm-rtk-col-8 {
+        position: relative;
+        float: left;
+        width: 100%;
+        padding: 6px;
+    }
+    .wpcm-rtk-col-12 {
+        position: relative;
+        float: left;
+        width: 100%;
+        padding: 6px;
+    }
+    .wpcm-vehicle-listings .wpcm-vehicle-filters .wpcm-filter {
+        width: 25% !important;
+    }
 }
+
+
 /*Desktop*/
+
 @media screen and (min-width: 1025px) {
-  .wpcm-col-2{
-    position: relative;
-    float: left;
-    width: 50%;
-    padding: 5px;
-  }
-  .wpcm-col-3{
-    position: relative;
-    float: left;
-    width: 33.3333%;
-    padding: 5px;    
-  }
-  .wpcm-col-4{
-    position: relative;
-    float: left;
-    width: 25%;
-    padding: 5px;
-  }
-  .wpcm-col-5{
-    position: relative;
-    float: left;
-    width: 20%;
-    padding: 5px;
-  }
-  .wpcm-col-6{
-    position: relative;
-    float: left;
-    width: 16.6666%;
-    padding: 5px;
-  }
-  .wpcm-col-7{
-    position: relative;
-    float: left;
-    width: 14.2857%;
-    padding: 5px;
-  }
-  .wpcm-rtk-col-4{
-    position: relative;
-    float: left;
-    width: 35%;
-    padding: 6px;
-  }
-  .wpcm-rtk-col-6{
-    position: relative;
-    float: left;
-    width: 50%;
-    padding: 6px;
-  }
-  .wpcm-rtk-col-8{
-    position: relative;
-    float: left;
-    width: 65%;
-    padding: 6px;
-  }
-  .wpcm-rtk-col-12{
-    position: relative;
-    float: left;
-    width: 100%;
-    padding: 6px;
-    margin-top:10px;
-    margin-bottom: 10px;
-  }
+    .wpcm-col-2 {
+        position: relative;
+        float: left;
+        width: 50%;
+        padding: 5px;
+    }
+    .wpcm-col-3 {
+        position: relative;
+        float: left;
+        width: 33.3333%;
+        padding: 5px;
+    }
+    .wpcm-col-4 {
+        position: relative;
+        float: left;
+        width: 25%;
+        padding: 5px;
+    }
+    .wpcm-col-5 {
+        position: relative;
+        float: left;
+        width: 20%;
+        padding: 5px;
+    }
+    .wpcm-col-6 {
+        position: relative;
+        float: left;
+        width: 16.6666%;
+        padding: 5px;
+    }
+    .wpcm-col-7 {
+        position: relative;
+        float: left;
+        width: 14.2857%;
+        padding: 5px;
+    }
+    .wpcm-rtk-col-4 {
+        position: relative;
+        float: left;
+        width: 35%;
+        padding: 6px;
+    }
+    .wpcm-rtk-col-6 {
+        position: relative;
+        float: left;
+        width: 50%;
+        padding: 6px;
+    }
+    .wpcm-rtk-col-8 {
+        position: relative;
+        float: left;
+        width: 65%;
+        padding: 6px;
+    }
+    .wpcm-rtk-col-12 {
+        position: relative;
+        float: left;
+        width: 100%;
+        padding: 6px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 }
