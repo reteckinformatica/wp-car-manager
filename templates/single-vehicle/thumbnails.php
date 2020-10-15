@@ -20,8 +20,8 @@ if ( $attachment_ids ) {
 			// get image caption
 			$image_caption = esc_attr( get_post_field( 'post_excerpt', $attachment_id ) );
 
-			// get image html
-			$image = Never5\WPCarManager\Helper\Images::get_image_html( $attachment_id, apply_filters( 'wpcm_single_vehicle_small_thumbnail_size', 'wpcm_vehicle_thumbnail' ) );
+			// get image html - get image size
+			$image = Never5\WPCarManager\Helper\Images::get_image_html( $attachment_id, apply_filters( 'wpcm_single_vehicle_small_thumbnail_size', 'wpcm_vehicle_single' ) );
 
 			?>
 				<div><?php echo $image; ?></div>
