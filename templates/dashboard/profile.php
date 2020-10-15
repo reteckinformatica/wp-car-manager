@@ -36,3 +36,16 @@
         </label>
     </li>          
 </ul>
+<div>
+    <h2><?php _e( 'Plano','wp-car-manager' ) ?></h2>
+    <?php 
+        //variables
+        $wpcm_vehicles  = count_user_posts(get_current_user_id(),'wpcm_vehicle');
+        $maxposts       = get_user_meta(get_current_user_id(), 'userMeta_max_posts', true);
+        
+    ?>
+    <ul>
+        <li>Maximo de fotos: </li>
+        <li>Maximo de anúncios: <?php echo $maxposts; ?></li>
+    </ul>
+</div>

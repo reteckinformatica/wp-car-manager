@@ -333,14 +333,14 @@ class SubmitCarHandler {
 				echo wpautop( sprintf( __( '%s has been submitted successfully and will be visible once payment has been confirmed.', 'wpcm-wc-paid-listings' ), '<strong>' . get_the_title( $listing_id ) . '</strong>' ) );
 				break;
 			default :
-				echo wpautop( sprintf( __( '%s has been submitted successfully.', 'wpcm-wc-paid-listings' ), '<strong>' . get_the_title( $listing_id ) . '</strong>' ) );
+				echo wpautop( sprintf( __( '%s Anúncio cadastrado com sucesso!.', 'wpcm-wc-paid-listings' ), '<strong>' . get_the_title( $listing_id ) . '</strong>' ) );
 				break;
 		}
 
 		echo '<p class="wpcm-submitted-actions">';
 
 		if ( 'publish' === get_post_status( $listing_id ) ) {
-			echo '<a class="button wpcm-button" href="' . get_permalink( $listing_id ) . '">' . __( 'View Listing', 'wpcm-wc-paid-listings' ) . '</a> ';
+			echo '<a class="button wpcm-button" href="' . get_permalink( $listing_id ) . '">' . __( 'Vizualizar anúncio', 'wpcm-wc-paid-listings' ) . '</a> ';
 		} elseif ( absint( wp_car_manager()->service( 'settings' )->get_option( 'page_dashboard' ) ) > 0 ) {
 			echo '<a class="button wpcm-button" href="' . get_permalink( wp_car_manager()->service( 'settings' )->get_option( 'page_dashboard' ) ) . '">' . __( 'View Dashboard', 'wpcm-wc-paid-listings' ) . '</a> ';
 		}

@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $wpcm_vehicles  = count_user_posts(get_current_user_id(),'wpcm_vehicle');
 $maxposts       = get_user_meta(get_current_user_id(), 'userMeta_max_posts', true);
 
-if($wpcm_vehicles < $maxposts): 
+if($wpcm_vehicles < $maxposts || $can_edit_listing): 
 
 ?>
 <!--Update by reteck-->
@@ -49,8 +49,8 @@ if($wpcm_vehicles < $maxposts):
 </div>
 <?php  else :?>
 	<div class="wpcm-wrap-page">
-		<h2><?php _e( 'Limite de posts atingido.','wp-car-manager' ) ?></h2>
-		<p class="wpcm-notice-erro"> <?php _e( 'Você não pode mais publicar veículos pois atingiu o limite maiximo de posts, por favor exclua um ou mais posts para voltar a publicar. Se precisar entre em contato para que possomos fazer um upgrade de seu plano', 'wp-car-manager' ); ?> </p>
+		<h2><?php _e( 'Limite máximo de anúncios atingido!','wp-car-manager' ) ?></h2>
+		<p class="wpcm-notice-erro"> <?php _e( 'Você atingiu o limite máximo de anúncios permitido em seu plano atual. Se precisar inserir uma quantidade maior de anúncios, entre em contato com nosso suporte para que possamos fazer um upgrade do seu plano.', 'wp-car-manager' ); ?> </p>
 		<a href="/meus-carros/" class="wpcm-button">Voltar</a>
 	</div>
-<?php endif;?>
+<?php endif; ?>
