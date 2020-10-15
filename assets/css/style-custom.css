@@ -5,6 +5,17 @@
 
 
 /*-------------------------------------------------------------------------------*/
+.wpcm-dashboard-plan{
+    overflow: hidden;
+}
+
+.wpcm-listing-plan{
+    margin: 0;
+}
+.wpcm-listing-plan li{
+    list-style-type: none;
+    padding: 10px;
+}
 
 
 .wpcm-notice-erro {

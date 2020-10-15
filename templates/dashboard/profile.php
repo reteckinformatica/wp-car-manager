@@ -7,7 +7,7 @@
     </li>
     <li id="wpcm-dashboard-profile-field-location">
         <label>
-            <span class="wpcm-dashboard-profile-label">Local do Véculo (URL)</span><!--Update by Reteck-->
+            <span class="wpcm-dashboard-profile-label">Localização da loja (URL)</span><!--Update by Reteck-->
             <span class="wpcm-dashboard-profile-value" data-key="location"></span>
         </label>
     </li>
@@ -36,16 +36,17 @@
         </label>
     </li>          
 </ul>
-<div>
+<div class="wpcm-dashboard-plan">
     <h2><?php _e( 'Plano','wp-car-manager' ) ?></h2>
     <?php 
         //variables
         $wpcm_vehicles  = count_user_posts(get_current_user_id(),'wpcm_vehicle');
         $maxposts       = get_user_meta(get_current_user_id(), 'userMeta_max_posts', true);
+        $max_photos     = get_user_meta(get_current_user_id(), 'userMeta_max_photos_upload', true);
         
     ?>
-    <ul>
-        <li>Maximo de fotos: </li>
+    <ul class="wpcm-listing-plan">
+        <li>Maximo de fotos: <?php echo $max_photos; ?></li>
         <li>Maximo de anúncios: <?php echo $maxposts; ?></li>
     </ul>
 </div>
