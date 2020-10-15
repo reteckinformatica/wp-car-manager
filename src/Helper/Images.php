@@ -17,7 +17,7 @@ class Images {
 
 		// return the image
 		return wp_get_attachment_image( $image_id, $size, 0, $attr = array(
-			'title' => $image_title,
+			'title' => "",
 			'alt'   => $image_title
 		) );
 	}
