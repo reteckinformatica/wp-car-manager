@@ -7,6 +7,12 @@
 /*-------------------------------------------------------------------------------*/
 
 
+.wpcm-notice-erro{
+    color: brown;
+    font-size: 15px;    
+}
+
+
 .wpcm-modal-whats-content{
     width: 50%;
     background-color: #fefefe;
