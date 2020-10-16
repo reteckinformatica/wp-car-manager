@@ -3,37 +3,37 @@
  * Version: 1.0.0
  */
 
-.wpcm-car-form fieldset div.wpcm-form-images-current ul{
-    margin: 0 !important;
-}
-.wpcm-car-form fieldset div.wpcm-form-images-current ul li{
+.wpcm-car-form fieldset div.wpcm-form-images-current ul {
     margin: 0 !important;
 }
 
-.wpcm-images-org{
-
+.wpcm-car-form fieldset div.wpcm-form-images-current ul li {
+    margin: 0 !important;
 }
-.wpcm-wrap-images{
+
+.wpcm-images-org {}
+
+.wpcm-wrap-images {
     margin-bottom: 10px;
 }
 
-.wpcm-images-org img{
+.wpcm-images-org img {
     height: auto;
-    width: 100%;
+    width : 100%;
 }
 
-
 /*-------------------------------------------------------------------------------*/
-.wpcm-dashboard-plan{
+.wpcm-dashboard-plan {
     overflow: hidden;
 }
 
-.wpcm-listing-plan{
+.wpcm-listing-plan {
     margin: 0;
 }
-.wpcm-listing-plan li{
+
+.wpcm-listing-plan li {
     list-style-type: none;
-    padding: 10px;
+    padding        : 10px;
 }
 
 
@@ -41,7 +41,6 @@
     color    : brown;
     font-size: 15px;
 }
-
 
 .wpcm-modal-whats-content {
     width           : 50%;
@@ -64,15 +63,6 @@
 .wpcm-hide {
     display: none;
 }
-
-
-
-
-
-
-
-
-/*Necessita otimização*/
 
 .wpcm-ligue-nos a {
     background-color: #0079BF;
