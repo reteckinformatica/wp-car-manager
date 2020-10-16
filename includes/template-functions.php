@@ -180,6 +180,8 @@ if ( ! function_exists( 'wpcm_template_single_contact' ) ) {
 
 			// get WhatsApp number
 			$whatsapp = get_user_meta( $vehicle->get_author(), 'wpcm_whatsapp', true);
+			$whatsapp2 = get_user_meta( $vehicle->get_author(), 'wpcm_whatsapp2', true);
+			$whatsapp3 = get_user_meta( $vehicle->get_author(), 'wpcm_whatsapp3', true);
 
 		} else {
 			// get email address
@@ -197,7 +199,9 @@ if ( ! function_exists( 'wpcm_template_single_contact' ) ) {
 				'phone_number2' => $phone_number2,
 				'phone_number3' => $phone_number3,
 				'location'	   	=> $location,
-				'whatsapp'	   	=> $whatsapp
+				'whatsapp'	   	=> $whatsapp,
+				'whatsapp2'	   	=> $whatsapp2,
+				'whatsapp3'	   	=> $whatsapp3				
 			)
 		);
 	}

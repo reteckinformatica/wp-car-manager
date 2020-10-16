@@ -48,9 +48,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<div class="wpcm-form-control">				
 					<select id="selecionar" name="wpcm-contact-vendedor">
 						<option>Selecione um vendedor</option>
-						<option value="<?php echo get_user_meta(get_current_user_id(), 'wpcm_whatsapp', true);?>" >Vendedor 1</option>
-						<option value="<?php echo get_user_meta(get_current_user_id(), 'wpcm_whatsapp2', true);?>" >Vendedor 2</option>
-						<option value="<?php echo get_user_meta(get_current_user_id(), 'wpcm_whatsapp3', true);?>" >Vendedor 3</option>
+						<?php if( ! empty($whatsapp) ): ?>
+						<option value="<?php echo $whatsapp; ?>" >Vendedor 1</option>
+						<?php endif; if( ! empty($whatsapp2) ): ?>
+						<option value="<?php echo $whatsapp2; ?>" >Vendedor 2</option>
+						<?php endif; if( ! empty($whatsapp3) ): ?>
+						<option value="<?php echo $whatsapp3; ?>" >Vendedor 3</option>
+						<?php endif; ?>
 					</select>
 				</div>															
 				<div class="wpcm-form-control">

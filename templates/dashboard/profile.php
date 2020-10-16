@@ -31,7 +31,7 @@
     </li>              
     <li id="wpcm-dashboard-profile-field-phone">
         <label>
-            <span class="wpcm-dashboard-profile-label">Telefone</span><!--Update by Reteck-->
+            <span class="wpcm-dashboard-profile-label">Telefone 1</span><!--Update by Reteck-->
             <span class="wpcm-dashboard-profile-value" data-key="phone"></span>
         </label>
     </li>
