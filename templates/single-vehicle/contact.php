@@ -86,7 +86,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<input type="text" name="wpcm-km-atual" placeholder="KM Atual">
 				</div>								
 				<div class="wpcm-form-control">
-					<button type="submit" name="wpcm-send-mgs">Enviar mensagem</button>	
+					<button type="submit" name="wpcm-send-mgs" onclick='return abrir()'>Enviar mensagem</button>	
 				</div>
 			</form>
 		</div>
@@ -121,10 +121,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 			$rtk_send_msg = str_replace(' ', '%20', str_replace('|','%0A', $textzap));
 		}
 
-		$url =  "https://api.whatsapp.com/send?1=pt_BR&phone=$whats_number&text=$rtk_send_msg";
-
+		$url_whats =  "https://api.whatsapp.com/send?1=pt_BR&phone=$whats_number&text=$rtk_send_msg";
 	?>
-		<script>	window.self.location.replace("<?php echo $url; ?>"); </script>
+		<script type="text/javascript">
+
+			pagina = "<?php echo $url_whats; ?>"
+
+			function abrir(){
+				newWindow=window.open(pagina,"nova","width=100%,height=100%")
+				if(newWindow)return false
+			}
+
+			abrir()
+
+
+
+			//window.open("<?php echo $url_whats; ?>", "_black");
+		</script>
 	<?php
 	}
 

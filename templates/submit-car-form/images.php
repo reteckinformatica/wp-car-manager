@@ -3,10 +3,33 @@
 
 	<?php
 
+	//
+	$attachment_ids = $vehicle->get_gallery_attachment_ids();
+	$max_photos = get_user_meta( get_current_user_id(), 'userMeta_max_photos_upload', true);
+
+	// is edit
+	$is_edit = false;
+
+	// check if we're editing
+	if ( ! empty( $_GET['wpcm_edit'] ) && ! empty( $_GET['wpcm_vehicle_id'] ) ) {
+		$is_edit = true;
+	}
+
+	// if editing
+	if ( $is_edit == true ){
+		if( count($attachment_ids) == $max_photos ){
+			$max_photos_upload = 0;
+		}else{
+			$max_photos_upload = $max_photos - count($attachment_ids);
+		}
+	}else{
+		$max_photos_upload = $max_photos;
+	}
+
 	// attachments
 	$attachment_ids = array();
 
-	// get featured image
+	// get featured image - destaque
 	$featured_id = get_post_thumbnail_id( $vehicle->get_id() );
 
 	// add id to $attachment_ids if not empty
@@ -37,7 +60,7 @@
 		<h3><?php _e( 'Upload New Images' , 'wp-car-manager' ); ?></h3>
 		<strong><?php _e( 'Click here to upload your images', 'wp-car-manager' ); _e(' | Você pode enviar até: ' . get_user_meta( get_current_user_id(), 'userMeta_max_photos_upload', true) . ' de imagens', 'wp-car-manager'); ?></strong><br/>
 		<span><?php _e( 'You can upload multiple images at the same time, the first image will be your thumbnail.', 'wp-car-manager' ); ?></span><br/>
-		<span id="max_photos_upload" hidden><?php echo get_user_meta( get_current_user_id(), 'userMeta_max_photos_upload', true); ?></span>		
+		<span id="max_photos_upload" hidden><?php echo $max_photos_upload; ?></span>		
 	</div>
 
 </fieldset>
