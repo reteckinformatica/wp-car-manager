@@ -114,7 +114,7 @@ class SaveImages extends Ajax {
 
 		// check if vehicle has featured image, if not set first image as featured image and remove from _car_gallery array
 		if ( ! has_post_thumbnail( $vehicle_id ) ) {
-			$first_image = $gallery_ids[0]; //get first image end set post thumbnail
+			$first_image = array_shift($gallery_ids); //get first image end set post thumbnail
 			set_post_thumbnail( $vehicle_id, $first_image );
 		}
 

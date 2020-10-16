@@ -4,7 +4,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 } // Exit if accessed directly
 
 // get attachment ID's
-$attachment_ids = $vehicle->get_gallery_attachment_ids();
+//$attachment_ids = $vehicle->get_gallery_attachment_ids();
+
+// get featured image - destaque
+$featured_id = get_post_thumbnail_id( $vehicle->get_id() );
+
+// add id to $attachment_ids if not empty
+if ( ! empty( $featured_id ) ) {
+	$attachment_ids[] = $featured_id;
+
+	// get other images, these can only exist if there's a featured image
+	$attachment_ids = array_merge( $attachment_ids, $vehicle->get_gallery_attachment_ids() );
+}
+
 
 if ( $attachment_ids ) {
 	$loop    = 0;
