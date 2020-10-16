@@ -38,6 +38,7 @@ class DeleteVehicle extends Ajax {
 
 		// delete vehicle
 		wp_trash_post( $vehicle_id );
+		wp_reset_postdata();
 
 		// done
 		wp_send_json( array( 'success' => true ) );

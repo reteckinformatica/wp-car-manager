@@ -3,8 +3,10 @@
 
 	<?php
 
-	//
+	//get gallery ids
 	$attachment_ids = $vehicle->get_gallery_attachment_ids();
+
+	//get max photos
 	$max_photos = get_user_meta( get_current_user_id(), 'userMeta_max_photos_upload', true);
 
 	// is edit
