@@ -20,6 +20,7 @@
 		if( count($attachment_ids) == $max_photos ){
 			$max_photos_upload = 0;
 		}else{
+			$max_photos = -1;
 			$max_photos_upload = $max_photos - count($attachment_ids);
 		}
 	}else{
