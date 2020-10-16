@@ -53,8 +53,12 @@ WPCM_Dashboard_Profile.prototype.load_data = function () {
 
 		jQuery('#wpcm-dashboard-profile-field-email:first').find('.wpcm-dashboard-profile-value:first').html(data.email);
 		jQuery('#wpcm-dashboard-profile-field-location:first').find('.wpcm-dashboard-profile-value:first').html(data.location);
-		jQuery('#wpcm-dashboard-profile-field-phone:first').find('.wpcm-dashboard-profile-value:first').html(data.phone);
+
 		jQuery('#wpcm-dashboard-profile-field-whatsapp:first').find('.wpcm-dashboard-profile-value:first').html(data.whatsapp);
+		jQuery('#wpcm-dashboard-profile-field-whatsapp2:first').find('.wpcm-dashboard-profile-value:first').html(data.whatsapp2);
+		jQuery('#wpcm-dashboard-profile-field-whatsapp3:first').find('.wpcm-dashboard-profile-value:first').html(data.whatsapp3);
+
+		jQuery('#wpcm-dashboard-profile-field-phone:first').find('.wpcm-dashboard-profile-value:first').html(data.phone);
 		jQuery('#wpcm-dashboard-profile-field-phone2:first').find('.wpcm-dashboard-profile-value:first').html(data.phone2);
 		jQuery('#wpcm-dashboard-profile-field-phone3:first').find('.wpcm-dashboard-profile-value:first').html(data.phone3);
 
@@ -101,8 +105,12 @@ WPCM_Dashboard_Profile.prototype.save = function () {
 
 			jQuery('#wpcm-dashboard-profile-field-email:first').find('.wpcm-dashboard-profile-value:first').html(data.email);
 			jQuery('#wpcm-dashboard-profile-field-location:first').find('.wpcm-dashboard-profile-value:first').html(data.location);
-			jQuery('#wpcm-dashboard-profile-field-phone:first').find('.wpcm-dashboard-profile-value:first').html(data.phone);			
+
 			jQuery('#wpcm-dashboard-profile-field-whatsapp:first').find('.wpcm-dashboard-profile-value:first').html(data.whatsapp);
+			jQuery('#wpcm-dashboard-profile-field-whatsapp2:first').find('.wpcm-dashboard-profile-value:first').html(data.whatsapp2);
+			jQuery('#wpcm-dashboard-profile-field-whatsapp3:first').find('.wpcm-dashboard-profile-value:first').html(data.whatsapp3);
+
+			jQuery('#wpcm-dashboard-profile-field-phone:first').find('.wpcm-dashboard-profile-value:first').html(data.phone);			
 			jQuery('#wpcm-dashboard-profile-field-phone2:first').find('.wpcm-dashboard-profile-value:first').html(data.phone2);
 			jQuery('#wpcm-dashboard-profile-field-phone3:first').find('.wpcm-dashboard-profile-value:first').html(data.phone3);
 

@@ -44,7 +44,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<option data-section="Comprar" value="Comprar" >Comprar</option>
 						<option data-section="Trocar" value="Trocar" >Trocar</option>
 					</select>
-				</div>										
+				</div>
+				<div class="wpcm-form-control">				
+					<select id="selecionar" name="wpcm-contact-vendedor">
+						<option>Selecione um vendedor</option>
+						<option value="<?php echo get_user_meta(get_current_user_id(), 'wpcm_whatsapp', true);?>" >Vendedor 1</option>
+						<option value="<?php echo get_user_meta(get_current_user_id(), 'wpcm_whatsapp2', true);?>" >Vendedor 2</option>
+						<option value="<?php echo get_user_meta(get_current_user_id(), 'wpcm_whatsapp3', true);?>" >Vendedor 3</option>
+					</select>
+				</div>															
 				<div class="wpcm-form-control">
 					<input type="text" name="wpcm_name_cliente" placeholder="Seu nome completo" required>
 				</div>			
@@ -87,26 +95,29 @@ if ( ! defined( 'ABSPATH' ) ) {
 		if(isset($_POST['wpcm-contact-type']) && $_POST['wpcm-contact-type'] == 'Comprar'){		
 			$nome         = $_POST['wpcm_name_cliente'];
 			$payment	  = $_POST['wpcm_payment_method'];
+			
+			$whats_number = $_POST['wpcm-contact-vendedor'];
 
 			$textzap = "Olá, sou " . $nome . ". | Vi seu anúncio no site " . get_site_url() . ". | Gostaria de comprar o veículo " . get_permalink() . ". | Forma de pagamento: " . $payment;
 			$rtk_send_msg = str_replace(' ', '%20', str_replace('|','%0A', $textzap));
 		}
 
 		if(isset($_POST['wpcm-contact-type']) && $_POST['wpcm-contact-type'] ==  'Trocar'){
-			$nome         = $_POST['wpcm_name_cliente'];
-			$payment	  = $_POST['wpcm_payment_method'];
-			$marca = $_POST['wpcm-marca'];
-			$modelo = $_POST['wpcm-modelo'];
-			$versao = $_POST['wpcm-versao'];
-			$ano = $_POST['wpcm-ano'];
-			$km_atual = $_POST['wpcm-km-atual'];
+			$nome         	= $_POST['wpcm_name_cliente'];
+			$payment	  	= $_POST['wpcm_payment_method'];
+			$marca 		  	= "Marca: "   . $_POST['wpcm-marca'];
+			$modelo 		= "Modelo: "  . $_POST['wpcm-modelo'];
+			$versao 		= "Versão: "  . $_POST['wpcm-versao'];
+			$ano 			= "Ano: "     . $_POST['wpcm-ano'];
+			$km_atual 		= $_POST['wpcm-km-atual'];
 			
-
-			$textzap = "Olá, sou " . $nome . ". | Vi seu anúncio no site " . get_site_url() . ". | Gostaria de trocar meu veículo | " . $marca . "|" . $modelo . "|" . $versao . "|" . $ano . "|" .$km_atual ." rodados, pelo seu " . get_permalink() . ". | Forma de pagamento: " . $payment;
+			$whats_number 	= $_POST['wpcm-contact-vendedor'];
+			
+			$textzap = "Olá, sou " . $nome . ". | Vi seu anúncio no site " . get_site_url() . ". | Gostaria de trocar meu veículo | " . $marca . "|" . $modelo . "|" . $versao . "|" . $ano . "|" .$km_atual ." km rodados, pelo seu " . get_permalink() . ". | Forma de pagamento: " . $payment;
 			$rtk_send_msg = str_replace(' ', '%20', str_replace('|','%0A', $textzap));
 		}
 
-		$url =  "https://api.whatsapp.com/send?1=pt_BR&phone=$whatsapp&text=$rtk_send_msg";
+		$url =  "https://api.whatsapp.com/send?1=pt_BR&phone=$whats_number&text=$rtk_send_msg";
 
 	?>
 		<script>	window.self.location.replace("<?php echo $url; ?>"); </script>

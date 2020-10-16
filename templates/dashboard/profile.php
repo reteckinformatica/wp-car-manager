@@ -13,10 +13,22 @@
     </li>
     <li id="wpcm-dashboard-profile-field-whatsapp">
         <label>
-            <span class="wpcm-dashboard-profile-label">WhatsApp</span><!--Update by Reteck-->
+            <span class="wpcm-dashboard-profile-label">WhatsApp 1</span><!--Update by Reteck-->
             <span class="wpcm-dashboard-profile-value" data-key="whatsapp"></span>
         </label>
-    </li>          
+    </li>
+    <li id="wpcm-dashboard-profile-field-whatsapp2">
+        <label>
+            <span class="wpcm-dashboard-profile-label">WhatsApp 2</span><!--Update by Reteck-->
+            <span class="wpcm-dashboard-profile-value" data-key="whatsapp2"></span>
+        </label>
+    </li>    
+    <li id="wpcm-dashboard-profile-field-whatsapp3">
+        <label>
+            <span class="wpcm-dashboard-profile-label">WhatsApp 3</span><!--Update by Reteck-->
+            <span class="wpcm-dashboard-profile-value" data-key="whatsapp3"></span>
+        </label>
+    </li>              
     <li id="wpcm-dashboard-profile-field-phone">
         <label>
             <span class="wpcm-dashboard-profile-label">Telefone</span><!--Update by Reteck-->
