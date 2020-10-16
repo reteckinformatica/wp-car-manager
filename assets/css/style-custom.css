@@ -3,6 +3,25 @@
  * Version: 1.0.0
  */
 
+.wpcm-car-form fieldset div.wpcm-form-images-current ul{
+    margin: 0 !important;
+}
+.wpcm-car-form fieldset div.wpcm-form-images-current ul li{
+    margin: 0 !important;
+}
+
+.wpcm-images-org{
+
+}
+.wpcm-wrap-images{
+    margin-bottom: 10px;
+}
+
+.wpcm-images-org img{
+    height: auto;
+    width: 100%;
+}
+
 
 /*-------------------------------------------------------------------------------*/
 .wpcm-dashboard-plan{

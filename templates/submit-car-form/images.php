@@ -17,10 +17,14 @@
 
 	// if editing
 	if ( $is_edit == true ){
-		if( count($attachment_ids) == $max_photos ){
-			$max_photos_upload = 0;
+		if( count($attachment_ids) > 0){
+			if( count($attachment_ids) == $max_photos ){
+				$max_photos_upload = 0;
+			}else{
+				$max_photos_upload = $max_photos - count($attachment_ids) -1;
+			}
 		}else{
-			$max_photos_upload = $max_photos - count($attachment_ids) -1;
+			$max_photos_upload = $max_photos;
 		}
 	}else{
 		$max_photos_upload = $max_photos;
@@ -44,15 +48,18 @@
 		?>
 		<div class="wpcm-form-images-current">
 			<h3><?php _e( 'Current Images', 'wp-car-manager' ); ?></h3>
-			<ul>
-				<?php foreach ( $attachment_ids as $attachment_id ) : ?>
-					<li>
-						<?php echo Never5\WPCarManager\Helper\Images::get_image_html( $attachment_id, apply_filters( 'wpcm_single_vehicle_small_thumbnail_size', 'wpcm_vehicle_thumbnail' ) ); ?>
-						<a href="javascript:;" class="button wpcm-delete-image" data-id="<?php echo $attachment_id; ?>"><?php _e( 'Delete', 'wp-car-manager' ); ?></a>
-					</li>
-				<?php endforeach; ?>
-			</ul>
-
+			<div class="wpcm-wrapper wpcm-wrap-images">
+				<div class="wpcm-row">
+					<ul>
+						<?php foreach ( $attachment_ids as $attachment_id ) : ?>
+							<li class="wpcm-col-4 wpcm-images-org">
+								<?php echo Never5\WPCarManager\Helper\Images::get_image_html( $attachment_id, apply_filters( 'wpcm_single_vehicle_small_thumbnail_size', 'wpcm_vehicle_thumbnail' ) ); ?>
+								<a href="javascript:;" class="button wpcm-delete-image" data-id="<?php echo $attachment_id; ?>"><?php _e( 'Delete', 'wp-car-manager' ); ?></a>
+							</li>
+						<?php endforeach; ?>
+					</ul>
+				</div>
+			</div>
 		</div>
 	<?php endif; ?>
 
