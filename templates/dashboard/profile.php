@@ -11,45 +11,76 @@
             <span class="wpcm-dashboard-profile-value" data-key="location"></span>
         </label>
     </li>
-    <li id="wpcm-dashboard-profile-field-whatsapp">
+    <h4><?php _e( 'WhatsApp','wpcm-car-manager' ); ?></h4>
+    <!--WhatsApp 01-->
+    <li id="wpcm-dashboard-profile-field-whatsapp-name">
         <label>
-            <span class="wpcm-dashboard-profile-label">WhatsApp 1</span><!--Update by Reteck-->
-            <span class="wpcm-dashboard-profile-value" data-key="whatsapp"></span>
+            <span class="wpcm-dashboard-profile-label">Nome vendedor 01</span><!--Update by Reteck-->
+            <span class="wpcm-dashboard-profile-value" data-key="whatsapp_name"></span>
         </label>
     </li>
-    <li id="wpcm-dashboard-profile-field-whatsapp2">
+    <li id="wpcm-dashboard-profile-field-whatsapp-01">
         <label>
-            <span class="wpcm-dashboard-profile-label">WhatsApp 2</span><!--Update by Reteck-->
-            <span class="wpcm-dashboard-profile-value" data-key="whatsapp2"></span>
+            <span class="wpcm-dashboard-profile-label">WhatsApp vendedor 01</span><!--Update by Reteck-->
+            <span class="wpcm-dashboard-profile-value" data-key="whatsapp_01"></span>
         </label>
-    </li>    
-    <li id="wpcm-dashboard-profile-field-whatsapp3">
+    </li>
+    <!--Vendedor 02-->    
+    <li id="wpcm-dashboard-profile-field-whatsapp-name-02">
         <label>
-            <span class="wpcm-dashboard-profile-label">WhatsApp 3</span><!--Update by Reteck-->
-            <span class="wpcm-dashboard-profile-value" data-key="whatsapp3"></span>
+            <span class="wpcm-dashboard-profile-label">Nome vendedor 02</span><!--Update by Reteck-->
+            <span class="wpcm-dashboard-profile-value" data-key="whatsapp_name_02"></span>
         </label>
     </li>              
+    <li id="wpcm-dashboard-profile-field-whatsapp-02">
+        <label>
+            <span class="wpcm-dashboard-profile-label">WhatsApp vendedor 02</span><!--Update by Reteck-->
+            <span class="wpcm-dashboard-profile-value" data-key="whatsapp_02"></span>
+        </label>
+    </li>
+    <!--Vendedor 03-->
+    <li id="wpcm-dashboard-profile-field-whatsapp-name-03">
+        <label>
+            <span class="wpcm-dashboard-profile-label">Nome vendedor 03</span><!--Update by Reteck-->
+            <span class="wpcm-dashboard-profile-value" data-key="whatsapp_name_03"></span>
+        </label>
+    </li>
+    <li id="wpcm-dashboard-profile-field-whatsapp-03">
+        <label>
+            <span class="wpcm-dashboard-profile-label">WhatsApp vendedor 03</span><!--Update by Reteck-->
+            <span class="wpcm-dashboard-profile-value" data-key="whatsapp_03"></span>
+        </label>
+    </li>
+    <h4><?php _e( 'Telefones','wpcm-car-manager' ); ?></h4>
+    <!--Phone 01-->
+    <li id="wpcm-dashboard-profile-field-phone-name">
+        <label>
+            <span class="wpcm-dashboard-profile-label">Nome vendedor 01</span><!--Update by Reteck-->
+            <span class="wpcm-dashboard-profile-value" data-key="phone_name"></span>
+        </label>
+    </li>    
     <li id="wpcm-dashboard-profile-field-phone">
         <label>
-            <span class="wpcm-dashboard-profile-label">Telefone 1</span><!--Update by Reteck-->
+            <span class="wpcm-dashboard-profile-label">Telefone vendedor 01</span><!--Update by Reteck-->
             <span class="wpcm-dashboard-profile-value" data-key="phone"></span>
         </label>
     </li>
-    <li id="wpcm-dashboard-profile-field-phone2">
+    <!--Phone 02-->
+    <li id="wpcm-dashboard-profile-field-phone-name-02">
         <label>
-            <span class="wpcm-dashboard-profile-label">Telefone 2</span><!--Update by Reteck-->
-            <span class="wpcm-dashboard-profile-value" data-key="phone2"></span>
+            <span class="wpcm-dashboard-profile-label">Nome vendedor 02</span><!--Update by Reteck-->
+            <span class="wpcm-dashboard-profile-value" data-key="phone_name_02"></span>
+        </label>
+    </li>    
+    <li id="wpcm-dashboard-profile-field-phone-02">
+        <label>
+            <span class="wpcm-dashboard-profile-label">Telefone vendedor 02</span><!--Update by Reteck-->
+            <span class="wpcm-dashboard-profile-value" data-key="phone_02"></span>
         </label>
     </li>
-    <li id="wpcm-dashboard-profile-field-phone3">
-        <label>
-            <span class="wpcm-dashboard-profile-label">Telefone 3</span><!--Update by Reteck-->
-            <span class="wpcm-dashboard-profile-value" data-key="phone3"></span>
-        </label>
-    </li>          
 </ul>
 <div class="wpcm-dashboard-plan">
-    <h2><?php _e( 'Plano','wp-car-manager' ) ?></h2>
+    <h4><?php _e( 'Plano','wp-car-manager' ) ?></h4>
     <?php 
         //variables
         $wpcm_vehicles  = count_user_posts(get_current_user_id(),'wpcm_vehicle');

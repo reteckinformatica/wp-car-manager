@@ -54,12 +54,18 @@ class GetProfile extends Ajax
 			$return['data']    = array(
 				'email' => esc_html(get_user_meta($user->ID, 'wpcm_email', true)),
 				'location' => esc_html(get_user_meta($user->ID, 'wpcm_location', true)),
+				
+				'phone_name' => esc_html(get_user_meta($user->ID, 'wpcm_phone_name', true)),
 				'phone' => esc_html(get_user_meta($user->ID, 'wpcm_phone', true)),
-				'whatsapp' => esc_html(get_user_meta($user->ID, 'wpcm_whatsapp', true)),
-				'whatsapp2' => esc_html(get_user_meta($user->ID, 'wpcm_whatsapp2', true)),
-				'whatsapp3' => esc_html(get_user_meta($user->ID, 'wpcm_whatsapp3', true)),
-				'phone2' => esc_html(get_user_meta($user->ID, 'wpcm_phone2', true)),
-				'phone3' => esc_html(get_user_meta($user->ID, 'wpcm_phone3', true))
+				'phone_name_02' => esc_html(get_user_meta($user->ID, 'wpcm_phone_name_02', true)),
+				'phone_02' => esc_html(get_user_meta($user->ID, 'wpcm_phone_02', true)),
+				
+				'whatsapp_name' => esc_html(get_user_meta($user->ID, 'wpcm_whatsapp_name', true)),
+				'whatsapp_01' => esc_html(get_user_meta($user->ID, 'wpcm_whatsapp_01', true)),
+				'whatsapp_name_02' => esc_html(get_user_meta($user->ID, 'wpcm_whatsapp_name_02', true)),
+				'whatsapp_02' => esc_html(get_user_meta($user->ID, 'wpcm_whatsapp_02', true)),
+				'whatsapp_name_03' => esc_html(get_user_meta($user->ID, 'wpcm_whatsapp_name_03', true)),
+				'whatsapp_03' => esc_html(get_user_meta($user->ID, 'wpcm_whatsapp_03', true))
 			);
 		} catch (SaveProfileException $e) {
 			$return['success'] = false;

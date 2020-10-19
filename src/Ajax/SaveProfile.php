@@ -77,67 +77,100 @@ class SaveProfile extends Ajax {
 			/**
 			 * Phone validation checks
 			 */
+			if ( ! isset( $data['phone_name'] ) ) {
+				throw new SaveProfileException( 'Phone name not set', 'no-phone' );
+			}
 			if ( ! isset( $data['phone'] ) ) {
 				throw new SaveProfileException( 'Phone not set', 'no-phone' );
 			}
+			if ( ! isset( $data['phone_name_02'] ) ) {
+				throw new SaveProfileException( 'Phone name not set', 'no-phone' );
+			}
+			if ( ! isset( $data['phone_02'] ) ) {
+				throw new SaveProfileException( 'Phone not set', 'no-phone' );
+			}
 
-			if ( ! isset( $data['whatsapp'] ) ) {
+			/**
+			* WhatsApp validation checks
+			*/
+			if ( ! isset( $data['whatsapp_name'] ) ) {
+				throw new SaveProfileException( 'WhatsApp name not set', 'no-phone' );
+			}
+
+			if ( ! isset( $data['whatsapp_01'] ) ) {
 				throw new SaveProfileException( 'WhatsApp not set', 'no-phone' );
 			}
 
-			if ( ! isset( $data['whatsapp2'] ) ) {
-				throw new SaveProfileException( 'WhatsApp not set', 'no-phone' );
-			}
-
-			if ( ! isset( $data['whatsapp3'] ) ) {
-				throw new SaveProfileException( 'WhatsApp not set', 'no-phone' );
+			if ( ! isset( $data['whatsapp_name_02'] ) ) {
+				throw new SaveProfileException( 'WhatsApp name not set', 'no-phone' );
 			}
 			
-			if ( ! isset( $data['phone2'] ) ) {
-				throw new SaveProfileException( 'Phone2 not set', 'no-phone' );
+			if ( ! isset( $data['whatsapp_02'] ) ) {
+				throw new SaveProfileException( 'WhatsApp not set', 'no-phone' );
 			}
 
-			if ( ! isset( $data['phone3'] ) ) {
-				throw new SaveProfileException( 'Phone3 not set', 'no-phone' );
+			if ( ! isset( $data['whatsapp_name_03'] ) ) {
+				throw new SaveProfileException( 'WhatsApp name not set', 'no-phone' );
 			}
+			
+			if ( ! isset( $data['whatsapp_03'] ) ) {
+				throw new SaveProfileException( 'WhatsApp not set', 'no-phone' );
+			}
+
+
 
 			/**
 			 * Data sanitization
 			 */
-			$data['email'] = trim( $data['email'] );
-			$data['location'] = trim( $data['location'] );
-			$data['phone'] = trim( $data['phone'] );
-			$data['whatsapp'] = trim( $data['whatsapp'] );
-			$data['whatsapp2'] = trim( $data['whatsapp2'] );
-			$data['whatsapp3'] = trim( $data['whatsapp3'] );
-			$data['phone2'] = trim( $data['phone2'] );
-			$data['phone3'] = trim( $data['phone3'] );
+			$data['email'] 				= trim( $data['email'] );
+			$data['location'] 			= trim( $data['location'] );
+			$data['phone_name'] 		= trim( $data['phone_name'] );
+			$data['phone'] 				= trim( $data['phone'] );
+			$data['phone_name_02'] 		= trim( $data['phone_name_02'] );
+			$data['phone_02'] 			= trim( $data['phone_02'] );
+			
+			$data['whatsapp_name'] 		= trim( $data['whatsapp_name'] );
+			$data['whatsapp_01'] 		= trim( $data['whatsapp_01'] );
+			$data['whatsapp_name_02']   = trim( $data['whatsapp_name_02'] );
+			$data['whatsapp_02'] 		= trim( $data['whatsapp_02'] );
+			$data['whatsapp_name_03'] 	= trim( $data['whatsapp_name_03'] );
+			$data['whatsapp_03'] 		= trim( $data['whatsapp_03'] );
 
 			/**
 			 * Data Persisting
 			 */
 			update_user_meta( $user->ID, 'wpcm_email', $data['email'] );
 			update_user_meta( $user->ID, 'wpcm_location', $data['location']);
+			
+			update_user_meta( $user->ID, 'wpcm_phone_name', $data['phone_name'] );
 			update_user_meta( $user->ID, 'wpcm_phone', $data['phone'] );
-			update_user_meta( $user->ID, 'wpcm_whatsapp', $data['whatsapp'] );
-			update_user_meta( $user->ID, 'wpcm_whatsapp2', $data['whatsapp2'] );
-			update_user_meta( $user->ID, 'wpcm_whatsapp3', $data['whatsapp3'] );
-			update_user_meta( $user->ID, 'wpcm_phone2', $data['phone2'] );
-			update_user_meta( $user->ID, 'wpcm_phone3', $data['phone3']);
+			update_user_meta( $user->ID, 'wpcm_phone_name_02', $data['phone_name_02'] );
+			update_user_meta( $user->ID, 'wpcm_phone_02', $data['phone_02']);
+
+			update_user_meta( $user->ID, 'wpcm_whatsapp_name', $data['whatsapp_name'] );
+			update_user_meta( $user->ID, 'wpcm_whatsapp_01', $data['whatsapp_01'] );
+			update_user_meta( $user->ID, 'wpcm_whatsapp_name_02', $data['whatsapp_name_02'] );
+			update_user_meta( $user->ID, 'wpcm_whatsapp_02', $data['whatsapp_02'] );
+			update_user_meta( $user->ID, 'wpcm_whatsapp_name_03', $data['whatsapp_name_03'] );
+			update_user_meta( $user->ID, 'wpcm_whatsapp_03', $data['whatsapp_03'] );
 
 			/**
 			 * Return statement
 			 */
 			$return['success'] = true;
 			$return['data']    = array(
-				'email' 	=> esc_html( $data['email'] ),
-				'location' 	=> esc_html( $data['location']),
-				'phone' 	=> esc_html( $data['phone'] ),
-				'whatsapp' 	=> esc_html( $data['whatsapp'] ),
-				'whatsapp2' => esc_html( $data['whatsapp2'] ),
-				'whatsapp3' => esc_html( $data['whatsapp3'] ),
-				'phone2' 	=> esc_html( $data['phone2'] ),
-				'phone3'  	=> esc_html( $data['phone3'] )
+				'email' 			=> esc_html( $data['email'] ),
+				'location' 			=> esc_html( $data['location']),
+				'phone_name' 		=> esc_html( $data['phone_name'] ),
+				'phone' 			=> esc_html( $data['phone'] ),
+				'phone_name_02' 	=> esc_html( $data['phone_name_02'] ),
+				'phone_02' 			=> esc_html( $data['phone_02'] ),
+				'whatsapp_name' 	=> esc_html( $data['whatsapp_name'] ),
+				'whatsapp_01' 		=> esc_html( $data['whatsapp_01'] ),
+				'whatsapp_name_02' 	=> esc_html( $data['whatsapp_name_02'] ),
+				'whatsapp_02' 		=> esc_html( $data['whatsapp_02'] ),
+				'whatsapp_name_03' 	=> esc_html( $data['whatsapp_name_03'] ),
+				'whatsapp_03'    	=> esc_html( $data['whatsapp_03'] )
 			);
 
 		} catch ( SaveProfileException $e ) {

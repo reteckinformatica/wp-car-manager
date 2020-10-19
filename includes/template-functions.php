@@ -171,17 +171,21 @@ if ( ! function_exists( 'wpcm_template_single_contact' ) ) {
 			$email = get_user_meta( $vehicle->get_author(), 'wpcm_email', true );
 
 			// get phone number
-			$phone_number = get_user_meta( $vehicle->get_author(), 'wpcm_phone', true );
-			$phone_number2 = get_user_meta( $vehicle->get_author(), 'wpcm_phone2', true );
-			$phone_number3 = get_user_meta( $vehicle->get_author(), 'wpcm_phone3', true );
+			$phone_name 		= get_user_meta( $vehicle->get_author(), 'wpcm_phone_name', true );
+			$phone_number 		= get_user_meta( $vehicle->get_author(), 'wpcm_phone', true );
+			$phone_name_02 		= get_user_meta( $vehicle->get_author(), 'wpcm_phone_name_02', true );
+			$phone_number_02	= get_user_meta( $vehicle->get_author(), 'wpcm_phone_02', true );
 
 			//get location
 			$location = get_user_meta( $vehicle->get_author(), 'wpcm_location', true );
 
 			// get WhatsApp number
-			$whatsapp = get_user_meta( $vehicle->get_author(), 'wpcm_whatsapp', true);
-			$whatsapp2 = get_user_meta( $vehicle->get_author(), 'wpcm_whatsapp2', true);
-			$whatsapp3 = get_user_meta( $vehicle->get_author(), 'wpcm_whatsapp3', true);
+			$whatsapp_name 		= get_user_meta( $vehicle->get_author(), 'wpcm_whatsapp_name', true);
+			$whatsapp_01 		= get_user_meta( $vehicle->get_author(), 'wpcm_whatsapp_01', true);
+			$whatsapp_name_02  	= get_user_meta( $vehicle->get_author(), 'wpcm_whatsapp_name_02', true);
+			$whatsapp_02		= get_user_meta( $vehicle->get_author(), 'wpcm_whatsapp_02', true);
+			$whatsapp_name_03 	= get_user_meta( $vehicle->get_author(), 'wpcm_whatsapp_name_03', true);
+			$whatsapp_03 		= get_user_meta( $vehicle->get_author(), 'wpcm_whatsapp_03', true);
 
 		} else {
 			// get email address
@@ -193,15 +197,19 @@ if ( ! function_exists( 'wpcm_template_single_contact' ) ) {
 
 		wp_car_manager()->service( 'template_manager' )->get_template_part( 'single-vehicle/contact', '',
 			array(
-				'vehicle'      	=> $vehicle,
-				'email'        	=> $email,
-				'phone_number' 	=> $phone_number,
-				'phone_number2' => $phone_number2,
-				'phone_number3' => $phone_number3,
-				'location'	   	=> $location,
-				'whatsapp'	   	=> $whatsapp,
-				'whatsapp2'	   	=> $whatsapp2,
-				'whatsapp3'	   	=> $whatsapp3				
+				'vehicle'      		=> $vehicle,
+				'email'        		=> $email,
+				'location'	   		=> $location,
+				'phone_name' 		=> $phone_name,
+				'phone_number' 		=> $phone_number,
+				'phone_name_02' 	=> $phone_name_02,
+				'phone_number_02' 	=> $phone_number_02,
+				'whatsapp_name'	   	=> $whatsapp_name,
+				'whatsapp_01'	   	=> $whatsapp_01,
+				'whatsapp_name_02'	=> $whatsapp_name_02,
+				'whatsapp_02'	   	=> $whatsapp_02,
+				'whatsapp_name_03'	=> $whatsapp_name_03,
+				'whatsapp_03'	   	=> $whatsapp_03				
 			)
 		);
 	}

@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <div class="wpcm-contact">
 	<h3>Fale com o vendedor</h3>
-	<?php if( ! empty($phone_number) || ! empty($phone_number2) || ! empty($phone_number3)):?>
+	<?php if( ! empty($phone_number) || ! empty($phone_number_02)):?>
 	<div class="wpcm-contact-buttons wpcm-contact-col-3 wpcm-ligue-nos">
 		<a href="javascript:wpcm_modal_contact_open();"><i class="fas fa-phone"></i> <?php _e( ' Ligue-nos', 'wp-car-manager' ); ?> </a>
 	</div>
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="wpcm-contact-buttons wpcm-contact-col-3 wpcm-location">
 		<a target="_black" href="<?php echo $location; ?>" ><i class="fas fa-map-marker-alt"></i> <?php _e( 'Localização', 'wp-car-manager' ) ?> </a>
 	</div>
-	<?php endif; if( ! empty($whatsapp)): ?>
+	<?php endif; if ( ! empty($whatsapp_01) || ! empty($whatsapp_02) || empty($whatsapp_03) ): ?>
 		<div class="wpcm-contact-buttons wpcm-contact-col-1 wpcm-whatsapp">
 			<a href="javascript:wpcm_modal_whats_open();"><i class="fab fa-whatsapp"></i> WhatsApp</a>
 		</div>
@@ -48,12 +48,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<div class="wpcm-form-control">				
 					<select id="selecionar" name="wpcm-contact-vendedor">
 						<option>Selecione um vendedor</option>
-						<?php if( ! empty($whatsapp) ): ?>
-						<option value="<?php echo $whatsapp; ?>" >Vendedor 1</option>
-						<?php endif; if( ! empty($whatsapp2) ): ?>
-						<option value="<?php echo $whatsapp2; ?>" >Vendedor 2</option>
-						<?php endif; if( ! empty($whatsapp3) ): ?>
-						<option value="<?php echo $whatsapp3; ?>" >Vendedor 3</option>
+						<?php if( ! empty($whatsapp_01) ): ?>
+						<option value="<?php echo $whatsapp_01; ?>" ><?php echo $whatsapp_name; ?></option>
+						<?php endif; if( ! empty($whatsapp_02) ): ?>
+						<option value="<?php echo $whatsapp_02; ?>" ><?php echo $whatsapp_name_02; ?></option>
+						<?php endif; if( ! empty($whatsapp_03) ): ?>
+						<option value="<?php echo $whatsapp_03; ?>" ><?php echo $whatsapp_name_03; ?></option>
 						<?php endif; ?>
 					</select>
 				</div>															
@@ -121,6 +121,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 			$rtk_send_msg = str_replace(' ', '%20', str_replace('|','%0A', $textzap));
 		}
 
+
+		$short_number_whats = array(
+			'whatsapp'  => $whatsapp,
+			'whatsapp2' => $whatsapp,
+			'whatsapp3' => $whatsapp
+		);
+
 		$url_whats =  "https://api.whatsapp.com/send?1=pt_BR&phone=$whats_number&text=$rtk_send_msg";
 	?>
 		<script type="text/javascript">
@@ -143,15 +150,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 
-
-
-
-
-
-
-
-
-
 <!--Contact Modal-->
 <div id="id01" class="modal">
 	<div class="modal-content">
@@ -163,28 +161,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php if( ! empty($phone_number) ):?> 
 			<div class="wpcm-rtk-modal-control">
 				<div class="wpcm-contact-telefones">
-					<?php _e( '<span><strong>Telefone 1: </strong>' . $phone_number . '</span>', 'wp-car-manager' ); ?>
+					<?php echo $phone_name . ": " . $phone_number;?>
 				</div>
 				<div class="wpcm-buttom-ligar">
 					<a href="tel:<?php echo $phone_number; ?>"><i class="fas fa-phone"></i> LIGAR</a>
 				</div>
 			</div>
-			<?php endif; if( ! empty($phone_number2)):?>
+			<?php endif; if( ! empty($phone_number_02)):?>
 			<div class="wpcm-rtk-modal-control">
 				<div class="wpcm-contact-telefones">
-					<?php _e( '<span><strong>Telefone 2: </strong>' . $phone_number2 . '</span>', 'wp-car-manager' ); ?>
+					<?php echo $phone_name_02 . ": " . $phone_number_02;?>			
 				</div>
 				<div class="wpcm-buttom-ligar">
-					<a href="tel:<?php echo $phone_number2; ?>"><i class="fas fa-phone"></i> LIGAR</a>			
-				</div>
-			</div>
-			<?php endif; if( ! empty($phone_number3)):?>
-			<div class="wpcm-rtk-modal-control">
-				<div class="wpcm-contact-telefones">
-					<?php _e( '<span><strong>Telefone 3: </strong>' . $phone_number3 . '</span>', 'wp-car-manager' ); ?>
-				</div>
-				<div class="wpcm-buttom-ligar">
-					<a href="tel:<?php echo $phone_number3; ?>"><i class="fas fa-phone"></i> LIGAR</a>
+					<a href="tel:<?php echo $phone_number_02; ?>"><i class="fas fa-phone"></i> LIGAR</a>			
 				</div>
 			</div>
 			<?php endif; ?>

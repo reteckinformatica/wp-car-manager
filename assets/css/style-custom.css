@@ -3,6 +3,22 @@
  * Version: 1.0.0
  */
 
+
+ /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+ /** PROFILE **/
+.wpcm-profile-sub-title{
+    border: #000000;
+}
+
+
+
+
+
+
+
+
+
+
 .wpcm-car-form fieldset div.wpcm-form-images-current ul {
     margin: 0 !important;
 }

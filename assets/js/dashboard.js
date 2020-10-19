@@ -54,13 +54,20 @@ WPCM_Dashboard_Profile.prototype.load_data = function () {
 		jQuery('#wpcm-dashboard-profile-field-email:first').find('.wpcm-dashboard-profile-value:first').html(data.email);
 		jQuery('#wpcm-dashboard-profile-field-location:first').find('.wpcm-dashboard-profile-value:first').html(data.location);
 
-		jQuery('#wpcm-dashboard-profile-field-whatsapp:first').find('.wpcm-dashboard-profile-value:first').html(data.whatsapp);
-		jQuery('#wpcm-dashboard-profile-field-whatsapp2:first').find('.wpcm-dashboard-profile-value:first').html(data.whatsapp2);
-		jQuery('#wpcm-dashboard-profile-field-whatsapp3:first').find('.wpcm-dashboard-profile-value:first').html(data.whatsapp3);
+		jQuery('#wpcm-dashboard-profile-field-whatsapp-name:first').find('.wpcm-dashboard-profile-value:first').html(data.whatsapp_name);
+		jQuery('#wpcm-dashboard-profile-field-whatsapp-01:first').find('.wpcm-dashboard-profile-value:first').html(data.whatsapp_01);
+		
+		jQuery('#wpcm-dashboard-profile-field-whatsapp-name-02:first').find('.wpcm-dashboard-profile-value:first').html(data.whatsapp_name_02);
+		jQuery('#wpcm-dashboard-profile-field-whatsapp-02:first').find('.wpcm-dashboard-profile-value:first').html(data.whatsapp_02);
 
+		jQuery('#wpcm-dashboard-profile-field-whatsapp-name-03:first').find('.wpcm-dashboard-profile-value:first').html(data.whatsapp_name_03);
+		jQuery('#wpcm-dashboard-profile-field-whatsapp-03:first').find('.wpcm-dashboard-profile-value:first').html(data.whatsapp_03);
+
+		jQuery('#wpcm-dashboard-profile-field-phone-name:first').find('.wpcm-dashboard-profile-value:first').html(data.phone_name);
 		jQuery('#wpcm-dashboard-profile-field-phone:first').find('.wpcm-dashboard-profile-value:first').html(data.phone);
-		jQuery('#wpcm-dashboard-profile-field-phone2:first').find('.wpcm-dashboard-profile-value:first').html(data.phone2);
-		jQuery('#wpcm-dashboard-profile-field-phone3:first').find('.wpcm-dashboard-profile-value:first').html(data.phone3);
+		jQuery('#wpcm-dashboard-profile-field-phone-name-02:first').find('.wpcm-dashboard-profile-value:first').html(data.phone_name_02);
+		jQuery('#wpcm-dashboard-profile-field-phone-02:first').find('.wpcm-dashboard-profile-value:first').html(data.phone_02);
+
 
 	});
 
@@ -106,14 +113,20 @@ WPCM_Dashboard_Profile.prototype.save = function () {
 			jQuery('#wpcm-dashboard-profile-field-email:first').find('.wpcm-dashboard-profile-value:first').html(data.email);
 			jQuery('#wpcm-dashboard-profile-field-location:first').find('.wpcm-dashboard-profile-value:first').html(data.location);
 
-			jQuery('#wpcm-dashboard-profile-field-whatsapp:first').find('.wpcm-dashboard-profile-value:first').html(data.whatsapp);
-			jQuery('#wpcm-dashboard-profile-field-whatsapp2:first').find('.wpcm-dashboard-profile-value:first').html(data.whatsapp2);
-			jQuery('#wpcm-dashboard-profile-field-whatsapp3:first').find('.wpcm-dashboard-profile-value:first').html(data.whatsapp3);
-
-			jQuery('#wpcm-dashboard-profile-field-phone:first').find('.wpcm-dashboard-profile-value:first').html(data.phone);			
-			jQuery('#wpcm-dashboard-profile-field-phone2:first').find('.wpcm-dashboard-profile-value:first').html(data.phone2);
-			jQuery('#wpcm-dashboard-profile-field-phone3:first').find('.wpcm-dashboard-profile-value:first').html(data.phone3);
-
+			jQuery('#wpcm-dashboard-profile-field-whatsapp-name:first').find('.wpcm-dashboard-profile-value:first').html(data.whatsapp_name);
+			jQuery('#wpcm-dashboard-profile-field-whatsapp-01:first').find('.wpcm-dashboard-profile-value:first').html(data.whatsapp_01);
+			
+			jQuery('#wpcm-dashboard-profile-field-whatsapp-name-02:first').find('.wpcm-dashboard-profile-value:first').html(data.whatsapp_name_02);
+			jQuery('#wpcm-dashboard-profile-field-whatsapp-02:first').find('.wpcm-dashboard-profile-value:first').html(data.whatsapp_02);
+	
+			jQuery('#wpcm-dashboard-profile-field-whatsapp-name-03:first').find('.wpcm-dashboard-profile-value:first').html(data.whatsapp_name_03);
+			jQuery('#wpcm-dashboard-profile-field-whatsapp-03:first').find('.wpcm-dashboard-profile-value:first').html(data.whatsapp_03);
+	
+			jQuery('#wpcm-dashboard-profile-field-phone-name:first').find('.wpcm-dashboard-profile-value:first').html(data.phone_name);
+			jQuery('#wpcm-dashboard-profile-field-phone:first').find('.wpcm-dashboard-profile-value:first').html(data.phone);
+			jQuery('#wpcm-dashboard-profile-field-phone-name-02:first').find('.wpcm-dashboard-profile-value:first').html(data.phone_name_02);
+			jQuery('#wpcm-dashboard-profile-field-phone-02:first').find('.wpcm-dashboard-profile-value:first').html(data.phone_02);
+			
 			instance.is_editing = false;
 		}
 	});
