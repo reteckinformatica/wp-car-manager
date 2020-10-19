@@ -131,12 +131,10 @@ ob_start();
 			$rtk_send_msg = str_replace(' ', '%20', str_replace('|','%0A', $textzap));
 		}
 
-		// mount url
-		$url_whats =  "https://api.whatsapp.com/send?1=pt_BR&phone=$whats_number&text=$rtk_send_msg";
 		?>
 			<script type="text/javascript">
 				// opren link
-				window.location.href = "<?php echo $url_whats; ?>";
+				window.location.href = "<?php echo "https://api.whatsapp.com/send?1=pt_BR&phone=$whats_number&text=$rtk_send_msg"; ?>";
 			</script>
 		<?php
 	}
