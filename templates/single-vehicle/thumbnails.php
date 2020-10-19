@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 } // Exit if accessed directly
 
 // get attachment ID's
-$attachment_ids = $vehicle->get_gallery_attachment_ids();
+//$attachment_ids = $vehicle->get_gallery_attachment_ids();
 
 // get featured image - destaque
 $featured_id = get_post_thumbnail_id( $vehicle->get_id() );

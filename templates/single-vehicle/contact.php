@@ -41,7 +41,7 @@ ob_start();
 				</div>
 				<div class="wpcm-form-control">				
 					<select id="selecionar" name="wpcm-contact-type">
-						<option>Selecione a resposta</option>
+						<option value="Não selecionado">Selecione a resposta</option>
 						<option data-section="Comprar" value="Comprar" >Comprar</option>
 						<option data-section="Trocar" value="Trocar" >Trocar</option>
 					</select>
@@ -63,7 +63,7 @@ ob_start();
 				</div>			
 				<div class="wpcm-form-control">
 					<select name="wpcm_payment_method"> 
-						<option>Forma de pagamento</option>
+						<option value="Não selecionado">Forma de pagamento</option>
 						<option value="À Vista">À Vista</option>
 						<option value="Preciso Financiar">Preciso Financiar</option>
 					</select>
@@ -103,7 +103,7 @@ ob_start();
 			
 			$whats_number = $_POST['wpcm-contact-vendedor'];
 
-			$textzap = "Olá, sou " . $nome . ". | Vi seu anúncio no site " . get_site_url() . ". | Gostaria de comprar o veículo " . get_permalink() . ". | Forma de pagamento: " . $payment;
+			$textzap = "Olá, sou " . $nome . ". | Vi seu anúncio no site Quero Acelerar e gostaria de comprar o veículo " . get_permalink() . ". | Forma de pagamento: " . $payment;
 			$rtk_send_msg = str_replace(' ', '%20', str_replace('|','%0A', $textzap));
 		}
 
@@ -118,7 +118,7 @@ ob_start();
 			
 			$whats_number 	= $_POST['wpcm-contact-vendedor'];
 			
-			$textzap = "Olá, sou " . $nome . ". | Vi seu anúncio no site " . get_site_url() . ". | Gostaria de trocar meu veículo | " . $marca . "|" . $modelo . "|" . $versao . "|" . $ano . "|" .$km_atual ." km rodados, pelo seu " . get_permalink() . ". | Forma de pagamento: " . $payment;
+			$textzap = "Olá, sou " . $nome . ". | Vi seu anúncio no site Quero Acelerar e gostaria de trocar meu veículo | " . $marca . "|" . $modelo . "|" . $versao . "|" . $ano . "|" .$km_atual ." km rodados, pelo seu " . get_permalink() . ". | Forma de pagamento: " . $payment;
 			$rtk_send_msg = str_replace(' ', '%20', str_replace('|','%0A', $textzap));
 		}
 		else{
@@ -127,7 +127,7 @@ ob_start();
 			
 			$whats_number = $_POST['wpcm-contact-vendedor'];
 
-			$textzap = "Olá, sou " . $nome . ". | Vi seu anúncio no site " . get_site_url() . ". | Gostaria de comprar o veículo " . get_permalink() . ". | Forma de pagamento: " . $payment;
+			$textzap = "Olá, sou " . $nome . ". | Vi seu anúncio no site Quero Acelerar e gostaria de comprar o veículo " . get_permalink() . ". | Forma de pagamento: " . $payment;
 			$rtk_send_msg = str_replace(' ', '%20', str_replace('|','%0A', $textzap));
 		}
 
