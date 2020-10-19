@@ -3,6 +3,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 } // Exit if accessed directly
 
+ob_start();
+
 ?>
 <div class="wpcm-contact">
 	<h3>Fale com o vendedor</h3>
@@ -46,7 +48,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					</select>
 				</div>
 				<div class="wpcm-form-control">				
-					<select id="selecionar" name="wpcm-contact-vendedor">
+					<select id="selecionar" name="wpcm-contact-vendedor" required>
 						<option>Selecione um vendedor</option>
 						<?php if( ! empty($whatsapp_01) ): ?>
 						<option value="<?php echo $whatsapp_01; ?>" ><?php echo $whatsapp_name; ?></option>
@@ -86,7 +88,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<input type="text" name="wpcm-km-atual" placeholder="KM Atual">
 				</div>								
 				<div class="wpcm-form-control">
-					<button type="submit" name="wpcm-send-mgs" onclick='return abrir()'>Enviar mensagem</button>	
+					<input type="submit" onClick="openURLWhats()" name="wpcm-send-mgs" value="Enviar"/>
 				</div>
 			</form>
 		</div>
@@ -120,35 +122,39 @@ if ( ! defined( 'ABSPATH' ) ) {
 			$textzap = "Olá, sou " . $nome . ". | Vi seu anúncio no site " . get_site_url() . ". | Gostaria de trocar meu veículo | " . $marca . "|" . $modelo . "|" . $versao . "|" . $ano . "|" .$km_atual ." km rodados, pelo seu " . get_permalink() . ". | Forma de pagamento: " . $payment;
 			$rtk_send_msg = str_replace(' ', '%20', str_replace('|','%0A', $textzap));
 		}
+		else{
+			$nome         = $_POST['wpcm_name_cliente'];
+			$payment	  = $_POST['wpcm_payment_method'];
+			
+			$whats_number = $_POST['wpcm-contact-vendedor'];
 
+			$textzap = "Olá, sou " . $nome . ". | Vi seu anúncio no site " . get_site_url() . ". | Gostaria de comprar o veículo " . get_permalink() . ". | Forma de pagamento: " . $payment;
+			$rtk_send_msg = str_replace(' ', '%20', str_replace('|','%0A', $textzap));
+		}
 
-		$short_number_whats = array(
-			'whatsapp'  => $whatsapp,
-			'whatsapp2' => $whatsapp,
-			'whatsapp3' => $whatsapp
-		);
-
+		// mount url
 		$url_whats =  "https://api.whatsapp.com/send?1=pt_BR&phone=$whats_number&text=$rtk_send_msg";
-	?>
+
+		?>
 		<script type="text/javascript">
-
-			pagina = "<?php echo $url_whats; ?>"
-
-			function abrir(){
-				newWindow=window.open(pagina,"nova","width=100%,height=100%")
-				if(newWindow)return false
+			// created link _black
+			function redirect_blank(url) {
+				var a = document.createElement('a');
+				a.target="_blank";
+				a.href=url;
+				a.click();
 			}
-
-			abrir()
-
-
-
-			//window.open("<?php echo $url_whats; ?>", "_black");
+			// opren link
+			function openURLWhats() {
+				var set_url = "<?php echo $url_whats; ?>";
+				this.redirect_blank(set_url);
+			}
 		</script>
-	<?php
+		<?php
 	}
-
 ?>
+
+
 
 <!--Contact Modal-->
 <div id="id01" class="modal">
@@ -221,3 +227,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 });
 
 </script>
+<?php ob_end_flush(); ?>
