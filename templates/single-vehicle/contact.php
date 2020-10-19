@@ -27,7 +27,6 @@ ob_start();
 	<?php endif; ?>
 </div>
 
-
 <!--Contact Modal WhatsApp-->
 <div id="wpcm-modal-whats" class="modal">
 	<div class="wpcm-modal-whats-content">
@@ -36,7 +35,7 @@ ob_start();
 			<h2><?php _e('Fale conosco', 'wp-car-manager') ?></h2>
 		</div>
 		<div class="wpcm-modal-whats-container">
-			<form method="post" action="">
+			<form method="post" action="" target="_black">
 				<div class="wpcm-form-control">
 					<label>O que você deseja?</label>
 				</div>
@@ -49,7 +48,7 @@ ob_start();
 				</div>
 				<div class="wpcm-form-control">				
 					<select id="selecionar" name="wpcm-contact-vendedor" required>
-						<option>Selecione um vendedor</option>
+						<option value="<?php echo $whatsapp_01; ?>">Selecione um vendedor</option>
 						<?php if( ! empty($whatsapp_01) ): ?>
 						<option value="<?php echo $whatsapp_01; ?>" ><?php echo $whatsapp_name; ?></option>
 						<?php endif; if( ! empty($whatsapp_02) ): ?>
@@ -88,16 +87,16 @@ ob_start();
 					<input type="text" name="wpcm-km-atual" placeholder="KM Atual">
 				</div>								
 				<div class="wpcm-form-control">
-					<input type="submit" onClick="openURLWhats()" name="wpcm-send-mgs" value="Enviar"/>
+					<input type="submit" name="wpcm-send-mgs" value="Enviar"/>
 				</div>
 			</form>
 		</div>
 	</div>
 </div>
 
-<?php
-      
+<?php      
 	if(isset($_POST['wpcm-send-mgs'])){
+
 		if(isset($_POST['wpcm-contact-type']) && $_POST['wpcm-contact-type'] == 'Comprar'){		
 			$nome         = $_POST['wpcm_name_cliente'];
 			$payment	  = $_POST['wpcm_payment_method'];
@@ -134,27 +133,14 @@ ob_start();
 
 		// mount url
 		$url_whats =  "https://api.whatsapp.com/send?1=pt_BR&phone=$whats_number&text=$rtk_send_msg";
-
 		?>
-		<script type="text/javascript">
-			// created link _black
-			function redirect_blank(url) {
-				var a = document.createElement('a');
-				a.target="_blank";
-				a.href=url;
-				a.click();
-			}
-			// opren link
-			function openURLWhats() {
-				var set_url = "<?php echo $url_whats; ?>";
-				this.redirect_blank(set_url);
-			}
-		</script>
+			<script type="text/javascript">
+				// opren link
+				window.location.href = "<?php echo $url_whats; ?>";
+			</script>
 		<?php
 	}
 ?>
-
-
 
 <!--Contact Modal-->
 <div id="id01" class="modal">
@@ -189,10 +175,8 @@ ob_start();
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-
 <!--Script teste (Remover)-->
 <script>
-
 	function wpcm_modal_contact_open() {
 		document.getElementById('id01').style.display='block';
 	}
@@ -206,7 +190,6 @@ ob_start();
 	function wpcm_modal_whats_close() {
 		document.getElementById('wpcm-modal-whats').style.display='none'
 	}
-
 
 	$("#selecionar").change(function() {
     var $this, secao, atual, campos;
@@ -227,4 +210,3 @@ ob_start();
 });
 
 </script>
-<?php ob_end_flush(); ?>
