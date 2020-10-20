@@ -9,13 +9,15 @@ jQuery( function ( $ ) {
 
 var WPCM_Listings = function ( tgt ) {
 
+	var pagina = window.location.hash.substring(1);
+
 	this.is_updating = false;
 	this.nonce = jQuery( tgt ).find( '#wpcm-listings-nonce' ).val();
 	this.filters = jQuery( tgt ).find( '.wpcm-vehicle-filters:first' );
 	this.sort = jQuery( tgt ).find( '#wpcm-sort:first' );
 	this.listings = jQuery( tgt ).find( '.wpcm-vehicle-results-wrapper>.wpcm-vehicle-results:first' );
 	this.pagination = jQuery( tgt ).find( '.wpcm-vehicle-listings-pagination:first' );
-	this.page = 1;
+	this.page = pagina;
 	this.default_sort = jQuery( tgt ).data( 'sort' );
 	this.condition = jQuery( tgt ).data( 'condition' );
 	this.featured = jQuery( tgt ).data( 'featured' );
@@ -83,7 +85,7 @@ WPCM_Listings.prototype.load_hash = function (){
 	var instance = this;
 
 	window.onhashchange = function() {
-		
+
 		var pagina = window.location.hash.substring(1);
 
 		instance.page = pagina;
