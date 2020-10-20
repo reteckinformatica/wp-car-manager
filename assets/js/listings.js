@@ -82,10 +82,10 @@ WPCM_Listings.prototype.load_hash = function (){
 	
 	var instance = this;
 
-	window.onhashchange = function(e) {
+	window.onhashchange = function() {
 		
 		var pagina = window.location.hash.substring(1);
-		
+
 		instance.page = pagina;
 
 		// trigger load_vehicles()
@@ -93,13 +93,14 @@ WPCM_Listings.prototype.load_hash = function (){
 		
 	};
 
-	
+	// added hash to browser	
 	$(function() {
 		$('.wpcm-vehicle-listings-pagination').on("click", 'li a', function (e) {
 			e.preventDefault();
 			window.location.hash = $(this).attr("data-page");
 		});
 	});
+
 }
 
 WPCM_Listings.prototype.init_sort = function () {
