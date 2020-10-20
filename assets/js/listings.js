@@ -45,6 +45,8 @@ var WPCM_Listings = function ( tgt ) {
 
 	// always load vehicles on init for now
 	this.load_vehicles();
+
+	this.load_hash();
 };
 
 WPCM_Listings.prototype.init_filters = function () {
@@ -74,6 +76,31 @@ WPCM_Listings.prototype.init_filters = function () {
 	} );
 
 };
+
+// load hash history brouser - by Reteck
+WPCM_Listings.prototype.load_hash = function (){
+	
+	var instance = this;
+
+	window.onhashchange = function(e) {
+		
+		var pagina = window.location.hash.substring(1);
+		
+		instance.page = pagina;
+
+		// trigger load_vehicles()
+		instance.load_vehicles();
+		
+	};
+
+	
+	$(function() {
+		$('.wpcm-vehicle-listings-pagination').on("click", 'li a', function (e) {
+			e.preventDefault();
+			window.location.hash = $(this).attr("data-page");
+		});
+	});
+}
 
 WPCM_Listings.prototype.init_sort = function () {
 

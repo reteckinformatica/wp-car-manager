@@ -64,7 +64,7 @@ abstract class Assets {
 	/**
 	* By Reteck
 	* Enqueue body scripts
-	*
+	* jquery-1.10.1.min.js
 	*/
 
 	public static function enqueue_body_scripts(){
@@ -72,6 +72,13 @@ abstract class Assets {
 		wp_enqueue_script(
 			'wpcm_js_jquery_1_11_1',
 			wp_car_manager()->service( 'file' )->plugin_url( '/assets/js/jquery-1.11.1.min.js' ),
+			array(),
+			wp_car_manager()->get_version()
+		);
+		// Jquery 1.10.1 JS
+		wp_enqueue_script(
+			'wpcm_js_jquery_1_10_1',
+			wp_car_manager()->service( 'file' )->plugin_url( '/assets/js/jquery-1.10.1.min.js' ),
 			array(),
 			wp_car_manager()->get_version()
 		);				
@@ -121,7 +128,7 @@ abstract class Assets {
 		// enqueue listings script
 		wp_enqueue_script(
 			'wpcm_js_listings',
-			wp_car_manager()->service( 'file' )->plugin_url( '/assets/js/listings' . ( ( ! SCRIPT_DEBUG ) ? '.min' : '' ) . '.js' ),
+			wp_car_manager()->service( 'file' )->plugin_url( '/assets/js/listings.js' ),
 			array( 'jquery', 'wpcm_js_select2' ),
 			wp_car_manager()->get_version(),
 			true
