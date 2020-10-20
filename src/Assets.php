@@ -79,13 +79,28 @@ abstract class Assets {
 			wp_car_manager()->service( 'file' )->plugin_url( '/assets/js/jquery-migrate-1.2.1.min.js' ),
 			array(),
 			wp_car_manager()->get_version()
-		);	
+		);
+		// Slick JS	
 		wp_enqueue_script(
 			'wpcm_js_slick_min',
 			wp_car_manager()->service( 'file' )->plugin_url( '/assets/js/slick.min.js' ),
 			array(),
 			wp_car_manager()->get_version()
-		);	
+		);
+		// Custom JS
+		wp_enqueue_script(
+			'wpcm_js_custom',
+			wp_car_manager()->service( 'file' )->plugin_url( '/assets/js/custom.js' ),
+			array(),
+			wp_car_manager()->get_version()
+		);
+		// Jquery 1.11.1 JS
+		wp_enqueue_script(
+			'wpcm_js_jquery_1_11_1',
+			wp_car_manager()->service( 'file' )->plugin_url( '/assets/js/jquery-1.11.1.js' ),
+			array(),
+			wp_car_manager()->get_version()
+		);		
 	}	
 
 	/**
