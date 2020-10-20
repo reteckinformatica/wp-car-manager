@@ -2,58 +2,27 @@
  * By Reteck
  * Version: 1.0.0
  */
-
-/**/
-/*Filtro*/
-.wpcm-filter-model{
- 
-}
-.wpcm-filter-make{
-    
-}
-.wpcm-filter-price{
-
-}
-.wpcm-filter-frdate{
- 
-}
-.wpcm-filter-mileage{
-    
-}
-
-.wpcm-filter{
+.wpcm-filter {
     padding: 2px !important;
 
 }
-.wpcm-vehicle-filters{
+
+.wpcm-vehicle-filters {
     background-color: rgb(255 255 255) !important;
-    border-radius: 8px 8px 0 0!important;
-    padding: 5px !important;
+    border-radius   : 8px 8px 0 0 !important;
+    padding         : 5px !important;
 }
-.wpcm-vehicle-sort{
+
+.wpcm-vehicle-sort {
     background-color: rgb(255 255 255) !important;
-    border-radius: 0 0 8px 8px!important;
+    border-radius   : 0 0 8px 8px !important;
 }
 
-.wpcm-vehicle-listings .wpcm-vehicle-filters .wpcm-filter{
-
-}
-
-
- /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
- /** PROFILE **/
-.wpcm-profile-sub-title{
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/** PROFILE **/
+.wpcm-profile-sub-title {
     border: #000000;
 }
-
-
-
-
-
-
-
-
-
 
 .wpcm-car-form fieldset div.wpcm-form-images-current ul {
     margin: 0 !important;
