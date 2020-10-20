@@ -488,7 +488,7 @@
 }
 
 .wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a .wpcm-listings-item-description {
-    padding: 0 !important;
+    padding: 3px !important;
     display: block;
 }
 

@@ -68,12 +68,13 @@ abstract class Assets {
 	*/
 
 	public static function enqueue_body_scripts(){
+		// Jquery 1.11.1 JS
 		wp_enqueue_script(
-			'wpcm_js_jquery_1_11_0_min',
-			wp_car_manager()->service( 'file' )->plugin_url( '/assets/js/jquery-1.11.0.min.js' ),
+			'wpcm_js_jquery_1_11_1',
+			wp_car_manager()->service( 'file' )->plugin_url( '/assets/js/jquery-1.11.1.min.js' ),
 			array(),
 			wp_car_manager()->get_version()
-		);			
+		);				
 		wp_enqueue_script(
 			'wpcm_js_jquery_migrate_1_2_1_min',
 			wp_car_manager()->service( 'file' )->plugin_url( '/assets/js/jquery-migrate-1.2.1.min.js' ),
@@ -94,13 +95,7 @@ abstract class Assets {
 			array(),
 			wp_car_manager()->get_version()
 		);
-		// Jquery 1.11.1 JS
-		wp_enqueue_script(
-			'wpcm_js_jquery_1_11_1',
-			wp_car_manager()->service( 'file' )->plugin_url( '/assets/js/jquery-1.11.1.js' ),
-			array(),
-			wp_car_manager()->get_version()
-		);		
+
 	}	
 
 	/**
